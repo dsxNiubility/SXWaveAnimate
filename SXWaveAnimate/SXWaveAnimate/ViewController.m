@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TableViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textView;
@@ -27,6 +28,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    TableViewController *tbvc = (TableViewController *)segue.destinationViewController;
+    tbvc.precent = [self.textView.text intValue];
+}
 
 
 @end

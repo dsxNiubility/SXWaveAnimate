@@ -11,7 +11,7 @@
 
 @interface MTSingleHeaderCell : UITableViewCell
 
-@property(nonatomic,strong)NSArray *scores;
+@property(nonatomic,assign)int precent;
 
 + (instancetype)cell;
 

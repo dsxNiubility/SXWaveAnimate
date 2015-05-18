@@ -77,7 +77,7 @@
         <!--Table View Controller-->
         <scene sceneID="6se-Pz-n8z">
             <objects>
-                <tableViewController id="9uj-XH-k9u" sceneMemberID="viewController">
+                <tableViewController id="9uj-XH-k9u" customClass="TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="73" sectionHeaderHeight="22" sectionFooterHeight="22" id="L93-6L-PTH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
