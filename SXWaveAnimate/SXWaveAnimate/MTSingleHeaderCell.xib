@@ -21,7 +21,7 @@
                             <constraint firstAttribute="height" constant="115" id="U2Y-96-hx2"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-lH-97O">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb_rotation" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-lH-97O">
                         <rect key="frame" x="15" y="5" width="125" height="125"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="125" id="1kV-JW-TJr"/>
@@ -58,7 +58,10 @@
                 <outlet property="leftView" destination="eYk-7V-q5f" id="nVc-Mp-Glo"/>
                 <outlet property="rotateImg" destination="dXd-lH-97O" id="Hbx-P9-dfg"/>
             </connections>
-            <point key="canvasLocation" x="140" y="267.5"/>
+            <point key="canvasLocation" x="192" y="263.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="fb_rotation" width="125" height="125"/>
+    </resources>
 </document>
