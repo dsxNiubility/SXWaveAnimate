@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D5B22C71B09EDE400C1D5C9 /* MTSingleHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B22C51B09EDE400C1D5C9 /* MTSingleHeaderCell.m */; };
+		1D5B22C81B09EDE400C1D5C9 /* MTSingleHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5B22C61B09EDE400C1D5C9 /* MTSingleHeaderCell.xib */; };
 		1DE5AFB01B08D75500A489BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFAF1B08D75500A489BD /* main.m */; };
 		1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFB21B08D75500A489BD /* AppDelegate.m */; };
 		1DE5AFB61B08D75500A489BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFB51B08D75500A489BD /* ViewController.m */; };
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D5B22C41B09EDE400C1D5C9 /* MTSingleHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSingleHeaderCell.h; sourceTree = "<group>"; };
+		1D5B22C51B09EDE400C1D5C9 /* MTSingleHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSingleHeaderCell.m; sourceTree = "<group>"; };
+		1D5B22C61B09EDE400C1D5C9 /* MTSingleHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTSingleHeaderCell.xib; sourceTree = "<group>"; };
 		1DE5AFAA1B08D75500A489BD /* SXWaveAnimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXWaveAnimate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE5AFAE1B08D75500A489BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DE5AFAF1B08D75500A489BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +86,9 @@
 		1DE5AFAC1B08D75500A489BD /* SXWaveAnimate */ = {
 			isa = PBXGroup;
 			children = (
+				1D5B22C41B09EDE400C1D5C9 /* MTSingleHeaderCell.h */,
+				1D5B22C51B09EDE400C1D5C9 /* MTSingleHeaderCell.m */,
+				1D5B22C61B09EDE400C1D5C9 /* MTSingleHeaderCell.xib */,
 				1DE5AFB11B08D75500A489BD /* AppDelegate.h */,
 				1DE5AFB21B08D75500A489BD /* AppDelegate.m */,
 				1DE5AFB41B08D75500A489BD /* ViewController.h */,
@@ -202,6 +210,7 @@
 				1DE5AFB91B08D75500A489BD /* Main.storyboard in Resources */,
 				1DE5AFBE1B08D75500A489BD /* LaunchScreen.xib in Resources */,
 				1DE5AFBB1B08D75500A489BD /* Images.xcassets in Resources */,
+				1D5B22C81B09EDE400C1D5C9 /* MTSingleHeaderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +231,7 @@
 				1DE5AFB61B08D75500A489BD /* ViewController.m in Sources */,
 				1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */,
 				1DE5AFB01B08D75500A489BD /* main.m in Sources */,
+				1D5B22C71B09EDE400C1D5C9 /* MTSingleHeaderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +428,7 @@
 				1DE5AFCF1B08D75500A489BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1DE5AFD01B08D75500A489BD /* Build configuration list for PBXNativeTarget "SXWaveAnimateTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +437,7 @@
 				1DE5AFD21B08D75500A489BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

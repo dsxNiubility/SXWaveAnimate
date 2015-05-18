@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="145" id="KGk-i7-Jjw" customClass="MTSingleHeaderCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYk-7V-q5f" userLabel="左边大View">
+                        <rect key="frame" x="20" y="10" width="115" height="115"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="115" id="6Uz-ZI-aOU"/>
+                            <constraint firstAttribute="height" constant="115" id="U2Y-96-hx2"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-lH-97O">
+                        <rect key="frame" x="15" y="5" width="125" height="125"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="125" id="1kV-JW-TJr"/>
+                            <constraint firstAttribute="width" constant="125" id="tKm-6c-SI5"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.9" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZN-it-5DR">
+                        <rect key="frame" x="53" y="44" width="48" height="47"/>
+                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="40"/>
+                        <color key="textColor" red="0.10980392156862745" green="0.49019607843137253" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总评分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcC-5b-Zsh">
+                        <rect key="frame" x="59" y="91" width="36" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.10980392160000001" green="0.49019607840000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dXd-lH-97O" firstAttribute="centerX" secondItem="CZN-it-5DR" secondAttribute="centerX" constant="0.5" id="PRi-7d-SBS"/>
+                    <constraint firstItem="KcC-5b-Zsh" firstAttribute="top" secondItem="CZN-it-5DR" secondAttribute="bottom" id="Puf-FW-EZX"/>
+                    <constraint firstItem="dXd-lH-97O" firstAttribute="centerY" secondItem="CZN-it-5DR" secondAttribute="centerY" id="Rgk-9O-ATp"/>
+                    <constraint firstItem="dXd-lH-97O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="gwO-gm-1AN"/>
+                    <constraint firstItem="dXd-lH-97O" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="htf-Nw-3Za"/>
+                    <constraint firstItem="eYk-7V-q5f" firstAttribute="centerY" secondItem="dXd-lH-97O" secondAttribute="centerY" id="o9h-uS-Xxf"/>
+                    <constraint firstItem="KcC-5b-Zsh" firstAttribute="centerX" secondItem="dXd-lH-97O" secondAttribute="centerX" constant="-0.5" id="sAU-sC-Kah"/>
+                    <constraint firstItem="eYk-7V-q5f" firstAttribute="centerX" secondItem="dXd-lH-97O" secondAttribute="centerX" id="vFe-ic-B20"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.23137254901960785" green="0.77647058823529413" blue="0.71372549019607845" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="avgScoreLbl" destination="CZN-it-5DR" id="lLG-LJ-UbZ"/>
+                <outlet property="leftView" destination="eYk-7V-q5f" id="nVc-Mp-Glo"/>
+                <outlet property="rotateImg" destination="dXd-lH-97O" id="Hbx-P9-dfg"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="267.5"/>
+        </tableViewCell>
+    </objects>
+</document>
