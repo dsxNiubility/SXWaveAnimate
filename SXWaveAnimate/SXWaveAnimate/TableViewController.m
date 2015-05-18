@@ -42,7 +42,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MTSingleHeaderCell *cell = [MTSingleHeaderCell cell];
-    
+    cell.precent = self.precent;
     return cell;
 }
 

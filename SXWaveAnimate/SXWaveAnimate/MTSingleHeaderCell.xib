@@ -14,7 +14,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYk-7V-q5f" userLabel="左边大View">
-                        <rect key="frame" x="85" y="10" width="115" height="115"/>
+                        <rect key="frame" x="103" y="10" width="115" height="115"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="115" id="6Uz-ZI-aOU"/>
@@ -22,30 +22,30 @@
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb_rotation" translatesAutoresizingMaskIntoConstraints="NO" id="dXd-lH-97O">
-                        <rect key="frame" x="80" y="5" width="125" height="125"/>
+                        <rect key="frame" x="98" y="5" width="125" height="125"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="125" id="1kV-JW-TJr"/>
                             <constraint firstAttribute="width" constant="125" id="tKm-6c-SI5"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.9" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZN-it-5DR">
-                        <rect key="frame" x="118" y="44" width="48" height="47"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZN-it-5DR">
+                        <rect key="frame" x="130" y="44" width="60" height="47"/>
                         <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="40"/>
-                        <color key="textColor" red="0.10980392156862745" green="0.49019607843137253" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="1" green="0.61568627450000002" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总评分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcC-5b-Zsh">
-                        <rect key="frame" x="124" y="91" width="36" height="15"/>
+                        <rect key="frame" x="142" y="91" width="36" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" red="0.10980392160000001" green="0.49019607840000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="1" green="0.61568627450000002" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="centerX" secondItem="dXd-lH-97O" secondAttribute="centerX" id="Hor-Wu-apY"/>
                     <constraint firstItem="dXd-lH-97O" firstAttribute="centerX" secondItem="CZN-it-5DR" secondAttribute="centerX" constant="0.5" id="PRi-7d-SBS"/>
                     <constraint firstItem="KcC-5b-Zsh" firstAttribute="top" secondItem="CZN-it-5DR" secondAttribute="bottom" id="Puf-FW-EZX"/>
                     <constraint firstItem="dXd-lH-97O" firstAttribute="centerY" secondItem="CZN-it-5DR" secondAttribute="centerY" id="Rgk-9O-ATp"/>
-                    <constraint firstItem="dXd-lH-97O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="80" id="gwO-gm-1AN"/>
                     <constraint firstItem="dXd-lH-97O" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="htf-Nw-3Za"/>
                     <constraint firstItem="eYk-7V-q5f" firstAttribute="centerY" secondItem="dXd-lH-97O" secondAttribute="centerY" id="o9h-uS-Xxf"/>
                     <constraint firstItem="KcC-5b-Zsh" firstAttribute="centerX" secondItem="dXd-lH-97O" secondAttribute="centerX" constant="-0.5" id="sAU-sC-Kah"/>

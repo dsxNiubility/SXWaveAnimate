@@ -34,5 +34,12 @@
     tbvc.precent = [self.textView.text intValue];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
+- (IBAction)pushClick {
+}
 
 @end

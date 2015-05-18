@@ -28,6 +28,12 @@
     // Configure the view for the selected state
 }
 
+- (void)setPrecent:(int)precent
+{
+    _precent = precent;
+    self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
+}
+
 
 
 
