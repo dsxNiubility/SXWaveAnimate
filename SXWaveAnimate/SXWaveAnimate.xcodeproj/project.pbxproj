@@ -10,6 +10,7 @@
 		1D5B22C71B09EDE400C1D5C9 /* MTSingleHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B22C51B09EDE400C1D5C9 /* MTSingleHeaderCell.m */; };
 		1D5B22C81B09EDE400C1D5C9 /* MTSingleHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5B22C61B09EDE400C1D5C9 /* MTSingleHeaderCell.xib */; };
 		1D5B22CB1B09EFF900C1D5C9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B22CA1B09EFF900C1D5C9 /* TableViewController.m */; };
+		1D8B352F1B0B2FDA000668B2 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B352E1B0B2FDA000668B2 /* UIViewAdditions.m */; };
 		1DE5AFB01B08D75500A489BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFAF1B08D75500A489BD /* main.m */; };
 		1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFB21B08D75500A489BD /* AppDelegate.m */; };
 		1DE5AFB61B08D75500A489BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFB51B08D75500A489BD /* ViewController.m */; };
@@ -35,6 +36,8 @@
 		1D5B22C61B09EDE400C1D5C9 /* MTSingleHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTSingleHeaderCell.xib; sourceTree = "<group>"; };
 		1D5B22C91B09EFF900C1D5C9 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		1D5B22CA1B09EFF900C1D5C9 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		1D8B352D1B0B2FDA000668B2 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		1D8B352E1B0B2FDA000668B2 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
 		1DE5AFAA1B08D75500A489BD /* SXWaveAnimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXWaveAnimate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE5AFAE1B08D75500A489BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DE5AFAF1B08D75500A489BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 		1DE5AFAC1B08D75500A489BD /* SXWaveAnimate */ = {
 			isa = PBXGroup;
 			children = (
+				1D8B352D1B0B2FDA000668B2 /* UIViewAdditions.h */,
+				1D8B352E1B0B2FDA000668B2 /* UIViewAdditions.m */,
 				1D5B22C41B09EDE400C1D5C9 /* MTSingleHeaderCell.h */,
 				1D5B22C51B09EDE400C1D5C9 /* MTSingleHeaderCell.m */,
 				1D5B22C61B09EDE400C1D5C9 /* MTSingleHeaderCell.xib */,
@@ -235,6 +240,7 @@
 			files = (
 				1DE5AFB61B08D75500A489BD /* ViewController.m in Sources */,
 				1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */,
+				1D8B352F1B0B2FDA000668B2 /* UIViewAdditions.m in Sources */,
 				1DE5AFB01B08D75500A489BD /* main.m in Sources */,
 				1D5B22CB1B09EFF900C1D5C9 /* TableViewController.m in Sources */,
 				1D5B22C71B09EDE400C1D5C9 /* MTSingleHeaderCell.m in Sources */,

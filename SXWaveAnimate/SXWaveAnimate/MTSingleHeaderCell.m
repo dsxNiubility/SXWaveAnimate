@@ -7,6 +7,7 @@
 //
 
 #import "MTSingleHeaderCell.h"
+#import "UIViewAdditions.h"
 
 @implementation MTSingleHeaderCell
 
@@ -32,6 +33,16 @@
 {
     _precent = precent;
     self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
+    self.leftView.layer.cornerRadius = 115/2.0;
+    self.leftView.clipsToBounds = YES;
+    UIImageView *bigImg = [[UIImageView alloc]init];
+    bigImg.image = [UIImage imageNamed:@"fb_wave"];
+    self.bigImg = bigImg;
+    [self.leftView addSubview:bigImg];
+    bigImg.frame = CGRectMake(0, 0, 450, 300);
+    
+    bigImg.top = 115 - ((precent/100.0) * 115);
+    bigImg.left = 0;
 }
 
 
