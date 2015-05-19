@@ -68,7 +68,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="textView" destination="EKa-DI-O3i" id="C9U-hD-fHi"/>
-                        <segue destination="9uj-XH-k9u" kind="show" identifier="precent" id="ww2-Ah-Srb"/>
+                        <segue destination="9uj-XH-k9u" kind="show" identifier="percent" id="ww2-Ah-Srb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

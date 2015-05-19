@@ -40,6 +40,13 @@
 }
 
 - (IBAction)pushClick {
+    int number = [self.textView.text intValue];
+    if (number < 0 || number > 100) {
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"输入有误" message:@"请输入0~100的数字" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+    }else{
+        [self performSegueWithIdentifier:@"percent" sender:nil];
+    }
 }
 
 @end
