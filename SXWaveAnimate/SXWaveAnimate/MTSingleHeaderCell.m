@@ -41,8 +41,8 @@
     [self.leftView addSubview:bigImg];
     bigImg.frame = CGRectMake(0, 0, 450, 300);
     
-    bigImg.top = 115 - ((precent/100.0) * 115);
-    bigImg.left = 0;
+    bigImg.top = 115;
+    bigImg.left = -390;
 }
 
 
