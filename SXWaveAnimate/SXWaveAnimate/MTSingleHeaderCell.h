@@ -21,4 +21,6 @@
 
 @property(nonatomic,strong)UIImageView *bigImg;
 
+@property(nonatomic,assign)CGFloat alpha;
+
 @end

@@ -55,6 +55,7 @@
 
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -65,15 +66,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return 2;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MTSingleHeaderCell *cell = [MTSingleHeaderCell cell];
-    self.singleHeadCell = cell;
-    cell.precent = self.precent;
-    return cell;
+    if (indexPath.row == 0) {
+        MTSingleHeaderCell *cell = [MTSingleHeaderCell cell];
+        self.singleHeadCell = cell;
+        cell.precent = self.precent;
+        return cell;
+    }else if (indexPath.row == 1){
+        MTSingleHeaderCell *cell = [MTSingleHeaderCell cell];
+        self.singleHeadCell = cell;
+        cell.alpha = 0.5;
+        cell.precent = self.precent;
+        return cell;
+    }else{
+        return nil;
+    }
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

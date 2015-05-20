@@ -13,6 +13,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    _alpha = 1;
 }
 
 + (instancetype)cell
@@ -29,6 +30,11 @@
     // Configure the view for the selected state
 }
 
+- (void)setAlpha:(CGFloat)alpha
+{
+    _alpha = alpha;
+}
+
 - (void)setPrecent:(int)precent
 {
     _precent = precent;
@@ -38,13 +44,13 @@
     UIImageView *bigImg = [[UIImageView alloc]init];
     bigImg.image = [UIImage imageNamed:@"fb_wave"];
     self.bigImg = bigImg;
+    bigImg.alpha = self.alpha;
     [self.leftView addSubview:bigImg];
     bigImg.frame = CGRectMake(0, 0, 450, 300);
     
     bigImg.top = 115;
     bigImg.left = -390;
 }
-
 
 
 
