@@ -58,7 +58,7 @@
     bigImg.frame = CGRectMake(0, 0, 450, 300);
     
     bigImg.top = 115;
-    bigImg.left = -390;
+    bigImg.left = -370;
 }
 
 

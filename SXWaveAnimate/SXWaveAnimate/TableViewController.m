@@ -33,8 +33,9 @@
 {
     [super viewDidAppear:animated];
     
-    [self addAnimateWithCell:self.singleHeadCell andType:1];
-    [self addAnimateWithCell:self.singleHeadCell2 andType:1];
+    [self addAnimateWithCell:self.singleHeadCell andType:0];
+    [self addAnimateWithCell:self.singleHeadCell2 andType:0];
+    [self addAnimateWithCell:self.singleHeadCell3 andType:2];
 
 }
 
@@ -56,7 +57,14 @@
         }];
     }];
     
-    if (type == 1) {
+    if (type == 0) {
+        CGFloat avgScore = self.precent;
+        [UIView animateWithDuration:4.0 animations:^{
+            cell.bigImg.top = 115 - ((avgScore/100.0) * 115);
+            
+            cell.bigImg.left = 0;
+        }];
+    }else if (type == 1){
         CGFloat avgScore = self.precent;
         [UIView animateWithDuration:4.0 animations:^{
             cell.bigImg.top = 115 - ((avgScore/100.0) * 115);
@@ -65,10 +73,14 @@
         }];
     }else if (type == 2){
         CGFloat avgScore = self.precent;
-        [UIView animateWithDuration:4.0 animations:^{
-            cell.bigImg.top = 115 - ((avgScore/100.0) * 115);
-            
-            cell.bigImg.left = 0;
+        [UIView animateWithDuration:1.0 animations:^{
+            cell.bigImg.top = 0;
+            cell.bigImg.left = -200;
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:3.0 animations:^{
+                cell.bigImg.top = 115 - ((avgScore/100.0) * 115);
+                cell.bigImg.left = 0;
+            }];
         }];
     }
 }
@@ -84,7 +96,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 2;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -98,10 +110,18 @@
         MTSingleHeaderCell *cell = [MTSingleHeaderCell cell];
         self.singleHeadCell2 = cell;
         cell.textColor = [UIColor colorWithRed:28/255.0 green:125/255.0 blue:115/255.0 alpha:1];
-        cell.alpha = 0.5;
+        cell.alpha = 0.6;
         cell.precent = self.precent;
         return cell;
-    }else{
+    }else if (indexPath.row == 2){
+        MTSingleHeaderCell *cell = [MTSingleHeaderCell cell];
+        self.singleHeadCell3 = cell;
+        cell.textColor = [UIColor whiteColor];
+        cell.alpha = 0.3;
+        cell.precent = self.precent;
+        return cell;
+    }
+    else {
         return nil;
     }
     
