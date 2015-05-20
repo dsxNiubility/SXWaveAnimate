@@ -35,10 +35,19 @@
     _alpha = alpha;
 }
 
+- (void)setTextColor:(UIColor *)textColor
+{
+    _textColor = textColor;
+}
+
 - (void)setPrecent:(int)precent
 {
     _precent = precent;
     self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
+    
+    self.avgScoreLbl.textColor = self.textColor;
+    self.discriptionLbl.textColor = self.textColor;
+    
     self.leftView.layer.cornerRadius = 115/2.0;
     self.leftView.clipsToBounds = YES;
     UIImageView *bigImg = [[UIImageView alloc]init];

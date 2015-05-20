@@ -18,9 +18,12 @@
 @property (weak, nonatomic) IBOutlet UIView *leftView;
 @property (weak, nonatomic) IBOutlet UIImageView *rotateImg;
 @property (weak, nonatomic) IBOutlet UILabel *avgScoreLbl;
+@property (weak, nonatomic) IBOutlet UILabel *discriptionLbl;
 
 @property(nonatomic,strong)UIImageView *bigImg;
 
 @property(nonatomic,assign)CGFloat alpha;
+
+@property(nonatomic,strong)UIColor *textColor;
 
 @end

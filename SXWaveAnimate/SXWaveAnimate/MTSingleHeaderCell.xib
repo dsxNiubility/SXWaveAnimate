@@ -55,6 +55,7 @@
             <color key="backgroundColor" red="0.23137254901960785" green="0.77647058823529413" blue="0.71372549019607845" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="avgScoreLbl" destination="CZN-it-5DR" id="lLG-LJ-UbZ"/>
+                <outlet property="discriptionLbl" destination="KcC-5b-Zsh" id="kAK-TI-uOq"/>
                 <outlet property="leftView" destination="eYk-7V-q5f" id="nVc-Mp-Glo"/>
                 <outlet property="rotateImg" destination="dXd-lH-97O" id="Hbx-P9-dfg"/>
             </connections>

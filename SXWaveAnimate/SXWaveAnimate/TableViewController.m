@@ -12,6 +12,8 @@
 
 @interface TableViewController ()
 @property(nonatomic,strong)MTSingleHeaderCell *singleHeadCell;
+@property(nonatomic,strong)MTSingleHeaderCell *singleHeadCell2;
+@property(nonatomic,strong)MTSingleHeaderCell *singleHeadCell3;
 @end
 
 @implementation TableViewController
@@ -30,29 +32,45 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    [self addAnimateWithCell:self.singleHeadCell andType:1];
+    [self addAnimateWithCell:self.singleHeadCell2 andType:1];
+
+}
+
+- (void)addAnimateWithCell:(MTSingleHeaderCell *)cell andType:(int)type
+{
+    [UIView animateWithDuration:1 animations:^{
+        cell.rotateImg.transform = CGAffineTransformRotate(cell.rotateImg.transform, 1*M_PI);
+    } completion:^(BOOL finished) {
         [UIView animateWithDuration:1 animations:^{
-            self.singleHeadCell.rotateImg.transform = CGAffineTransformRotate(self.singleHeadCell.rotateImg.transform, 1*M_PI);
+            cell.rotateImg.transform = CGAffineTransformRotate(cell.rotateImg.transform, 1*M_PI);
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:1 animations:^{
-                self.singleHeadCell.rotateImg.transform = CGAffineTransformRotate(self.singleHeadCell.rotateImg.transform, 1*M_PI);
+                cell.rotateImg.transform = CGAffineTransformRotate(cell.rotateImg.transform, 1*M_PI);
             } completion:^(BOOL finished) {
                 [UIView animateWithDuration:1 animations:^{
-                    self.singleHeadCell.rotateImg.transform = CGAffineTransformRotate(self.singleHeadCell.rotateImg.transform, 1*M_PI);
-                } completion:^(BOOL finished) {
-                    [UIView animateWithDuration:1 animations:^{
-                        self.singleHeadCell.rotateImg.transform = CGAffineTransformRotate(self.singleHeadCell.rotateImg.transform, 1*M_PI);
-                    }];
+                    cell.rotateImg.transform = CGAffineTransformRotate(cell.rotateImg.transform, 1*M_PI);
                 }];
             }];
         }];
-        
+    }];
+    
+    if (type == 1) {
         CGFloat avgScore = self.precent;
         [UIView animateWithDuration:4.0 animations:^{
-            self.singleHeadCell.bigImg.top = 115 - ((avgScore/100.0) * 115);
+            cell.bigImg.top = 115 - ((avgScore/100.0) * 115);
             
-            self.singleHeadCell.bigImg.left = 0;
+            cell.bigImg.left = 0;
         }];
-
+    }else if (type == 2){
+        CGFloat avgScore = self.precent;
+        [UIView animateWithDuration:4.0 animations:^{
+            cell.bigImg.top = 115 - ((avgScore/100.0) * 115);
+            
+            cell.bigImg.left = 0;
+        }];
+    }
 }
 
 
@@ -69,16 +87,17 @@
     return 2;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         MTSingleHeaderCell *cell = [MTSingleHeaderCell cell];
         self.singleHeadCell = cell;
+        cell.textColor = [UIColor orangeColor];
         cell.precent = self.precent;
         return cell;
     }else if (indexPath.row == 1){
         MTSingleHeaderCell *cell = [MTSingleHeaderCell cell];
-        self.singleHeadCell = cell;
+        self.singleHeadCell2 = cell;
+        cell.textColor = [UIColor colorWithRed:28/255.0 green:125/255.0 blue:115/255.0 alpha:1];
         cell.alpha = 0.5;
         cell.precent = self.precent;
         return cell;
