@@ -61,6 +61,9 @@
         CGFloat avgScore = self.precent;
         [UIView animateWithDuration:4.0 animations:^{
             cell.bigImg.top = 115 - ((avgScore/100.0) * 115);
+            if (avgScore == 100) {
+                cell.bigImg.top = -20;
+            }
             
             cell.bigImg.left = 0;
         }];
@@ -68,7 +71,9 @@
         CGFloat avgScore = self.precent;
         [UIView animateWithDuration:4.0 animations:^{
             cell.bigImg.top = 115 - ((avgScore/100.0) * 115);
-            
+            if (avgScore == 100) {
+                cell.bigImg.top = -20;
+            }
             cell.bigImg.left = 0;
         }];
     }else if (type == 2){
@@ -79,6 +84,9 @@
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:3.0 animations:^{
                 cell.bigImg.top = 115 - ((avgScore/100.0) * 115);
+                if (avgScore == 100) {
+                    cell.bigImg.top = -20;
+                }
                 cell.bigImg.left = 0;
             }];
         }];
