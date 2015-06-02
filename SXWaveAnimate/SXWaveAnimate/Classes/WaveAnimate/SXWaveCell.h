@@ -25,5 +25,11 @@
 
 @property(nonatomic,strong)UIColor *textColor;
 
+@property(nonatomic,assign)int type;
+
+- (instancetype)initWithPrecent:(int)precent;
+- (void)addAnimateWithType:(int)type;
+- (void)setPrecent:(int)precent textColor:(UIColor *)tcolor type:(int)type alpha:(CGFloat)alpha;
+
 @end
 

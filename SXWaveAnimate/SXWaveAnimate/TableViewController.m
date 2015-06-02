@@ -28,101 +28,41 @@
 {
     [super viewDidAppear:animated];
     
-    [self addAnimateWithCell:self.waveCell andType:0];
-    [self addAnimateWithCell:self.waveCell2 andType:0];
-    [self addAnimateWithCell:self.waveCell3 andType:2];
+    // ------在需要加入动画的地方
+    [self.waveCell addAnimateWithType:0];
+    [self.waveCell2 addAnimateWithType:0];
+    [self.waveCell3 addAnimateWithType:2];
 
-}
-
-- (void)addAnimateWithCell:(SXWaveCell *)cell andType:(int)type
-{
-    [UIView animateWithDuration:1 animations:^{
-        cell.rotateImg.transform = CGAffineTransformRotate(cell.rotateImg.transform, 1*M_PI);
-    } completion:^(BOOL finished) {
-        [UIView animateWithDuration:1 animations:^{
-            cell.rotateImg.transform = CGAffineTransformRotate(cell.rotateImg.transform, 1*M_PI);
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:1 animations:^{
-                cell.rotateImg.transform = CGAffineTransformRotate(cell.rotateImg.transform, 1*M_PI);
-            } completion:^(BOOL finished) {
-                [UIView animateWithDuration:1 animations:^{
-                    cell.rotateImg.transform = CGAffineTransformRotate(cell.rotateImg.transform, 1*M_PI);
-                }];
-            }];
-        }];
-    }];
-    
-    if (type == 0) {
-        CGFloat avgScore = self.precent;
-        [UIView animateWithDuration:4.0 animations:^{
-            cell.bigImg.top = 115 - ((avgScore/100.0) * 115);
-            if (avgScore == 100) {
-                cell.bigImg.top = -20;
-            }
-            
-            cell.bigImg.left = 0;
-        }];
-    }else if (type == 1){
-        CGFloat avgScore = self.precent;
-        [UIView animateWithDuration:4.0 animations:^{
-            cell.bigImg.top = 115 - ((avgScore/100.0) * 115);
-            if (avgScore == 100) {
-                cell.bigImg.top = -20;
-            }
-            cell.bigImg.left = 0;
-        }];
-    }else if (type == 2){
-        CGFloat avgScore = self.precent;
-        [UIView animateWithDuration:1.0 animations:^{
-            cell.bigImg.top = 0;
-            cell.bigImg.left = -200;
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:3.0 animations:^{
-                cell.bigImg.top = 115 - ((avgScore/100.0) * 115);
-                if (avgScore == 100) {
-                    cell.bigImg.top = -20;
-                }
-                cell.bigImg.left = 0;
-            }];
-        }];
-    }
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
     return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
+        
+        // ------在需要的地方加入动画Cell需要如下几行代码。
         SXWaveCell *cell = [SXWaveCell cell];
         self.waveCell = cell;
-        cell.textColor = [UIColor orangeColor];
-        cell.precent = self.precent;
+        [cell setPrecent:self.precent textColor:[UIColor orangeColor] type:0 alpha:1];
         return cell;
+        
     }else if (indexPath.row == 1){
+        
         SXWaveCell *cell = [SXWaveCell cell];
         self.waveCell2 = cell;
-        cell.textColor = [UIColor colorWithRed:28/255.0 green:125/255.0 blue:115/255.0 alpha:1];
-        cell.alpha = 0.6;
-        cell.precent = self.precent;
+        [cell setPrecent:self.precent textColor:[UIColor colorWithRed:28/255.0 green:125/255.0 blue:115/255.0 alpha:1] type:0 alpha:0.6];
         return cell;
+        
     }else if (indexPath.row == 2){
+        
         SXWaveCell *cell = [SXWaveCell cell];
         self.waveCell3 = cell;
-        cell.textColor = [UIColor whiteColor];
-        cell.alpha = 0.3;
-        cell.precent = self.precent;
+        [cell setPrecent:self.precent textColor:[UIColor whiteColor] type:2 alpha:0.3];
         return cell;
+        
     }
     else {
         return nil;

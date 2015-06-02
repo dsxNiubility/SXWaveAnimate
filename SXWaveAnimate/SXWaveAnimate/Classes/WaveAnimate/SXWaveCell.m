@@ -11,11 +11,19 @@
 
 @implementation SXWaveCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     _alpha = 1;
 }
 
 + (instancetype)cell{
+    return [[NSBundle mainBundle]loadNibNamed:@"SXWaveCell" owner:nil options:nil][0];
+}
+
+- (instancetype)initWithPrecent:(int)precent{
+    [self setPrecent:precent];
+    self.type = 2;
+    self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
     return [[NSBundle mainBundle]loadNibNamed:@"SXWaveCell" owner:nil options:nil][0];
 }
 
@@ -25,6 +33,12 @@
 
 - (void)setTextColor:(UIColor *)textColor{
     _textColor = textColor;
+}
+
+- (void)setType:(int)type
+{
+    _type = type;
+//    [self addAnimateWithType:self.type];
 }
 
 - (void)setPrecent:(int)precent{
@@ -46,5 +60,72 @@
     bigImg.top = 115;
     bigImg.left = -370;
 }
+
+- (void)setPrecent:(int)precent textColor:(UIColor *)tcolor type:(int)type alpha:(CGFloat)alpha
+{
+    [self setAlpha:alpha];
+    [self setType:type];
+    [self setTextColor:tcolor];
+    [self setPrecent:precent];
+}
+
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+//    [self addAnimateWithType:self.type];
+//}
+
+- (void)addAnimateWithType:(int)type
+{
+    [UIView animateWithDuration:1 animations:^{
+        self.rotateImg.transform = CGAffineTransformRotate(self.rotateImg.transform, 1*M_PI);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1 animations:^{
+            self.rotateImg.transform = CGAffineTransformRotate(self.rotateImg.transform, 1*M_PI);
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:1 animations:^{
+                self.rotateImg.transform = CGAffineTransformRotate(self.rotateImg.transform, 1*M_PI);
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:1 animations:^{
+                    self.rotateImg.transform = CGAffineTransformRotate(self.rotateImg.transform, 1*M_PI);
+                }];
+            }];
+        }];
+    }];
+    
+    if (type == 0) {
+        CGFloat avgScore = self.precent;
+        [UIView animateWithDuration:4.0 animations:^{
+            self.bigImg.top = 115 - ((avgScore/100.0) * 115);
+            if (avgScore == 100) {
+                self.bigImg.top = -20;
+            }
+            
+            self.bigImg.left = 0;
+        }];
+    }else if (type == 1){
+        CGFloat avgScore = self.precent;
+        [UIView animateWithDuration:4.0 animations:^{
+            self.bigImg.top = 115 - ((avgScore/100.0) * 115);
+            if (avgScore == 100) {
+                self.bigImg.top = -20;
+            }
+            self.bigImg.left = 0;
+        }];
+    }else if (type == 2){
+        CGFloat avgScore = self.precent;
+        [UIView animateWithDuration:1.0 animations:^{
+            self.bigImg.top = 0;
+            self.bigImg.left = -200;
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:3.0 animations:^{
+                self.bigImg.top = 115 - ((avgScore/100.0) * 115);
+                if (avgScore == 100) {
+                    self.bigImg.top = -20;
+                }
+                self.bigImg.left = 0;
+            }];
+        }];
+    }
+}
+
 
 @end
