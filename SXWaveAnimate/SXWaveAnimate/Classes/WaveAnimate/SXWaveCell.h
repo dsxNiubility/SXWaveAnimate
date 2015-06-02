@@ -1,15 +1,14 @@
 //
-//  MTSingleHeaderCell.h
-//  iMerchant
+//  SXWaveCell.h
+//  SXWaveAnimate
 //
-//  Created by dongshangxian on 15/5/6.
-//  Copyright (c) 2015年 dantesx. All rights reserved.
+//  Created by dongshangxian on 15/6/2.
+//  Copyright (c) 2015年 Sankuai. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#pragma mark - **************** 单门店首页的顶部Cell
 
-@interface MTSingleHeaderCell : UITableViewCell
+@interface SXWaveCell : UITableViewCell
 
 @property(nonatomic,assign)int precent;
 
@@ -27,3 +26,4 @@
 @property(nonatomic,strong)UIColor *textColor;
 
 @end
+

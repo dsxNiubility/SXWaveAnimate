@@ -7,13 +7,13 @@
 //
 
 #import "TableViewController.h"
-#import "MTSingleHeaderCell.h"
+#import "SXWaveCell.h"
 #import "UIViewAdditions.h"
 
 @interface TableViewController ()
-@property(nonatomic,strong)MTSingleHeaderCell *singleHeadCell;
-@property(nonatomic,strong)MTSingleHeaderCell *singleHeadCell2;
-@property(nonatomic,strong)MTSingleHeaderCell *singleHeadCell3;
+@property(nonatomic,strong)SXWaveCell *waveCell;
+@property(nonatomic,strong)SXWaveCell *waveCell2;
+@property(nonatomic,strong)SXWaveCell *waveCell3;
 @end
 
 @implementation TableViewController
@@ -22,24 +22,19 @@
     [super viewDidLoad];
     
     NSLog(@"%d",self.precent);
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    [self addAnimateWithCell:self.singleHeadCell andType:0];
-    [self addAnimateWithCell:self.singleHeadCell2 andType:0];
-    [self addAnimateWithCell:self.singleHeadCell3 andType:2];
+    [self addAnimateWithCell:self.waveCell andType:0];
+    [self addAnimateWithCell:self.waveCell2 andType:0];
+    [self addAnimateWithCell:self.waveCell3 andType:2];
 
 }
 
-- (void)addAnimateWithCell:(MTSingleHeaderCell *)cell andType:(int)type
+- (void)addAnimateWithCell:(SXWaveCell *)cell andType:(int)type
 {
     [UIView animateWithDuration:1 animations:^{
         cell.rotateImg.transform = CGAffineTransformRotate(cell.rotateImg.transform, 1*M_PI);
@@ -109,21 +104,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        MTSingleHeaderCell *cell = [MTSingleHeaderCell cell];
-        self.singleHeadCell = cell;
+        SXWaveCell *cell = [SXWaveCell cell];
+        self.waveCell = cell;
         cell.textColor = [UIColor orangeColor];
         cell.precent = self.precent;
         return cell;
     }else if (indexPath.row == 1){
-        MTSingleHeaderCell *cell = [MTSingleHeaderCell cell];
-        self.singleHeadCell2 = cell;
+        SXWaveCell *cell = [SXWaveCell cell];
+        self.waveCell2 = cell;
         cell.textColor = [UIColor colorWithRed:28/255.0 green:125/255.0 blue:115/255.0 alpha:1];
         cell.alpha = 0.6;
         cell.precent = self.precent;
         return cell;
     }else if (indexPath.row == 2){
-        MTSingleHeaderCell *cell = [MTSingleHeaderCell cell];
-        self.singleHeadCell3 = cell;
+        SXWaveCell *cell = [SXWaveCell cell];
+        self.waveCell3 = cell;
         cell.textColor = [UIColor whiteColor];
         cell.alpha = 0.3;
         cell.precent = self.precent;

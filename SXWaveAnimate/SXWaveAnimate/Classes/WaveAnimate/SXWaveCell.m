@@ -1,47 +1,33 @@
 //
-//  MTSingleHeaderCell.m
-//  iMerchant
+//  SXWaveCell.m
+//  SXWaveAnimate
 //
-//  Created by dongshangxian on 15/5/6.
-//  Copyright (c) 2015年 dantesx. All rights reserved.
+//  Created by dongshangxian on 15/6/2.
+//  Copyright (c) 2015年 Sankuai. All rights reserved.
 //
 
-#import "MTSingleHeaderCell.h"
+#import "SXWaveCell.h"
 #import "UIViewAdditions.h"
 
-@implementation MTSingleHeaderCell
+@implementation SXWaveCell
 
 - (void)awakeFromNib {
-    // Initialization code
     _alpha = 1;
 }
 
-+ (instancetype)cell
-{
-//    static NSString *ID = @"SingleHeaderCell";
-    
-   return [[NSBundle mainBundle]loadNibNamed:@"MTSingleHeaderCell" owner:nil options:nil][0];
-    
++ (instancetype)cell{
+    return [[NSBundle mainBundle]loadNibNamed:@"SXWaveCell" owner:nil options:nil][0];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
-- (void)setAlpha:(CGFloat)alpha
-{
+- (void)setAlpha:(CGFloat)alpha{
     _alpha = alpha;
 }
 
-- (void)setTextColor:(UIColor *)textColor
-{
+- (void)setTextColor:(UIColor *)textColor{
     _textColor = textColor;
 }
 
-- (void)setPrecent:(int)precent
-{
+- (void)setPrecent:(int)precent{
     _precent = precent;
     self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
     
@@ -60,8 +46,5 @@
     bigImg.top = 115;
     bigImg.left = -370;
 }
-
-
-
 
 @end
