@@ -3,7 +3,7 @@
 
 ![image](https://github.com/dsxNiubility/SXWaveAnimate/raw/master/screenshots/waveAnimate.gif)
 
-####6月2日升级版本
+####6月2日升级版本（建议更新下）
 **将动画代码封装到了Cell的内部，提供了统一的接口及赋值方法**
 
 _使用方法_
