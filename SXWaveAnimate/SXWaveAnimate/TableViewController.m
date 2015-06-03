@@ -74,4 +74,9 @@
     return 145;
 }
 
+- (void)dealloc
+{
+    NSLog(@"TableViewController - delloc");
+}
+
 @end
