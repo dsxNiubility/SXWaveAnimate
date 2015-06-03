@@ -7,7 +7,7 @@
 //
 
 #import "SXWaveCell.h"
-#import "UIViewAdditions.h"
+
 
 @implementation SXWaveCell
 

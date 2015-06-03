@@ -10,7 +10,7 @@
 		1D5B22CB1B09EFF900C1D5C9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B22CA1B09EFF900C1D5C9 /* TableViewController.m */; };
 		1D680DD81B1D804A006D4038 /* SXWaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D680DD61B1D804A006D4038 /* SXWaveCell.xib */; };
 		1D680DDB1B1D8133006D4038 /* SXWaveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D680DDA1B1D8133006D4038 /* SXWaveCell.m */; };
-		1D8B352F1B0B2FDA000668B2 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8B352E1B0B2FDA000668B2 /* UIViewAdditions.m */; };
+		1DDC4C111B1ED05E00EBDF15 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC4C101B1ED05E00EBDF15 /* UIViewAdditions.m */; };
 		1DE5AFB01B08D75500A489BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFAF1B08D75500A489BD /* main.m */; };
 		1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFB21B08D75500A489BD /* AppDelegate.m */; };
 		1DE5AFB61B08D75500A489BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFB51B08D75500A489BD /* ViewController.m */; };
@@ -36,8 +36,8 @@
 		1D680DD61B1D804A006D4038 /* SXWaveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SXWaveCell.xib; sourceTree = "<group>"; };
 		1D680DD91B1D8133006D4038 /* SXWaveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWaveCell.h; sourceTree = "<group>"; };
 		1D680DDA1B1D8133006D4038 /* SXWaveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaveCell.m; sourceTree = "<group>"; };
-		1D8B352D1B0B2FDA000668B2 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
-		1D8B352E1B0B2FDA000668B2 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		1DDC4C0F1B1ED05E00EBDF15 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		1DDC4C101B1ED05E00EBDF15 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
 		1DE5AFAA1B08D75500A489BD /* SXWaveAnimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXWaveAnimate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE5AFAE1B08D75500A489BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DE5AFAF1B08D75500A489BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -74,6 +74,7 @@
 		1D680DD21B1D804A006D4038 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1DDC4C0E1B1ED05E00EBDF15 /* Vendor */,
 				1D680DD31B1D804A006D4038 /* WaveAnimate */,
 			);
 			path = Classes;
@@ -87,6 +88,15 @@
 				1D680DDA1B1D8133006D4038 /* SXWaveCell.m */,
 			);
 			path = WaveAnimate;
+			sourceTree = "<group>";
+		};
+		1DDC4C0E1B1ED05E00EBDF15 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				1DDC4C0F1B1ED05E00EBDF15 /* UIViewAdditions.h */,
+				1DDC4C101B1ED05E00EBDF15 /* UIViewAdditions.m */,
+			);
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 		1DE5AFA11B08D75500A489BD = {
@@ -111,8 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				1D680DD21B1D804A006D4038 /* Classes */,
-				1D8B352D1B0B2FDA000668B2 /* UIViewAdditions.h */,
-				1D8B352E1B0B2FDA000668B2 /* UIViewAdditions.m */,
 				1DE5AFB11B08D75500A489BD /* AppDelegate.h */,
 				1DE5AFB21B08D75500A489BD /* AppDelegate.m */,
 				1DE5AFB41B08D75500A489BD /* ViewController.h */,
@@ -256,8 +264,8 @@
 			files = (
 				1D680DDB1B1D8133006D4038 /* SXWaveCell.m in Sources */,
 				1DE5AFB61B08D75500A489BD /* ViewController.m in Sources */,
+				1DDC4C111B1ED05E00EBDF15 /* UIViewAdditions.m in Sources */,
 				1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */,
-				1D8B352F1B0B2FDA000668B2 /* UIViewAdditions.m in Sources */,
 				1DE5AFB01B08D75500A489BD /* main.m in Sources */,
 				1D5B22CB1B09EFF900C1D5C9 /* TableViewController.m in Sources */,
 			);
@@ -387,7 +395,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SXWaveAnimate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -397,7 +407,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SXWaveAnimate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

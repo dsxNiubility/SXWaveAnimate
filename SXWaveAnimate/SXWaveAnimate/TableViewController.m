@@ -8,7 +8,6 @@
 
 #import "TableViewController.h"
 #import "SXWaveCell.h"
-#import "UIViewAdditions.h"
 
 @interface TableViewController ()
 @property(nonatomic,strong)SXWaveCell *waveCell;

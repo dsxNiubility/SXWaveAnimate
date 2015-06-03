@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewAdditions.h"
 
 @interface SXWaveCell : UITableViewCell
 
