@@ -13,6 +13,7 @@
 @property(nonatomic,strong)SXWaveCell *waveCell;
 @property(nonatomic,strong)SXWaveCell *waveCell2;
 @property(nonatomic,strong)SXWaveCell *waveCell3;
+@property(nonatomic,strong)SXWaveCell *waveCell4;
 @end
 
 @implementation TableViewController
@@ -31,12 +32,13 @@
     [self.waveCell addAnimateWithType:0];
     [self.waveCell2 addAnimateWithType:0];
     [self.waveCell3 addAnimateWithType:2];
+    [self.waveCell4 addAnimateWithType:1];
 
 }
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -60,8 +62,14 @@
         SXWaveCell *cell = [SXWaveCell cell];
         self.waveCell3 = cell;
         [cell setPrecent:self.precent textColor:[UIColor whiteColor] type:2 alpha:0.3];
+        cell.endless = YES;
         return cell;
-        
+    }else if (indexPath.row == 3){
+        SXWaveCell *cell = [SXWaveCell cell];
+        self.waveCell4 = cell;
+        [cell setPrecent:self.precent textColor:[UIColor whiteColor] type:1 alpha:0.3];
+        cell.endless = YES;
+        return cell;
     }
     else {
         return nil;
