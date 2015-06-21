@@ -28,6 +28,8 @@
 
 @property(nonatomic,assign)int type;
 
+@property(nonatomic,assign,getter=isEndless)BOOL endless;
+
 - (instancetype)initWithPrecent:(int)precent;
 - (void)addAnimateWithType:(int)type;
 - (void)setPrecent:(int)precent textColor:(UIColor *)tcolor type:(int)type alpha:(CGFloat)alpha;

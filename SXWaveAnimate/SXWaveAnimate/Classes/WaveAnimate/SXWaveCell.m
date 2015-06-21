@@ -14,6 +14,7 @@
 - (void)awakeFromNib
 {
     _alpha = 1;
+    _endless = NO;
 }
 
 + (instancetype)cell{
@@ -38,17 +39,15 @@
 - (void)setType:(int)type
 {
     _type = type;
-//    [self addAnimateWithType:self.type];
+    // [self addAnimateWithType:self.type];
 }
 
 - (void)setPrecent:(int)precent{
     _precent = precent;
     self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
-    
     self.avgScoreLbl.textColor = self.textColor;
     self.discriptionLbl.textColor = self.textColor;
-    
-    self.leftView.layer.cornerRadius = 115/2.0;
+    self.leftView.layer.cornerRadius = self.leftView.bounds.size.width/2.0;
     self.leftView.clipsToBounds = YES;
     UIImageView *bigImg = [[UIImageView alloc]init];
     bigImg.image = [UIImage imageNamed:@"fb_wave"];
@@ -69,27 +68,26 @@
     [self setPrecent:precent];
 }
 
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-//    [self addAnimateWithType:self.type];
-//}
-
+NSString * rotationAnimationKey = @"rotationAnimation";
+NSString * moveAnimationKey = @"waveMoveAnimation";
 - (void)addAnimateWithType:(int)type
 {
-    [UIView animateWithDuration:1 animations:^{
-        self.rotateImg.transform = CGAffineTransformRotate(self.rotateImg.transform, 1*M_PI);
-    } completion:^(BOOL finished) {
-        [UIView animateWithDuration:1 animations:^{
-            self.rotateImg.transform = CGAffineTransformRotate(self.rotateImg.transform, 1*M_PI);
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:1 animations:^{
-                self.rotateImg.transform = CGAffineTransformRotate(self.rotateImg.transform, 1*M_PI);
-            } completion:^(BOOL finished) {
-                [UIView animateWithDuration:1 animations:^{
-                    self.rotateImg.transform = CGAffineTransformRotate(self.rotateImg.transform, 1*M_PI);
-                }];
-            }];
-        }];
-    }];
+    CABasicAnimation * transformRoate = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    transformRoate.byValue = [NSNumber numberWithDouble:(2 * M_PI)];
+    transformRoate.duration = 2;
+    transformRoate.repeatCount = self.isEndless == YES ? MAXFLOAT : 2;
+    [self.rotateImg.layer addAnimation:transformRoate forKey:rotationAnimationKey];
+    
+    __weak __typeof(&*self)weakSelf = self;
+    void(^acallBack)(CGFloat start) = ^(CGFloat start) {
+        CAKeyframeAnimation * moveAction = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
+        moveAction.values = [NSArray arrayWithObjects:[NSNumber numberWithFloat:-60],[NSNumber numberWithFloat:start],nil];
+        moveAction.duration = 4;
+        // moveAction.autoreverses = YES;
+        moveAction.repeatCount = MAXFLOAT;
+        [weakSelf.bigImg.layer addAnimation:moveAction forKey:moveAnimationKey];
+    };
+    
     
     if (type == 0) {
         CGFloat avgScore = self.precent;
@@ -98,8 +96,11 @@
             if (avgScore == 100) {
                 self.bigImg.top = -20;
             }
-            
             self.bigImg.left = 0;
+        } completion:^(BOOL finished) {
+            if (self.endless == YES) {
+                acallBack(self.bigImg.layer.position.x);
+            }
         }];
     }else if (type == 1){
         CGFloat avgScore = self.precent;
@@ -109,6 +110,10 @@
                 self.bigImg.top = -20;
             }
             self.bigImg.left = 0;
+        }completion:^(BOOL finished) {
+            if (self.endless == YES) {
+                acallBack(self.bigImg.layer.position.x);
+            }
         }];
     }else if (type == 2){
         CGFloat avgScore = self.precent;
@@ -122,9 +127,18 @@
                     self.bigImg.top = -20;
                 }
                 self.bigImg.left = 0;
+            } completion:^(BOOL finished) {
+                if (self.endless == YES) {
+                    acallBack(self.bigImg.layer.position.x);
+                }
             }];
         }];
     }
+}
+
+-(void)dealloc{
+    [self.bigImg.layer removeAnimationForKey:moveAnimationKey];
+    [self.bigImg.layer removeAnimationForKey:rotationAnimationKey];
 }
 
 
