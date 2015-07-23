@@ -11,7 +11,7 @@
 		1D680DD81B1D804A006D4038 /* SXWaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D680DD61B1D804A006D4038 /* SXWaveCell.xib */; };
 		1D680DDB1B1D8133006D4038 /* SXWaveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D680DDA1B1D8133006D4038 /* SXWaveCell.m */; };
 		1D7B69E01B60CB7D0047982B /* SXWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B69DF1B60CB7D0047982B /* SXWaveView.m */; };
-		1D7B69E21B60CB940047982B /* SXWaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7B69E11B60CB940047982B /* SXWaveView.xib */; };
+		1D7B69E41B60CBDC0047982B /* SXWaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7B69E31B60CBDC0047982B /* SXWaveView.xib */; };
 		1DDC4C111B1ED05E00EBDF15 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC4C101B1ED05E00EBDF15 /* UIViewAdditions.m */; };
 		1DE5AFB01B08D75500A489BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFAF1B08D75500A489BD /* main.m */; };
 		1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFB21B08D75500A489BD /* AppDelegate.m */; };
@@ -40,7 +40,7 @@
 		1D680DDA1B1D8133006D4038 /* SXWaveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaveCell.m; sourceTree = "<group>"; };
 		1D7B69DE1B60CB7D0047982B /* SXWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWaveView.h; sourceTree = "<group>"; };
 		1D7B69DF1B60CB7D0047982B /* SXWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaveView.m; sourceTree = "<group>"; };
-		1D7B69E11B60CB940047982B /* SXWaveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SXWaveView.xib; sourceTree = "<group>"; };
+		1D7B69E31B60CBDC0047982B /* SXWaveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SXWaveView.xib; sourceTree = "<group>"; };
 		1DDC4C0F1B1ED05E00EBDF15 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
 		1DDC4C101B1ED05E00EBDF15 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
 		1DE5AFAA1B08D75500A489BD /* SXWaveAnimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXWaveAnimate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,9 +99,9 @@
 		1D7B69DD1B60CB7D0047982B /* tem */ = {
 			isa = PBXGroup;
 			children = (
+				1D7B69E31B60CBDC0047982B /* SXWaveView.xib */,
 				1D7B69DE1B60CB7D0047982B /* SXWaveView.h */,
 				1D7B69DF1B60CB7D0047982B /* SXWaveView.m */,
-				1D7B69E11B60CB940047982B /* SXWaveView.xib */,
 			);
 			path = tem;
 			sourceTree = "<group>";
@@ -260,7 +260,7 @@
 				1DE5AFB91B08D75500A489BD /* Main.storyboard in Resources */,
 				1DE5AFBE1B08D75500A489BD /* LaunchScreen.xib in Resources */,
 				1DE5AFBB1B08D75500A489BD /* Images.xcassets in Resources */,
-				1D7B69E21B60CB940047982B /* SXWaveView.xib in Resources */,
+				1D7B69E41B60CBDC0047982B /* SXWaveView.xib in Resources */,
 				1D680DD81B1D804A006D4038 /* SXWaveCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
