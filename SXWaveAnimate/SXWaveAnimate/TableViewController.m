@@ -48,6 +48,8 @@
         SXWaveCell *cell = [SXWaveCell cell];
         self.waveCell = cell;
         [cell setPrecent:self.precent textColor:[UIColor orangeColor] type:0 alpha:1];
+        
+        cell.endless = YES;
         return cell;
         
     }else if (indexPath.row == 1){
@@ -68,7 +70,6 @@
         SXWaveCell *cell = [SXWaveCell cell];
         self.waveCell4 = cell;
         [cell setPrecent:self.precent textColor:[UIColor whiteColor] type:1 alpha:0.3];
-        cell.endless = YES;
         return cell;
     }
     else {
