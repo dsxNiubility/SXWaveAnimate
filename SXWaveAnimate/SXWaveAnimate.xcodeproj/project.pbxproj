@@ -10,6 +10,8 @@
 		1D5B22CB1B09EFF900C1D5C9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B22CA1B09EFF900C1D5C9 /* TableViewController.m */; };
 		1D680DD81B1D804A006D4038 /* SXWaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D680DD61B1D804A006D4038 /* SXWaveCell.xib */; };
 		1D680DDB1B1D8133006D4038 /* SXWaveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D680DDA1B1D8133006D4038 /* SXWaveCell.m */; };
+		1D7B69DA1B60C5950047982B /* SXWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B69D91B60C5950047982B /* SXWaveView.m */; };
+		1D7B69DC1B60C5B70047982B /* SXWaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7B69DB1B60C5B70047982B /* SXWaveView.xib */; };
 		1DDC4C111B1ED05E00EBDF15 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC4C101B1ED05E00EBDF15 /* UIViewAdditions.m */; };
 		1DE5AFB01B08D75500A489BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFAF1B08D75500A489BD /* main.m */; };
 		1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFB21B08D75500A489BD /* AppDelegate.m */; };
@@ -36,6 +38,9 @@
 		1D680DD61B1D804A006D4038 /* SXWaveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SXWaveCell.xib; sourceTree = "<group>"; };
 		1D680DD91B1D8133006D4038 /* SXWaveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWaveCell.h; sourceTree = "<group>"; };
 		1D680DDA1B1D8133006D4038 /* SXWaveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaveCell.m; sourceTree = "<group>"; };
+		1D7B69D81B60C5950047982B /* SXWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWaveView.h; sourceTree = "<group>"; };
+		1D7B69D91B60C5950047982B /* SXWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaveView.m; sourceTree = "<group>"; };
+		1D7B69DB1B60C5B70047982B /* SXWaveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SXWaveView.xib; sourceTree = "<group>"; };
 		1DDC4C0F1B1ED05E00EBDF15 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
 		1DDC4C101B1ED05E00EBDF15 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
 		1DE5AFAA1B08D75500A489BD /* SXWaveAnimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXWaveAnimate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +79,7 @@
 		1D680DD21B1D804A006D4038 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1D7B69D71B60C57B0047982B /* tem */,
 				1DDC4C0E1B1ED05E00EBDF15 /* Vendor */,
 				1D680DD31B1D804A006D4038 /* WaveAnimate */,
 			);
@@ -88,6 +94,16 @@
 				1D680DDA1B1D8133006D4038 /* SXWaveCell.m */,
 			);
 			path = WaveAnimate;
+			sourceTree = "<group>";
+		};
+		1D7B69D71B60C57B0047982B /* tem */ = {
+			isa = PBXGroup;
+			children = (
+				1D7B69D81B60C5950047982B /* SXWaveView.h */,
+				1D7B69D91B60C5950047982B /* SXWaveView.m */,
+				1D7B69DB1B60C5B70047982B /* SXWaveView.xib */,
+			);
+			path = tem;
 			sourceTree = "<group>";
 		};
 		1DDC4C0E1B1ED05E00EBDF15 /* Vendor */ = {
@@ -244,6 +260,7 @@
 				1DE5AFB91B08D75500A489BD /* Main.storyboard in Resources */,
 				1DE5AFBE1B08D75500A489BD /* LaunchScreen.xib in Resources */,
 				1DE5AFBB1B08D75500A489BD /* Images.xcassets in Resources */,
+				1D7B69DC1B60C5B70047982B /* SXWaveView.xib in Resources */,
 				1D680DD81B1D804A006D4038 /* SXWaveCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7B69DA1B60C5950047982B /* SXWaveView.m in Sources */,
 				1D680DDB1B1D8133006D4038 /* SXWaveCell.m in Sources */,
 				1DE5AFB61B08D75500A489BD /* ViewController.m in Sources */,
 				1DDC4C111B1ED05E00EBDF15 /* UIViewAdditions.m in Sources */,
