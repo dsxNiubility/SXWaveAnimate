@@ -61,7 +61,13 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-124" y="339.5"/>
+            <connections>
+                <outlet property="avgScoreLbl" destination="72a-kC-buh" id="SqC-Rp-E0f"/>
+                <outlet property="discriptionLbl" destination="x08-f0-EFT" id="oV5-b3-2VE"/>
+                <outlet property="leftView" destination="CWd-R3-sCE" id="QLt-yM-nhy"/>
+                <outlet property="rotateImg" destination="Y0F-qb-Ck6" id="8LQ-lW-ZRm"/>
+            </connections>
+            <point key="canvasLocation" x="-86.5" y="465.5"/>
         </view>
     </objects>
     <resources>
