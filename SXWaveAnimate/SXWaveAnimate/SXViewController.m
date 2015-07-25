@@ -7,8 +7,13 @@
 //
 
 #import "SXViewController.h"
+#import "SXWaveView.h"
 
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 @interface SXViewController ()
+
+@property(nonatomic,strong)SXWaveView *animateView1;
 
 @end
 
@@ -16,22 +21,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor redColor];
+    
+    SXWaveView *animateView1 = [SXWaveView view];
+    [self.view addSubview:animateView1];
+    self.animateView1 = animateView1;
+    animateView1.precent = self.precent;
+    animateView1.frame = CGRectMake(0, 64,SCREEN_WIDTH/3, SCREEN_WIDTH/3);
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.animateView1 addAnimateWithType:0];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

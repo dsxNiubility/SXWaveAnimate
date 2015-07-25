@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TableViewController.h"
+#import "SXViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textView;
@@ -30,8 +31,14 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    TableViewController *tbvc = (TableViewController *)segue.destinationViewController;
-    tbvc.precent = [self.textView.text intValue];
+    if ([segue.destinationViewController isKindOfClass:[TableViewController class]]){
+        TableViewController *tbvc = (TableViewController *)segue.destinationViewController;
+        tbvc.precent = [self.textView.text intValue];
+    }else if ([segue.destinationViewController isKindOfClass:[SXViewController class]]){
+        SXViewController *vc = (SXViewController *)segue.destinationViewController;
+        vc.precent = [self.textView.text intValue];
+    }
+
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
