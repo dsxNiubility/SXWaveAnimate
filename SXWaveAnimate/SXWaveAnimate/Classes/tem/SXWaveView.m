@@ -67,15 +67,15 @@
     [self setPrecent:precent];
 }
 
-NSString * rotationAnimationKey2 = @"rotationAnimation";
-NSString * moveAnimationKey2 = @"waveMoveAnimation";
+NSString * viewRotationKey = @"rotationAnimation";
+NSString * viewMoveKey = @"waveMoveAnimation";
 - (void)addAnimateWithType:(int)type
 {
     CABasicAnimation * transformRoate = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     transformRoate.byValue = [NSNumber numberWithDouble:(2 * M_PI)];
     transformRoate.duration = 2;
     transformRoate.repeatCount = self.isEndless == YES ? MAXFLOAT : 2;
-    [self.rotateImg.layer addAnimation:transformRoate forKey:rotationAnimationKey2];
+    [self.rotateImg.layer addAnimation:transformRoate forKey:viewRotationKey];
     
     __weak __typeof(&*self)weakSelf = self;
     void(^acallBack)(CGFloat start) = ^(CGFloat start) {
@@ -84,7 +84,7 @@ NSString * moveAnimationKey2 = @"waveMoveAnimation";
         moveAction.duration = 4;
         // moveAction.autoreverses = YES;
         moveAction.repeatCount = MAXFLOAT;
-        [weakSelf.bigImg.layer addAnimation:moveAction forKey:moveAnimationKey2];
+        [weakSelf.bigImg.layer addAnimation:moveAction forKey:viewMoveKey];
     };
     
     
@@ -136,8 +136,8 @@ NSString * moveAnimationKey2 = @"waveMoveAnimation";
 }
 
 -(void)dealloc{
-    [self.bigImg.layer removeAnimationForKey:moveAnimationKey2];
-    [self.bigImg.layer removeAnimationForKey:rotationAnimationKey2];
+    [self.bigImg.layer removeAnimationForKey:viewRotationKey];
+    [self.bigImg.layer removeAnimationForKey:viewMoveKey];
 }
 
 @end
