@@ -19,12 +19,12 @@
 @property(nonatomic,strong)UIImageView *bigImg;
 
 @property(nonatomic,assign)CGFloat alpha;
-
 @property(nonatomic,strong)UIColor *textColor;
-
+@property(nonatomic,strong)UIColor *bgColor;
 @property(nonatomic,assign)int type;
-
 @property(nonatomic,assign,getter=isEndless)BOOL endless;
+@property(nonatomic,copy)NSString *descriptionTxt;
+
 
 - (instancetype)initWithPrecent:(int)precent;
 - (void)addAnimateWithType:(int)type;

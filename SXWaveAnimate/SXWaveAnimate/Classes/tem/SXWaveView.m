@@ -20,25 +20,12 @@
     return [[NSBundle mainBundle]loadNibNamed:@"SXWaveView" owner:nil options:nil][0];
 }
 
+// ------一些便利构造和赋值方法
 - (instancetype)initWithPrecent:(int)precent{
     [self setPrecent:precent];
     self.type = 2;
     self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
     return [[NSBundle mainBundle]loadNibNamed:@"SXWaveView" owner:nil options:nil][0];
-}
-
-- (void)setAlpha:(CGFloat)alpha{
-    _alpha = alpha;
-}
-
-- (void)setTextColor:(UIColor *)textColor{
-    _textColor = textColor;
-}
-
-- (void)setType:(int)type
-{
-    _type = type;
-    // [self addAnimateWithType:self.type];
 }
 
 - (void)setPrecent:(int)precent{
@@ -66,6 +53,34 @@
     [self setTextColor:tcolor];
     [self setPrecent:precent];
 }
+- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor type:(int)type alpha:(CGFloat)alpha endless:(BOOL)endless{
+    
+}
+
+
+- (void)setAlpha:(CGFloat)alpha{
+    _alpha = alpha;
+}
+
+- (void)setTextColor:(UIColor *)textColor{
+    _textColor = textColor;
+}
+
+- (void)setBgColor:(UIColor *)bgColor{
+    _bgColor = bgColor;
+    self.backgroundColor = _bgColor;
+}
+
+- (void)setDescriptionTxt:(NSString *)descriptionTxt
+{
+    _descriptionTxt = descriptionTxt;
+}
+
+- (void)setType:(int)type
+{
+    _type = type;
+}
+
 
 NSString * viewRotationKey = @"rotationAnimation";
 NSString * viewMoveKey = @"waveMoveAnimation";
