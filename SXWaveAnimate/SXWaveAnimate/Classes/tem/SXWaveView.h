@@ -29,6 +29,7 @@
 - (instancetype)initWithPrecent:(int)precent;
 - (void)addAnimateWithType:(int)type;
 - (void)setPrecent:(int)precent textColor:(UIColor *)tcolor type:(int)type alpha:(CGFloat)alpha;
+- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor type:(int)type alpha:(CGFloat)alpha endless:(BOOL)endless;
 
 + (instancetype)view;
 

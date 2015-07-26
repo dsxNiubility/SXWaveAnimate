@@ -14,6 +14,18 @@
 {
     _alpha = 1;
     _endless = NO;
+    self.leftView.layer.cornerRadius = self.leftView.bounds.size.width/2.0;
+    self.leftView.clipsToBounds = YES;
+    UIImageView *bigImg = [[UIImageView alloc]init];
+    bigImg.image = [UIImage imageNamed:@"fb_wave"];
+    self.bigImg = bigImg;
+    [self.leftView addSubview:bigImg];
+    bigImg.frame = CGRectMake(0, 0, 450, 300);
+
+    bigImg.top = 115;
+    bigImg.left = -370;
+    
+    self.backgroundColor = [UIColor colorWithRed:42/255.0 green:178/255.0 blue:163/255.0 alpha:1];
 }
 
 + (instancetype)view{
@@ -31,19 +43,6 @@
 - (void)setPrecent:(int)precent{
     _precent = precent;
     self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
-    self.avgScoreLbl.textColor = self.textColor;
-    self.discriptionLbl.textColor = self.textColor;
-    self.leftView.layer.cornerRadius = self.leftView.bounds.size.width/2.0;
-    self.leftView.clipsToBounds = YES;
-    UIImageView *bigImg = [[UIImageView alloc]init];
-    bigImg.image = [UIImage imageNamed:@"fb_wave"];
-    self.bigImg = bigImg;
-    bigImg.alpha = self.alpha;
-    [self.leftView addSubview:bigImg];
-    bigImg.frame = CGRectMake(0, 0, 450, 300);
-    
-    bigImg.top = 115;
-    bigImg.left = -370;
 }
 
 - (void)setPrecent:(int)precent textColor:(UIColor *)tcolor type:(int)type alpha:(CGFloat)alpha
@@ -54,16 +53,33 @@
     [self setPrecent:precent];
 }
 - (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor type:(int)type alpha:(CGFloat)alpha endless:(BOOL)endless{
+    [self setAlpha:alpha];
+    [self setType:type];
+    [self setPrecent:precent];
+    [self setEndless:endless];
+    
+    if (description) {
+        [self setDescriptionTxt:description];
+    }
+    if (tcolor) {
+        [self setTextColor:tcolor];
+    }
+    if (bColor) {
+        [self setBgColor:bColor];
+    }
     
 }
 
 
 - (void)setAlpha:(CGFloat)alpha{
     _alpha = alpha;
+    self.bigImg.alpha = _alpha;
 }
 
 - (void)setTextColor:(UIColor *)textColor{
     _textColor = textColor;
+    self.avgScoreLbl.textColor = _textColor;
+    self.discriptionLbl.textColor = _textColor;
 }
 
 - (void)setBgColor:(UIColor *)bgColor{
@@ -71,13 +87,12 @@
     self.backgroundColor = _bgColor;
 }
 
-- (void)setDescriptionTxt:(NSString *)descriptionTxt
-{
+- (void)setDescriptionTxt:(NSString *)descriptionTxt{
     _descriptionTxt = descriptionTxt;
+    self.discriptionLbl.text = _descriptionTxt;
 }
 
-- (void)setType:(int)type
-{
+- (void)setType:(int)type{
     _type = type;
 }
 
@@ -101,7 +116,6 @@ NSString * viewMoveKey = @"waveMoveAnimation";
         moveAction.repeatCount = MAXFLOAT;
         [weakSelf.bigImg.layer addAnimation:moveAction forKey:viewMoveKey];
     };
-    
     
     if (type == 0) {
         CGFloat avgScore = self.precent;

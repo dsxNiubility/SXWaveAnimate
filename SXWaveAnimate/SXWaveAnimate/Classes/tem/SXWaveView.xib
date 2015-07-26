@@ -37,7 +37,6 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.1215686275" green="0.73333333329999995" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="CWd-R3-sCE" firstAttribute="centerY" secondItem="Y0F-qb-Ck6" secondAttribute="centerY" id="8hR-6w-dcq"/>
                         <constraint firstItem="Y0F-qb-Ck6" firstAttribute="centerY" secondItem="x08-f0-EFT" secondAttribute="centerY" constant="-30" id="9gg-GT-gdT"/>
@@ -52,7 +51,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.1215686275" green="0.73333333329999995" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="fh9-Iy-hb2" secondAttribute="trailing" id="1ZN-cM-vfg"/>
                 <constraint firstItem="fh9-Iy-hb2" firstAttribute="top" secondItem="3xS-8Z-B7H" secondAttribute="top" id="GwF-RU-EKJ"/>
@@ -67,7 +66,7 @@
                 <outlet property="leftView" destination="CWd-R3-sCE" id="QLt-yM-nhy"/>
                 <outlet property="rotateImg" destination="Y0F-qb-Ck6" id="8LQ-lW-ZRm"/>
             </connections>
-            <point key="canvasLocation" x="-86.5" y="465.5"/>
+            <point key="canvasLocation" x="21.5" y="508.5"/>
         </view>
     </objects>
     <resources>

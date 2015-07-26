@@ -27,8 +27,8 @@
     SXWaveView *animateView1 = [SXWaveView view];
     [self.view addSubview:animateView1];
     self.animateView1 = animateView1;
-    animateView1.precent = self.precent;
     animateView1.frame = CGRectMake(0, 64,SCREEN_WIDTH/3, SCREEN_WIDTH/3);
+    [animateView1 setPrecent:self.precent description:@"score" textColor:[UIColor redColor] bgColor:[UIColor darkGrayColor] type:0 alpha:0.5 endless:YES];
     
 }
 
