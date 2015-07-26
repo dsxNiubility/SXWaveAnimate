@@ -14,7 +14,9 @@
 {
     _alpha = 1;
     _endless = NO;
+    
     self.leftView.layer.cornerRadius = self.leftView.bounds.size.width/2.0;
+    self.leftView.frame = self.bounds;
     self.leftView.clipsToBounds = YES;
     UIImageView *bigImg = [[UIImageView alloc]init];
     bigImg.image = [UIImage imageNamed:@"fb_wave"];

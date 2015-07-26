@@ -16,10 +16,6 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWd-R3-sCE" userLabel="左边大View">
                             <rect key="frame" x="5" y="5" width="115" height="115"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="115" id="pzJ-fW-kOR"/>
-                                <constraint firstAttribute="width" constant="115" id="soT-yX-U5I"/>
-                            </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总评分" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x08-f0-EFT">
                             <rect key="frame" x="45" y="85" width="36" height="15"/>
@@ -41,10 +37,12 @@
                         <constraint firstItem="CWd-R3-sCE" firstAttribute="centerY" secondItem="Y0F-qb-Ck6" secondAttribute="centerY" id="8hR-6w-dcq"/>
                         <constraint firstItem="Y0F-qb-Ck6" firstAttribute="centerY" secondItem="x08-f0-EFT" secondAttribute="centerY" constant="-30" id="9gg-GT-gdT"/>
                         <constraint firstItem="Y0F-qb-Ck6" firstAttribute="leading" secondItem="fh9-Iy-hb2" secondAttribute="leading" id="LHN-vk-h5P"/>
+                        <constraint firstItem="CWd-R3-sCE" firstAttribute="height" secondItem="Y0F-qb-Ck6" secondAttribute="height" constant="-10" id="N4l-VU-V9p"/>
                         <constraint firstItem="Y0F-qb-Ck6" firstAttribute="top" secondItem="fh9-Iy-hb2" secondAttribute="top" id="NGO-cV-x1u"/>
                         <constraint firstItem="Y0F-qb-Ck6" firstAttribute="centerX" secondItem="72a-kC-buh" secondAttribute="centerX" id="Xzy-yK-Aq9"/>
                         <constraint firstAttribute="bottom" secondItem="Y0F-qb-Ck6" secondAttribute="bottom" id="YX6-Ll-elS"/>
                         <constraint firstAttribute="trailing" secondItem="Y0F-qb-Ck6" secondAttribute="trailing" id="aQt-0G-s7y"/>
+                        <constraint firstItem="CWd-R3-sCE" firstAttribute="width" secondItem="Y0F-qb-Ck6" secondAttribute="width" constant="-10" id="gMD-2u-Qcp"/>
                         <constraint firstItem="Y0F-qb-Ck6" firstAttribute="centerY" secondItem="72a-kC-buh" secondAttribute="centerY" id="ghO-ZY-YgM"/>
                         <constraint firstItem="CWd-R3-sCE" firstAttribute="centerX" secondItem="Y0F-qb-Ck6" secondAttribute="centerX" id="lBu-SA-JKe"/>
                         <constraint firstItem="Y0F-qb-Ck6" firstAttribute="centerX" secondItem="x08-f0-EFT" secondAttribute="centerX" id="yaT-gm-Nke"/>
