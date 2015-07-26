@@ -99,6 +99,7 @@
 
 NSString * viewRotationKey = @"rotationAnimation";
 NSString * viewMoveKey = @"waveMoveAnimation";
+
 - (void)addAnimateWithType:(int)type
 {
     CABasicAnimation * transformRoate = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
@@ -132,6 +133,8 @@ NSString * viewMoveKey = @"waveMoveAnimation";
         }];
     }else if (type == 1){
         CGFloat avgScore = self.precent;
+        self.bigImg.top = -20;
+        self.bigImg.left = -300;
         [UIView animateWithDuration:4.0 animations:^{
             self.bigImg.top = 115 - ((avgScore/100.0) * 115);
             if (avgScore == 100) {
@@ -145,11 +148,11 @@ NSString * viewMoveKey = @"waveMoveAnimation";
         }];
     }else if (type == 2){
         CGFloat avgScore = self.precent;
-        [UIView animateWithDuration:1.0 animations:^{
-            self.bigImg.top = 0;
+        [UIView animateWithDuration:1.5 animations:^{
+            self.bigImg.top = -20;
             self.bigImg.left = -200;
         } completion:^(BOOL finished) {
-            [UIView animateWithDuration:3.0 animations:^{
+            [UIView animateWithDuration:2.0 animations:^{
                 self.bigImg.top = 115 - ((avgScore/100.0) * 115);
                 if (avgScore == 100) {
                     self.bigImg.top = -20;
