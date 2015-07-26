@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIView *leftView;
 @property (weak, nonatomic) IBOutlet UIImageView *rotateImg;
 @property (weak, nonatomic) IBOutlet UILabel *avgScoreLbl;
-@property (weak, nonatomic) IBOutlet UILabel *discriptionLbl;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLbl;
 @property(nonatomic,assign)int precent;
 
 @property(nonatomic,strong)UIImageView *bigImg;
@@ -36,5 +36,6 @@
 - (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha endless:(BOOL)endless;
 
 + (instancetype)view;
+- (instancetype)view;
 
 @end

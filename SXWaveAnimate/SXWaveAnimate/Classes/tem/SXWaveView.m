@@ -7,27 +7,88 @@
 //
 
 #import "SXWaveView.h"
+#define W self.bounds.size.width
 
+@interface SXWaveView ()
+
+@property(nonatomic,assign)CGRect rect;
+@end
 @implementation SXWaveView
 
-- (void)awakeFromNib
-{
-    _alpha = 1;
-    _endless = NO;
-    
-    self.leftView.layer.cornerRadius = self.leftView.bounds.size.width/2.0;
-    self.leftView.frame = self.bounds;
-    self.leftView.clipsToBounds = YES;
-    UIImageView *bigImg = [[UIImageView alloc]init];
-    bigImg.image = [UIImage imageNamed:@"fb_wave"];
-    self.bigImg = bigImg;
-    [self.leftView addSubview:bigImg];
-    bigImg.frame = CGRectMake(0, 0, 450, 300);
 
-    bigImg.top = 115;
-    bigImg.left = -370;
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        UIView *bgView = [[UIView alloc]initWithFrame:frame];
+        bgView.backgroundColor = [UIColor grayColor];
+        [self addSubview:bgView];
+        bgView.top = 0;
+        
+        UIImageView *rotateImg = [[UIImageView alloc]initWithFrame:frame];
+        rotateImg.contentMode = UIViewContentModeScaleAspectFit;
+        rotateImg.image = [UIImage imageNamed:@"fb_rotation"];
+        UIView * leftView = [[UIView alloc]init];
+
+        [bgView addSubview:leftView];
+        leftView.width = bgView.width - W/12.5;
+        leftView.height = bgView.height - W/12.5;
+        leftView.centerx = bgView.centerx;
+        leftView.centery = bgView.centery;
+
+        
+//        leftView.backgroundColor = [UIColor grayColor];
+        leftView.top = W/25;
+        [bgView addSubview:rotateImg];
+        rotateImg.top = 0;
+        
+        UILabel *avgScoreLbl = [[UILabel alloc]init];
+        avgScoreLbl.width = W / 2;
+        avgScoreLbl.height = W/4;
+        avgScoreLbl.centerx = rotateImg.centerx;
+        avgScoreLbl.centery = rotateImg.centery;
+        avgScoreLbl.font = [UIFont systemFontOfSize:16];
+        avgScoreLbl.text = @"56%";
+        avgScoreLbl.textAlignment = NSTextAlignmentCenter;
+        
+       
+        
+        UILabel *descriptionLbl = [[UILabel alloc]init];
+        
+        descriptionLbl.font = [UIFont systemFontOfSize:14];
+        descriptionLbl.text = @"总评分";
+        
+        [bgView addSubview:avgScoreLbl];
+        [bgView addSubview:descriptionLbl];
+        
+        self.leftView = leftView;
+        self.avgScoreLbl = avgScoreLbl;
+        self.descriptionLbl = descriptionLbl;
+        self.rotateImg = rotateImg;
+        
+        _alpha = 1;
+        _endless = NO;
+        UIImageView *bigImg = [[UIImageView alloc]init];
+        bigImg.image = [UIImage imageNamed:@"fb_wave"];
+        self.bigImg = bigImg;
+        [self.leftView addSubview:bigImg];
+        self.backgroundColor = [UIColor colorWithRed:42/255.0 green:178/255.0 blue:163/255.0 alpha:1];
+        
+        self.leftView.layer.cornerRadius = self.leftView.bounds.size.width/2.0;
+        //    self.leftView.frame = self.bounds;
+        self.leftView.clipsToBounds = YES;
+        
+        self.bigImg.frame = CGRectMake(0, 0, 6*W, 3*W);
+        
+        NSLog(@"%f",W);
+        self.bigImg.top = W;
+        self.bigImg.left = -5*W;
     
-    self.backgroundColor = [UIColor colorWithRed:42/255.0 green:178/255.0 blue:163/255.0 alpha:1];
+    }
+    return self;
+}
+
+- (instancetype)view{
+    return [[NSBundle mainBundle]loadNibNamed:@"SXWaveView" owner:nil options:nil][0];
 }
 
 + (instancetype)view{
@@ -79,7 +140,7 @@
 - (void)setTextColor:(UIColor *)textColor{
     _textColor = textColor;
     self.avgScoreLbl.textColor = _textColor;
-    self.discriptionLbl.textColor = _textColor;
+    self.descriptionLbl.textColor = _textColor;
 }
 
 - (void)setBgColor:(UIColor *)bgColor{
@@ -89,7 +150,7 @@
 
 - (void)setDescriptionTxt:(NSString *)descriptionTxt{
     _descriptionTxt = descriptionTxt;
-    self.discriptionLbl.text = _descriptionTxt;
+    self.descriptionLbl.text = _descriptionTxt;
 }
 
 NSString * viewRotationKey = @"rotationAnimation";
@@ -103,16 +164,6 @@ NSString * viewMoveKey = @"waveMoveAnimation";
     transformRoate.repeatCount = self.isEndless == YES ? MAXFLOAT : 2;
     [self.rotateImg.layer addAnimation:transformRoate forKey:viewRotationKey];
     
-    __weak __typeof(&*self)weakSelf = self;
-    void(^acallBack)(CGFloat start) = ^(CGFloat start) {
-        CAKeyframeAnimation * moveAction = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
-        moveAction.values = [NSArray arrayWithObjects:[NSNumber numberWithFloat:-60],[NSNumber numberWithFloat:start],nil];
-        moveAction.duration = 4;
-        // moveAction.autoreverses = YES;
-        moveAction.repeatCount = MAXFLOAT;
-        [weakSelf.bigImg.layer addAnimation:moveAction forKey:viewMoveKey];
-    };
-    
     if (type == 0) {
         CGFloat avgScore = self.precent;
         [UIView animateWithDuration:4.0 animations:^{
@@ -121,10 +172,6 @@ NSString * viewMoveKey = @"waveMoveAnimation";
                 self.bigImg.top = -20;
             }
             self.bigImg.left = 0;
-        } completion:^(BOOL finished) {
-            if (self.endless == YES) {
-                acallBack(self.bigImg.layer.position.x);
-            }
         }];
     }else if (type == 1){
         CGFloat avgScore = self.precent;
@@ -136,27 +183,19 @@ NSString * viewMoveKey = @"waveMoveAnimation";
                 self.bigImg.top = -20;
             }
             self.bigImg.left = 0;
-        }completion:^(BOOL finished) {
-            if (self.endless == YES) {
-                acallBack(self.bigImg.layer.position.x);
-            }
         }];
     }else if (type == 2){
         CGFloat avgScore = self.precent;
-        [UIView animateWithDuration:1.5 animations:^{
+        [UIView animateWithDuration:2.0 animations:^{
             self.bigImg.top = -20;
-            self.bigImg.left = -200;
+            self.bigImg.left = -2*W;
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:2.0 animations:^{
-                self.bigImg.top = 115 - ((avgScore/100.0) * 115);
+                self.bigImg.top = W - ((avgScore/100.0) * W);
                 if (avgScore == 100) {
                     self.bigImg.top = -20;
                 }
                 self.bigImg.left = 0;
-            } completion:^(BOOL finished) {
-                if (self.endless == YES) {
-                    acallBack(self.bigImg.layer.position.x);
-                }
             }];
         }];
     }
