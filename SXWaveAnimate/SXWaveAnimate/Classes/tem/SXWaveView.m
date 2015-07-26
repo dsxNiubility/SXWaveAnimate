@@ -45,16 +45,14 @@
     self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
 }
 
-- (void)setPrecent:(int)precent textColor:(UIColor *)tcolor type:(int)type alpha:(CGFloat)alpha
+- (void)setPrecent:(int)precent textColor:(UIColor *)tcolor alpha:(CGFloat)alpha
 {
     [self setAlpha:alpha];
-    [self setType:type];
     [self setTextColor:tcolor];
     [self setPrecent:precent];
 }
-- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor type:(int)type alpha:(CGFloat)alpha endless:(BOOL)endless{
+- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha endless:(BOOL)endless{
     [self setAlpha:alpha];
-    [self setType:type];
     [self setPrecent:precent];
     [self setEndless:endless];
     
@@ -91,11 +89,6 @@
     _descriptionTxt = descriptionTxt;
     self.discriptionLbl.text = _descriptionTxt;
 }
-
-- (void)setType:(int)type{
-    _type = type;
-}
-
 
 NSString * viewRotationKey = @"rotationAnimation";
 NSString * viewMoveKey = @"waveMoveAnimation";

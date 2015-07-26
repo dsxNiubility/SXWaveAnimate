@@ -28,13 +28,13 @@
     [self.view addSubview:animateView1];
     self.animateView1 = animateView1;
     animateView1.frame = CGRectMake(0, 64,SCREEN_WIDTH/3, SCREEN_WIDTH/3);
-    [animateView1 setPrecent:self.precent description:@"score" textColor:[UIColor redColor] bgColor:[UIColor darkGrayColor] type:3 alpha:0.5 endless:YES];
+    [animateView1 setPrecent:self.precent description:@"score" textColor:[UIColor redColor] bgColor:[UIColor darkGrayColor] alpha:0.5 endless:YES];
     
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.animateView1 addAnimateWithType:0];
+    [self.animateView1 addAnimateWithType:2];
 }
 
 - (void)didReceiveMemoryWarning {

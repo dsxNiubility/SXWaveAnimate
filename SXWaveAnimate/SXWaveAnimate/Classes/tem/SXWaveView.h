@@ -31,9 +31,9 @@
 /** 参数值：0-正常 1-从高而降 2-先升再降*/
 - (void)addAnimateWithType:(int)type;
 
-- (void)setPrecent:(int)precent textColor:(UIColor *)tcolor type:(int)type alpha:(CGFloat)alpha;
+- (void)setPrecent:(int)precent textColor:(UIColor *)tcolor alpha:(CGFloat)alpha;
 
-- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor type:(int)type alpha:(CGFloat)alpha endless:(BOOL)endless;
+- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha endless:(BOOL)endless;
 
 + (instancetype)view;
 
