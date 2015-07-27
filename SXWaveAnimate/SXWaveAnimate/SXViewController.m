@@ -42,7 +42,7 @@
     SXWaveView *animateView1 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN, 100+MARGIN,SIDES, SIDES)];
     [self.view addSubview:animateView1];
     self.animateView1 = animateView1;
-    [self.animateView1 setPrecent:self.precent description:@"sx" textColor:[UIColor orangeColor] bgColor:COLOR(31, 187, 170, 1) alpha:1 clips:NO];
+    [self.animateView1 setPrecent:self.precent description:@"董铂然" textColor:[UIColor orangeColor] bgColor:COLOR(31, 187, 170, 1) alpha:1 clips:NO];
     
     SXWaveView *animateView2 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN*2+SIDES, 100+MARGIN,SIDES, SIDES)];
     [self.view addSubview:animateView2];
