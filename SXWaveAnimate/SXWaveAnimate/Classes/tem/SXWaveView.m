@@ -46,7 +46,7 @@
         avgScoreLbl.height = W/4;
         avgScoreLbl.centerx = rotateImg.centerx;
         avgScoreLbl.centery = rotateImg.centery;
-        avgScoreLbl.font = [UIFont fontWithName:@"DIN Alternate" size:30];
+        avgScoreLbl.font = [UIFont fontWithName:@"DIN Alternate" size:30*W/125];
         avgScoreLbl.text = @"56%";
         avgScoreLbl.textAlignment = NSTextAlignmentCenter;
         
@@ -56,8 +56,8 @@
         descriptionLbl.width = W / 2;
         descriptionLbl.height = W/6;
         descriptionLbl.centerx = rotateImg.centerx;
-        descriptionLbl.centery = rotateImg.centery + 25;
-        descriptionLbl.font = [UIFont systemFontOfSize:13];
+        descriptionLbl.centery = rotateImg.centery + 25*W/125;
+        descriptionLbl.font = [UIFont systemFontOfSize:13*W/125];
         descriptionLbl.text = @"总评分";
         descriptionLbl.textAlignment = NSTextAlignmentCenter;
         
