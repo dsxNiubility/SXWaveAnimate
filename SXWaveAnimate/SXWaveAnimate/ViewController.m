@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//    self.textView.text = @"68";
     self.textView.tintColor = [UIColor orangeColor];
     // Do any additional setup after loading the view, typically from a nib.
 }

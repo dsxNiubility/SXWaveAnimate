@@ -33,7 +33,7 @@
 
 - (void)setPrecent:(int)precent textColor:(UIColor *)tcolor alpha:(CGFloat)alpha;
 
-- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha endless:(BOOL)endless;
+- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha;
 
 + (instancetype)view;
 - (instancetype)view;

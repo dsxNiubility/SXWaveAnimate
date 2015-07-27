@@ -46,16 +46,20 @@
         avgScoreLbl.height = W/4;
         avgScoreLbl.centerx = rotateImg.centerx;
         avgScoreLbl.centery = rotateImg.centery;
-        avgScoreLbl.font = [UIFont systemFontOfSize:16];
+        avgScoreLbl.font = [UIFont fontWithName:@"DIN Alternate" size:30];
         avgScoreLbl.text = @"56%";
         avgScoreLbl.textAlignment = NSTextAlignmentCenter;
         
        
         
         UILabel *descriptionLbl = [[UILabel alloc]init];
-        
-        descriptionLbl.font = [UIFont systemFontOfSize:14];
+        descriptionLbl.width = W / 2;
+        descriptionLbl.height = W/6;
+        descriptionLbl.centerx = rotateImg.centerx;
+        descriptionLbl.centery = rotateImg.centery + 25;
+        descriptionLbl.font = [UIFont systemFontOfSize:13];
         descriptionLbl.text = @"总评分";
+        descriptionLbl.textAlignment = NSTextAlignmentCenter;
         
         [bgView addSubview:avgScoreLbl];
         [bgView addSubview:descriptionLbl];
@@ -114,10 +118,9 @@
     [self setTextColor:tcolor];
     [self setPrecent:precent];
 }
-- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha endless:(BOOL)endless{
+- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha{
     [self setAlpha:alpha];
     [self setPrecent:precent];
-    [self setEndless:endless];
     
     if (description) {
         [self setDescriptionTxt:description];
@@ -167,7 +170,7 @@ NSString * viewMoveKey = @"waveMoveAnimation";
     if (type == 0) {
         CGFloat avgScore = self.precent;
         [UIView animateWithDuration:4.0 animations:^{
-            self.bigImg.top = 115 - ((avgScore/100.0) * 115);
+            self.bigImg.top = W - ((avgScore/100.0) * W);
             if (avgScore == 100) {
                 self.bigImg.top = -20;
             }
@@ -176,9 +179,9 @@ NSString * viewMoveKey = @"waveMoveAnimation";
     }else if (type == 1){
         CGFloat avgScore = self.precent;
         self.bigImg.top = -20;
-        self.bigImg.left = -300;
+        self.bigImg.left = -5*W;
         [UIView animateWithDuration:4.0 animations:^{
-            self.bigImg.top = 115 - ((avgScore/100.0) * 115);
+            self.bigImg.top = W - ((avgScore/100.0) * W);
             if (avgScore == 100) {
                 self.bigImg.top = -20;
             }
@@ -188,7 +191,7 @@ NSString * viewMoveKey = @"waveMoveAnimation";
         CGFloat avgScore = self.precent;
         [UIView animateWithDuration:2.0 animations:^{
             self.bigImg.top = -20;
-            self.bigImg.left = -2*W;
+            self.bigImg.left = -3*W;
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:2.0 animations:^{
                 self.bigImg.top = W - ((avgScore/100.0) * W);

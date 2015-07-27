@@ -37,7 +37,7 @@
     SXWaveView *animateView1 = [[SXWaveView alloc]initWithFrame:CGRectMake(0, 64,SIDES, SIDES)];
     [self.view addSubview:animateView1];
     self.animateView1 = animateView1;
-    [self.animateView1 setPrecent:self.precent description:@"汉字汉字" textColor:[UIColor redColor] bgColor:[UIColor darkGrayColor] alpha:0.5 endless:NO];
+    [self.animateView1 setPrecent:self.precent description:@"市场" textColor:[UIColor redColor] bgColor:[UIColor darkGrayColor] alpha:0.5];
     
 //    SXWaveView *animateView2 = [SXWaveView view];
 //    [self.view addSubview:animateView2];
@@ -92,7 +92,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.animateView1 addAnimateWithType:2];
+    [self.animateView1 addAnimateWithType:1];
     NSLog(@"viewWillAppear");
 }
 
