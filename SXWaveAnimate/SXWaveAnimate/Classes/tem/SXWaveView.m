@@ -12,6 +12,7 @@
 @interface SXWaveView ()
 
 @property(nonatomic,assign)CGRect rect;
+@property(nonatomic,assign)BOOL clips;
 @end
 @implementation SXWaveView
 
@@ -19,10 +20,12 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
+        
         UIView *bgView = [[UIView alloc]initWithFrame:frame];
         bgView.backgroundColor = [UIColor grayColor];
         [self addSubview:bgView];
         bgView.top = 0;
+        bgView.left = 0;
         
         UIImageView *rotateImg = [[UIImageView alloc]initWithFrame:frame];
         rotateImg.contentMode = UIViewContentModeScaleAspectFit;
@@ -40,6 +43,7 @@
         leftView.top = W/25;
         [bgView addSubview:rotateImg];
         rotateImg.top = 0;
+        rotateImg.left = 0;
         
         UILabel *avgScoreLbl = [[UILabel alloc]init];
         avgScoreLbl.width = W / 2;
@@ -118,9 +122,10 @@
     [self setTextColor:tcolor];
     [self setPrecent:precent];
 }
-- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha{
+- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha clips:(BOOL)clips{
     [self setAlpha:alpha];
     [self setPrecent:precent];
+    [self setClips:clips];
     
     if (description) {
         [self setDescriptionTxt:description];
@@ -134,6 +139,14 @@
     
 }
 
+- (void)setClips:(BOOL)clips
+{
+    _clips = clips;
+    if (_clips == YES) {
+        self.layer.cornerRadius = self.width/2;
+        self.clipsToBounds = YES;
+    }
+}
 
 - (void)setAlpha:(CGFloat)alpha{
     _alpha = alpha;
