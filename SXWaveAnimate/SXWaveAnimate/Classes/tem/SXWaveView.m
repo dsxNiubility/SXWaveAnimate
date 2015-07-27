@@ -22,7 +22,6 @@
     if (self = [super initWithFrame:frame]) {
         
         UIView *bgView = [[UIView alloc]initWithFrame:frame];
-        bgView.backgroundColor = [UIColor grayColor];
         [self addSubview:bgView];
         bgView.top = 0;
         bgView.left = 0;

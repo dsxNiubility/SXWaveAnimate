@@ -66,6 +66,13 @@
             </connections>
             <point key="canvasLocation" x="21.5" y="508.5"/>
         </view>
+        <view contentMode="scaleToFill" id="rF7-7c-GRw">
+            <rect key="frame" x="1" y="0.0" width="155" height="158"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" red="0.073540597312645353" green="0.46129261363636365" blue="0.41842976504775581" alpha="1" colorSpace="calibratedRGB"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="184.5" y="796"/>
+        </view>
     </objects>
     <resources>
         <image name="fb_rotation" width="125" height="125"/>
