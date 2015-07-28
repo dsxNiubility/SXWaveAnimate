@@ -159,6 +159,14 @@
     self.descriptionLbl.text = _descriptionTxt;
 }
 
+- (void)setHalf:(BOOL)half{
+    _half = half;
+    if (_half == YES) {
+        self.avgScoreLbl.centerx = self.width/4*3;
+        self.descriptionLbl.centerx = self.width/4*3;
+    }
+}
+
 NSString * viewRotationKey = @"rotationAnimation";
 NSString * viewMoveKey = @"waveMoveAnimation";
 

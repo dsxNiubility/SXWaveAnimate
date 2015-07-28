@@ -24,6 +24,7 @@
 @property(nonatomic,assign)int type;
 @property(nonatomic,assign,getter=isEndless)BOOL endless;
 @property(nonatomic,copy)NSString *descriptionTxt;
+@property(nonatomic,assign)BOOL half;
 
 
 - (instancetype)initWithPrecent:(int)precent;

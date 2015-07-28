@@ -12,6 +12,7 @@
 		1D5E14BD1B6770E3005180C1 /* SXWaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5E14BB1B6770E3005180C1 /* SXWaveCell.xib */; };
 		1D5E14C11B6770EC005180C1 /* SXWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5E14C01B6770EC005180C1 /* SXWaveView.m */; };
 		1D5E14C41B6770F7005180C1 /* SXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5E14C31B6770F7005180C1 /* SXViewController.m */; };
+		1D75B83D1B677CFC00D3FBE2 /* SXHalfWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D75B83C1B677CFC00D3FBE2 /* SXHalfWaveView.m */; };
 		1DDC4C111B1ED05E00EBDF15 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC4C101B1ED05E00EBDF15 /* UIViewAdditions.m */; };
 		1DE5AFB01B08D75500A489BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFAF1B08D75500A489BD /* main.m */; };
 		1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFB21B08D75500A489BD /* AppDelegate.m */; };
@@ -42,6 +43,8 @@
 		1D5E14C01B6770EC005180C1 /* SXWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaveView.m; sourceTree = "<group>"; };
 		1D5E14C21B6770F7005180C1 /* SXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXViewController.h; sourceTree = "<group>"; };
 		1D5E14C31B6770F7005180C1 /* SXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXViewController.m; sourceTree = "<group>"; };
+		1D75B83B1B677CFC00D3FBE2 /* SXHalfWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXHalfWaveView.h; sourceTree = "<group>"; };
+		1D75B83C1B677CFC00D3FBE2 /* SXHalfWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXHalfWaveView.m; sourceTree = "<group>"; };
 		1DDC4C0F1B1ED05E00EBDF15 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
 		1DDC4C101B1ED05E00EBDF15 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
 		1DE5AFAA1B08D75500A489BD /* SXWaveAnimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXWaveAnimate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +95,8 @@
 			children = (
 				1D5E14BF1B6770EC005180C1 /* SXWaveView.h */,
 				1D5E14C01B6770EC005180C1 /* SXWaveView.m */,
+				1D75B83B1B677CFC00D3FBE2 /* SXHalfWaveView.h */,
+				1D75B83C1B677CFC00D3FBE2 /* SXHalfWaveView.m */,
 			);
 			path = SXWaveView;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 			files = (
 				1D5E14C11B6770EC005180C1 /* SXWaveView.m in Sources */,
 				1DE5AFB61B08D75500A489BD /* ViewController.m in Sources */,
+				1D75B83D1B677CFC00D3FBE2 /* SXHalfWaveView.m in Sources */,
 				1DDC4C111B1ED05E00EBDF15 /* UIViewAdditions.m in Sources */,
 				1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */,
 				1DE5AFB01B08D75500A489BD /* main.m in Sources */,

@@ -54,10 +54,20 @@
     self.animateView3 = animateView3;
     [self.animateView3 setPrecent:self.precent description:@"sx" textColor:[UIColor redColor] bgColor:[UIColor grayColor] alpha:0.9 clips:NO];
     
+//    UIView *View4 = [[UIView alloc]initWithFrame:CGRectMake(0+MARGIN, 100+MARGIN*2+SIDES,SIDES/2, SIDES)];
+//    [self.view addSubview:View4];
+//    SXWaveView *animateView4 = [[SXWaveView alloc]initWithFrame:CGRectMake(-SIDES/2, 0, SIDES, SIDES)];
+//    self.animateView4 = animateView4;
+//    [View4 addSubview:animateView4];
+//    [self.animateView4 setPrecent:self.precent description:@"sx" textColor:COLOR(19, 118, 107, 1) bgColor:COLOR(31, 187, 170, 1) alpha:0.7 clips:YES];
+//    View4.clipsToBounds = YES;
+//    self.animateView4.half = YES;
+    
     SXWaveView *animateView4 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN, 100+MARGIN*2+SIDES,SIDES, SIDES)];
     [self.view addSubview:animateView4];
     self.animateView4 = animateView4;
     [self.animateView4 setPrecent:self.precent description:@"sx" textColor:COLOR(19, 118, 107, 1) bgColor:COLOR(31, 187, 170, 1) alpha:0.7 clips:YES];
+//    self.animateView4.half = YES;
 
     SXWaveView *animateView5 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN*2+SIDES, 100+MARGIN*2+SIDES,SIDES, SIDES)];
     [self.view addSubview:animateView5];
