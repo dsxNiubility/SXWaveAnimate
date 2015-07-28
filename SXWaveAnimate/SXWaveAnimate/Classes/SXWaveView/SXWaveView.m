@@ -86,20 +86,11 @@
         
         self.bigImg.frame = CGRectMake(0, 0, 6*W, 3*W);
         
-        NSLog(@"%f",W);
         self.bigImg.top = W;
         self.bigImg.left = -5*W;
     
     }
     return self;
-}
-
-- (instancetype)view{
-    return [[NSBundle mainBundle]loadNibNamed:@"SXWaveView" owner:nil options:nil][0];
-}
-
-+ (instancetype)view{
-    return [[NSBundle mainBundle]loadNibNamed:@"SXWaveView" owner:nil options:nil][0];
 }
 
 // ------一些便利构造和赋值方法
