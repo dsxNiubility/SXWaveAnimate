@@ -7,7 +7,7 @@
 //
 
 #import "SXViewController.h"
-#import "SXWaveView.h"
+#import "SXWaveView.h"  // -----步骤1 引入自定义view头文件
 #import "SXHalfWaveView.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
@@ -17,7 +17,7 @@
 #define COLOR(a,b,c,d) [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:d]
 @interface SXViewController ()
 
-@property(nonatomic,strong)SXWaveView *animateView1;
+@property(nonatomic,strong)SXWaveView *animateView1; // ------步骤2 建一个成员变量
 @property(nonatomic,strong)SXWaveView *animateView2;
 @property(nonatomic,strong)SXWaveView *animateView3;
 @property(nonatomic,strong)SXWaveView *animateView4;
@@ -42,12 +42,13 @@
     self.title = @"WaveViewShow";
     
     self.view.backgroundColor = [UIColor colorWithRed:165/255.0 green:236/255.0 blue:229/255.0 alpha:1];
-    // ------设定了9个自定义样式的view
 
+    // ------步骤3 用自定义view建立一个view，并使用set方法
     SXWaveView *animateView1 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN, 100+MARGIN,SIDES, SIDES)];
     [self.view addSubview:animateView1];
     self.animateView1 = animateView1;
     [self.animateView1 setPrecent:self.precent description:@"董铂然" textColor:[UIColor orangeColor] bgColor:COLOR(31, 187, 170, 1) alpha:1 clips:NO];
+    // ------步骤3
     
     SXWaveView *animateView2 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN*2+SIDES, 100+MARGIN,SIDES, SIDES)];
     [self.view addSubview:animateView2];
@@ -58,15 +59,6 @@
     [self.view addSubview:animateView3];
     self.animateView3 = animateView3;
     [self.animateView3 setPrecent:self.precent description:@"sx" textColor:[UIColor redColor] bgColor:[UIColor grayColor] alpha:0.9 clips:NO];
-    
-//    UIView *View4 = [[UIView alloc]initWithFrame:CGRectMake(0+MARGIN, 100+MARGIN*2+SIDES,SIDES/2, SIDES)];
-//    [self.view addSubview:View4];
-//    SXWaveView *animateView4 = [[SXWaveView alloc]initWithFrame:CGRectMake(-SIDES/2, 0, SIDES, SIDES)];
-//    self.animateView4 = animateView4;
-//    [View4 addSubview:animateView4];
-//    [self.animateView4 setPrecent:self.precent description:@"sx" textColor:COLOR(19, 118, 107, 1) bgColor:COLOR(31, 187, 170, 1) alpha:0.7 clips:YES];
-//    View4.clipsToBounds = YES;
-//    self.animateView4.half = YES;
     
     SXWaveView *animateView4 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN, 100+MARGIN*2+SIDES,SIDES, SIDES)];
     [self.view addSubview:animateView4];
@@ -148,6 +140,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    // ------步骤4 设置动画
     [self.animateView1 addAnimateWithType:0];
     [self.animateView2 addAnimateWithType:0];
     [self.animateView3 addAnimateWithType:0];
@@ -162,12 +155,6 @@
     [self.animateView11 addAnimateWithType:2];
     [self.animateView12 addAnimateWithType:1];
     [self.animateView13 addAnimateWithType:0];
-    NSLog(@"viewWillAppear");
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

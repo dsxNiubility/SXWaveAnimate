@@ -16,7 +16,7 @@
 @end
 @implementation SXWaveView
 
-
+#pragma mark - **************** 构造方法
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
@@ -38,7 +38,6 @@
         leftView.centery = bgView.centery;
 
         
-//        leftView.backgroundColor = [UIColor grayColor];
         leftView.top = W/25;
         [bgView addSubview:rotateImg];
         rotateImg.top = 0;
@@ -81,7 +80,6 @@
         self.backgroundColor = [UIColor colorWithRed:42/255.0 green:178/255.0 blue:163/255.0 alpha:1];
         
         self.leftView.layer.cornerRadius = self.leftView.bounds.size.width/2.0;
-        //    self.leftView.frame = self.bounds;
         self.leftView.clipsToBounds = YES;
         
         self.bigImg.frame = CGRectMake(0, 0, 6*W, 3*W);
@@ -93,7 +91,7 @@
     return self;
 }
 
-// ------一些便利构造和赋值方法
+
 - (instancetype)initWithPrecent:(int)precent{
     [self setPrecent:precent];
     self.type = 2;
@@ -101,6 +99,7 @@
     return [[NSBundle mainBundle]loadNibNamed:@"SXWaveView" owner:nil options:nil][0];
 }
 
+#pragma mark - **************** 赋值方法
 - (void)setPrecent:(int)precent{
     _precent = precent;
     self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
@@ -167,6 +166,7 @@
     }
 }
 
+#pragma mark - **************** 动画设置
 NSString * viewRotationKey = @"rotationAnimation";
 NSString * viewMoveKey = @"waveMoveAnimation";
 
