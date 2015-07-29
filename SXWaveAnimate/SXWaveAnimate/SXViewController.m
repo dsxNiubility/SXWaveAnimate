@@ -102,10 +102,9 @@
     
     
     SXHalfWaveView *animateView10 = [[SXHalfWaveView alloc]initWithFrame:CGRectMake(0+MARGIN*3+2*SIDES, 100+MARGIN*4+SIDES*3,SIDES/2, SIDES)];
-    animateView10.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:animateView10];
     self.animateView10 = animateView10;
-    [self.animateView10 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2 clips:NO];
+    [self.animateView10 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2];
     
 }
 

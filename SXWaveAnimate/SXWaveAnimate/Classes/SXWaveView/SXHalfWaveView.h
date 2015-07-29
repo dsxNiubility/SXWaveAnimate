@@ -10,7 +10,7 @@
 
 @interface SXHalfWaveView : UIView
 
-- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha clips:(BOOL)clips;
+- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha;
 
 /** 参数值：0-正常 1-从高而降 2-先升再降*/
 - (void)addAnimateWithType:(int)type;

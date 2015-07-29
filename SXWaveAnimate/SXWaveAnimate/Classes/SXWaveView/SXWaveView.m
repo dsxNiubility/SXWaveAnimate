@@ -162,8 +162,8 @@
 - (void)setHalf:(BOOL)half{
     _half = half;
     if (_half == YES) {
-        self.avgScoreLbl.centerx = self.width/4*3;
-        self.descriptionLbl.centerx = self.width/4*3;
+        self.avgScoreLbl.centerx = self.width*0.72;
+        self.descriptionLbl.centerx = self.width*0.72;
     }
 }
 

@@ -39,8 +39,9 @@
     return self;
 }
 
-- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha clips:(BOOL)clips{
-    [self.waveView setPrecent:precent description:description textColor:tcolor bgColor:bColor alpha:alpha clips:clips];
+- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha{
+    [self.waveView setPrecent:precent description:description textColor:tcolor bgColor:bColor alpha:alpha clips:YES];
+    self.waveView.half = YES;
 }
 
 /** 参数值：0-正常 1-从高而降 2-先升再降*/
