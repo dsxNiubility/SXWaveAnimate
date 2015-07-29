@@ -103,22 +103,22 @@
     SXHalfWaveView *animateView10 = [[SXHalfWaveView alloc]initWithFrame:CGRectMake(lastMargin, 100+MARGIN*7+SIDES*3,SIDES/2, SIDES)];
     [self.view addSubview:animateView10];
     self.animateView10 = animateView10;
-    [self.animateView10 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2];
+    [self.animateView10 setPrecent:self.precent description:@"sx" textColor:COLOR(214, 200, 75, 1) bgColor:COLOR(38, 188, 213, 1) alpha:1];
     
     SXHalfWaveView *animateView11 = [[SXHalfWaveView alloc]initWithFrame:CGRectMake(self.animateView10.right + lastMargin, 100+MARGIN*7+SIDES*3,SIDES/2, SIDES)];
     [self.view addSubview:animateView11];
     self.animateView11 = animateView11;
-    [self.animateView11 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2];
+    [self.animateView11 setPrecent:self.precent description:@"sx" textColor:COLOR(244, 13, 100, 1) bgColor:COLOR(244, 222, 41, 1) alpha:0.6];
     
     SXHalfWaveView *animateView12 = [[SXHalfWaveView alloc]initWithFrame:CGRectMake(self.animateView11.right + lastMargin, 100+MARGIN*7+SIDES*3,SIDES/2, SIDES)];
     [self.view addSubview:animateView12];
     self.animateView12 = animateView12;
-    [self.animateView12 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2];
+    [self.animateView12 setPrecent:self.precent description:@"sx" textColor:COLOR(205, 179, 128, 1) bgColor:COLOR(53, 44, 10, 1) alpha:0.3];
     
     SXHalfWaveView *animateView13 = [[SXHalfWaveView alloc]initWithFrame:CGRectMake(self.animateView12.right + lastMargin, 100+MARGIN*7+SIDES*3,SIDES/2, SIDES)];
     [self.view addSubview:animateView13];
     self.animateView13 = animateView13;
-    [self.animateView13 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2];
+    [self.animateView13 setPrecent:self.precent description:@"sx" textColor:COLOR(0, 90, 107, 1) bgColor:COLOR(107, 194, 53, 1) alpha:0.5];
     
     
     // ------这里代码不相关
@@ -158,10 +158,10 @@
     [self.animateView8 addAnimateWithType:2];
     [self.animateView9 addAnimateWithType:2];
     
-    [self.animateView10 addAnimateWithType:2];
+    [self.animateView10 addAnimateWithType:0];
     [self.animateView11 addAnimateWithType:2];
-    [self.animateView12 addAnimateWithType:2];
-    [self.animateView13 addAnimateWithType:2];
+    [self.animateView12 addAnimateWithType:1];
+    [self.animateView13 addAnimateWithType:0];
     NSLog(@"viewWillAppear");
 }
 
