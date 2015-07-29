@@ -8,6 +8,7 @@
 
 #import "SXViewController.h"
 #import "SXWaveView.h"
+#import "SXHalfWaveView.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -26,6 +27,10 @@
 @property(nonatomic,strong)SXWaveView *animateView8;
 @property(nonatomic,strong)SXWaveView *animateView9;
 
+@property(nonatomic,strong)SXHalfWaveView *animateView10;
+@property(nonatomic,strong)SXHalfWaveView *animateView11;
+@property(nonatomic,strong)SXHalfWaveView *animateView12;
+@property(nonatomic,strong)SXHalfWaveView *animateView13;
 
 @end
 
@@ -94,6 +99,14 @@
     self.animateView9 = animateView9;
     [self.animateView9 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2 clips:NO];
     
+    
+    
+    SXHalfWaveView *animateView10 = [[SXHalfWaveView alloc]initWithFrame:CGRectMake(0+MARGIN*3+2*SIDES, 100+MARGIN*4+SIDES*3,SIDES/2, SIDES)];
+    animateView10.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:animateView10];
+    self.animateView10 = animateView10;
+    [self.animateView10 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2 clips:NO];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -107,6 +120,8 @@
     [self.animateView7 addAnimateWithType:2];
     [self.animateView8 addAnimateWithType:2];
     [self.animateView9 addAnimateWithType:2];
+    
+    [self.animateView10 addAnimateWithType:2];
     NSLog(@"viewWillAppear");
 }
 
