@@ -72,7 +72,6 @@
     [self.view addSubview:animateView4];
     self.animateView4 = animateView4;
     [self.animateView4 setPrecent:self.precent description:@"sx" textColor:COLOR(19, 118, 107, 1) bgColor:COLOR(31, 187, 170, 1) alpha:0.7 clips:YES];
-//    self.animateView4.half = YES;
 
     SXWaveView *animateView5 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN*2+SIDES, 100+MARGIN*2+SIDES,SIDES, SIDES)];
     [self.view addSubview:animateView5];
@@ -99,12 +98,51 @@
     self.animateView9 = animateView9;
     [self.animateView9 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2 clips:NO];
     
+    CGFloat lastMargin = (SCREEN_WIDTH - SIDES*2)/5;
     
-    
-    SXHalfWaveView *animateView10 = [[SXHalfWaveView alloc]initWithFrame:CGRectMake(0+MARGIN*3+2*SIDES, 100+MARGIN*4+SIDES*3,SIDES/2, SIDES)];
+    SXHalfWaveView *animateView10 = [[SXHalfWaveView alloc]initWithFrame:CGRectMake(lastMargin, 100+MARGIN*7+SIDES*3,SIDES/2, SIDES)];
     [self.view addSubview:animateView10];
     self.animateView10 = animateView10;
     [self.animateView10 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2];
+    
+    SXHalfWaveView *animateView11 = [[SXHalfWaveView alloc]initWithFrame:CGRectMake(self.animateView10.right + lastMargin, 100+MARGIN*7+SIDES*3,SIDES/2, SIDES)];
+    [self.view addSubview:animateView11];
+    self.animateView11 = animateView11;
+    [self.animateView11 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2];
+    
+    SXHalfWaveView *animateView12 = [[SXHalfWaveView alloc]initWithFrame:CGRectMake(self.animateView11.right + lastMargin, 100+MARGIN*7+SIDES*3,SIDES/2, SIDES)];
+    [self.view addSubview:animateView12];
+    self.animateView12 = animateView12;
+    [self.animateView12 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2];
+    
+    SXHalfWaveView *animateView13 = [[SXHalfWaveView alloc]initWithFrame:CGRectMake(self.animateView12.right + lastMargin, 100+MARGIN*7+SIDES*3,SIDES/2, SIDES)];
+    [self.view addSubview:animateView13];
+    self.animateView13 = animateView13;
+    [self.animateView13 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2];
+    
+    
+    // ------这里代码不相关
+    UILabel *titlelabel1 = [[UILabel alloc]init];
+    [self.view addSubview:titlelabel1];
+    titlelabel1.frame = self.animateView2.frame;
+    titlelabel1.centery = titlelabel1.top - 25;
+    titlelabel1.font = [UIFont fontWithName:@"DIN Alternate" size:15];
+    titlelabel1.text = @"c i r c l e";
+    titlelabel1.textColor = COLOR(19, 118, 107, 1);
+    titlelabel1.textAlignment = NSTextAlignmentCenter;
+    
+    UILabel *titlelabel2 = [[UILabel alloc]init];
+    [self.view addSubview:titlelabel2];
+    titlelabel2.frame = self.animateView11.frame;
+    titlelabel2.width = 150;
+    titlelabel2.centery = titlelabel2.top - 25;
+    titlelabel2.centerx = titlelabel1.centerx;
+    titlelabel2.font = [UIFont fontWithName:@"DIN Alternate" size:15];
+    titlelabel2.text = @"s e m i - c i r c l e";
+    titlelabel2.textColor = COLOR(19, 118, 107, 1);
+    titlelabel2.textAlignment = NSTextAlignmentCenter;
+    
+    
     
 }
 
@@ -121,6 +159,9 @@
     [self.animateView9 addAnimateWithType:2];
     
     [self.animateView10 addAnimateWithType:2];
+    [self.animateView11 addAnimateWithType:2];
+    [self.animateView12 addAnimateWithType:2];
+    [self.animateView13 addAnimateWithType:2];
     NSLog(@"viewWillAppear");
 }
 
