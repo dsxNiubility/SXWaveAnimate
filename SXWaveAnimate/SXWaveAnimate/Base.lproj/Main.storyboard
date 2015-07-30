@@ -71,6 +71,24 @@
                                     <action selector="pushViewClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="lgn-Fg-J7E"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayU-PD-SDP">
+                                <rect key="frame" x="0.0" y="317" width="133" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="2nL-sc-bUn"/>
+                                    <constraint firstAttribute="height" constant="30" id="kr7-l7-sCN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="18"/>
+                                <state key="normal" title="董铂然 dsxNiubility">
+                                    <color key="titleColor" red="1" green="0.53725490200000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.1215686275" green="0.73333333329999995" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJh-qH-0gP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.77647058820000003" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -78,9 +96,11 @@
                             <constraint firstItem="biC-PI-lCp" firstAttribute="leading" secondItem="MWT-ki-elG" secondAttribute="leading" id="RqU-la-rc0"/>
                             <constraint firstAttribute="centerX" secondItem="2Ow-CM-EnL" secondAttribute="centerX" id="UjV-3N-69G"/>
                             <constraint firstAttribute="centerX" secondItem="MWT-ki-elG" secondAttribute="centerX" id="V5y-8g-GRm"/>
+                            <constraint firstItem="ayU-PD-SDP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X9R-gF-wzZ"/>
                             <constraint firstItem="MWT-ki-elG" firstAttribute="trailing" secondItem="nnc-Fc-GIj" secondAttribute="trailing" id="b75-tp-Ex6"/>
                             <constraint firstItem="2Ow-CM-EnL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ee0-9s-oHU"/>
                             <constraint firstItem="MWT-ki-elG" firstAttribute="top" secondItem="2Ow-CM-EnL" secondAttribute="bottom" constant="8" id="gic-eO-49D"/>
+                            <constraint firstItem="ayU-PD-SDP" firstAttribute="top" secondItem="biC-PI-lCp" secondAttribute="bottom" id="sPi-dk-xRo"/>
                             <constraint firstItem="biC-PI-lCp" firstAttribute="top" secondItem="MWT-ki-elG" secondAttribute="bottom" constant="20" id="uPx-Xb-8u5"/>
                         </constraints>
                     </view>

@@ -1,10 +1,12 @@
 # SXWaveAnimate
 ##实现非常美观的灌水动画
 
-![image](https://github.com/dsxNiubility/SXWaveAnimate/raw/master/screenshots/waveAnimate.gif)
 
 ####7月30日升级版本（建议更新下）
 **与以往的只有自定义cell相比，开通了粒度更小的自定义View-SXWaveView**
+
+![image](https://github.com/dsxNiubility/SXWaveAnimate/raw/master/screenshots/waveAnimate0.gif)
+
 ######主要更新有：
 * 修改整体UI样式
 * 增加了SXWaveView。使得项目的泛用性和灵活性更好
@@ -31,6 +33,8 @@ _看下代码就知道了里面写的很清楚_
 ---
 ####6月2日升级版本（建议更新下）
 **将动画代码封装到了Cell的内部，提供了统一的接口及赋值方法**
+
+![image](https://github.com/dsxNiubility/SXWaveAnimate/raw/master/screenshots/waveAnimate.gif)
 
 _使用方法_
 >1.将代码中的classes文件夹拖入项目中，里面包含了自定义Cell，及一个便利计算frame的类<br />
