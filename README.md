@@ -1,6 +1,13 @@
 # SXWaveAnimate
 ##实现非常美观的灌水动画
-
+<br />
+[![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
+)](https://developer.apple.com/iphone/index.action)
+[![Language](http://img.shields.io/badge/language-OC-brightgreen.svg?style=flat
+)](https://developer.apple.com/swift)
+[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
+)](http://mit-license.org)
+[![Build](https://img.shields.io/teamcity/codebetter/bt428.svg)]()
 
 ####7月30日升级版本（建议更新下）
 **与以往的只有自定义cell相比，开通了粒度更小的自定义View-SXWaveView**
