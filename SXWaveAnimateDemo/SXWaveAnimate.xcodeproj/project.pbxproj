@@ -14,6 +14,8 @@
 		1D2CF2001B9EA66D00D1C29E /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CF1FB1B9EA66D00D1C29E /* UIViewAdditions.m */; };
 		1D5B22CB1B09EFF900C1D5C9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B22CA1B09EFF900C1D5C9 /* TableViewController.m */; };
 		1D5E14C41B6770F7005180C1 /* SXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5E14C31B6770F7005180C1 /* SXViewController.m */; };
+		1D9EF9F21BA14EBC00620DDD /* fb_rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9EF9F01BA14EBC00620DDD /* fb_rotation.png */; };
+		1D9EF9F31BA14EBC00620DDD /* fb_wave.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9EF9F11BA14EBC00620DDD /* fb_wave.png */; };
 		1DE5AFB01B08D75500A489BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFAF1B08D75500A489BD /* main.m */; };
 		1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFB21B08D75500A489BD /* AppDelegate.m */; };
 		1DE5AFB61B08D75500A489BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFB51B08D75500A489BD /* ViewController.m */; };
@@ -47,6 +49,8 @@
 		1D5B22CA1B09EFF900C1D5C9 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		1D5E14C21B6770F7005180C1 /* SXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXViewController.h; sourceTree = "<group>"; };
 		1D5E14C31B6770F7005180C1 /* SXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXViewController.m; sourceTree = "<group>"; };
+		1D9EF9F01BA14EBC00620DDD /* fb_rotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_rotation.png; sourceTree = "<group>"; };
+		1D9EF9F11BA14EBC00620DDD /* fb_wave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_wave.png; sourceTree = "<group>"; };
 		1DE5AFAA1B08D75500A489BD /* SXWaveAnimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXWaveAnimate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE5AFAE1B08D75500A489BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DE5AFAF1B08D75500A489BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		1D2CF1F21B9EA66D00D1C29E /* SXWaveAnimate */ = {
 			isa = PBXGroup;
 			children = (
+				1D9EF9EF1BA14EBC00620DDD /* images */,
 				1D2CF1F31B9EA66D00D1C29E /* SXHalfWaveView.h */,
 				1D2CF1F41B9EA66D00D1C29E /* SXHalfWaveView.m */,
 				1D2CF1F51B9EA66D00D1C29E /* SXWaveCell.h */,
@@ -95,6 +100,15 @@
 			);
 			name = SXWaveAnimate;
 			path = ../../SXWaveAnimate;
+			sourceTree = "<group>";
+		};
+		1D9EF9EF1BA14EBC00620DDD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1D9EF9F01BA14EBC00620DDD /* fb_rotation.png */,
+				1D9EF9F11BA14EBC00620DDD /* fb_wave.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		1DE5AFA11B08D75500A489BD = {
@@ -242,8 +256,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9EF9F31BA14EBC00620DDD /* fb_wave.png in Resources */,
 				1DE5AFB91B08D75500A489BD /* Main.storyboard in Resources */,
 				1D2CF1FE1B9EA66D00D1C29E /* SXWaveCell.xib in Resources */,
+				1D9EF9F21BA14EBC00620DDD /* fb_rotation.png in Resources */,
 				1DE5AFBE1B08D75500A489BD /* LaunchScreen.xib in Resources */,
 				1DE5AFBB1B08D75500A489BD /* Images.xcassets in Resources */,
 			);
@@ -405,6 +421,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -418,6 +435,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
