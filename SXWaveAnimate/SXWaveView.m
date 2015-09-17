@@ -28,7 +28,7 @@
         
         UIImageView *rotateImg = [[UIImageView alloc]initWithFrame:frame];
         rotateImg.contentMode = UIViewContentModeScaleAspectFit;
-        rotateImg.image = [UIImage imageNamed:@"fb_rotation"];
+        rotateImg.image = [UIImage imageNamed:@"fb_rotation.png"];
         UIView * leftView = [[UIView alloc]init];
 
         [bgView addSubview:leftView];
@@ -74,7 +74,7 @@
         _alpha = 1;
         _endless = NO;
         UIImageView *bigImg = [[UIImageView alloc]init];
-        bigImg.image = [UIImage imageNamed:@"fb_wave"];
+        bigImg.image = [UIImage imageNamed:@"fb_wave.png"];
         self.bigImg = bigImg;
         [self.leftView addSubview:bigImg];
         self.backgroundColor = [UIColor colorWithRed:42/255.0 green:178/255.0 blue:163/255.0 alpha:1];

@@ -8,6 +8,6 @@ s.authors = { '董尚先' => 'dantesx2012@gmail.com' }
 s.source = { :git => 'https://github.com/dsxNiubility/SXWaveAnimate.git', :tag => s.version.to_s }
 s.requires_arc = true
 s.ios.deployment_target = '8.0'
-s.source_files = 'SXWaveAnimate/*.{h,m,xib}'
-s.resources = 'SXWaveAnimate/images/*.png'
+s.source_files = 'SXWaveAnimate/*.{h,m}'
+s.resources = 'SXWaveAnimate/images/*.{png,xib}'
 end

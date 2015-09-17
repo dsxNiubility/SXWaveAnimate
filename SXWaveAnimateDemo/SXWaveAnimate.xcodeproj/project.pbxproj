@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D2CF1FC1B9EA66D00D1C29E /* SXHalfWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CF1F41B9EA66D00D1C29E /* SXHalfWaveView.m */; };
-		1D2CF1FD1B9EA66D00D1C29E /* SXWaveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CF1F61B9EA66D00D1C29E /* SXWaveCell.m */; };
-		1D2CF1FE1B9EA66D00D1C29E /* SXWaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D2CF1F71B9EA66D00D1C29E /* SXWaveCell.xib */; };
-		1D2CF1FF1B9EA66D00D1C29E /* SXWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CF1F91B9EA66D00D1C29E /* SXWaveView.m */; };
-		1D2CF2001B9EA66D00D1C29E /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CF1FB1B9EA66D00D1C29E /* UIViewAdditions.m */; };
+		1D0CEB791BAAA66F00DF2B22 /* SXWaveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CF1F61B9EA66D00D1C29E /* SXWaveCell.m */; };
+		1D0CEB7A1BAAA67100DF2B22 /* SXHalfWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CF1F41B9EA66D00D1C29E /* SXHalfWaveView.m */; };
+		1D0CEB7B1BAAA67700DF2B22 /* SXWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CF1F91B9EA66D00D1C29E /* SXWaveView.m */; };
+		1D0CEB7C1BAAA67900DF2B22 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2CF1FB1B9EA66D00D1C29E /* UIViewAdditions.m */; };
+		1D0CEB7D1BAAA6AF00DF2B22 /* fb_rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9EF9F01BA14EBC00620DDD /* fb_rotation.png */; };
+		1D0CEB7E1BAAA6B200DF2B22 /* fb_wave.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9EF9F11BA14EBC00620DDD /* fb_wave.png */; };
+		1D0CEB891BAAAC0300DF2B22 /* SXWaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D0CEB881BAAAC0300DF2B22 /* SXWaveCell.xib */; };
 		1D5B22CB1B09EFF900C1D5C9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B22CA1B09EFF900C1D5C9 /* TableViewController.m */; };
 		1D5E14C41B6770F7005180C1 /* SXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5E14C31B6770F7005180C1 /* SXViewController.m */; };
-		1D9EF9F21BA14EBC00620DDD /* fb_rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9EF9F01BA14EBC00620DDD /* fb_rotation.png */; };
-		1D9EF9F31BA14EBC00620DDD /* fb_wave.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9EF9F11BA14EBC00620DDD /* fb_wave.png */; };
 		1DE5AFB01B08D75500A489BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFAF1B08D75500A489BD /* main.m */; };
 		1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFB21B08D75500A489BD /* AppDelegate.m */; };
 		1DE5AFB61B08D75500A489BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFB51B08D75500A489BD /* ViewController.m */; };
@@ -36,11 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D0CEB881BAAAC0300DF2B22 /* SXWaveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SXWaveCell.xib; sourceTree = "<group>"; };
 		1D2CF1F31B9EA66D00D1C29E /* SXHalfWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXHalfWaveView.h; sourceTree = "<group>"; };
 		1D2CF1F41B9EA66D00D1C29E /* SXHalfWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXHalfWaveView.m; sourceTree = "<group>"; };
 		1D2CF1F51B9EA66D00D1C29E /* SXWaveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWaveCell.h; sourceTree = "<group>"; };
 		1D2CF1F61B9EA66D00D1C29E /* SXWaveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaveCell.m; sourceTree = "<group>"; };
-		1D2CF1F71B9EA66D00D1C29E /* SXWaveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SXWaveCell.xib; sourceTree = "<group>"; };
 		1D2CF1F81B9EA66D00D1C29E /* SXWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWaveView.h; sourceTree = "<group>"; };
 		1D2CF1F91B9EA66D00D1C29E /* SXWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaveView.m; sourceTree = "<group>"; };
 		1D2CF1FA1B9EA66D00D1C29E /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
@@ -92,7 +92,6 @@
 				1D2CF1F41B9EA66D00D1C29E /* SXHalfWaveView.m */,
 				1D2CF1F51B9EA66D00D1C29E /* SXWaveCell.h */,
 				1D2CF1F61B9EA66D00D1C29E /* SXWaveCell.m */,
-				1D2CF1F71B9EA66D00D1C29E /* SXWaveCell.xib */,
 				1D2CF1F81B9EA66D00D1C29E /* SXWaveView.h */,
 				1D2CF1F91B9EA66D00D1C29E /* SXWaveView.m */,
 				1D2CF1FA1B9EA66D00D1C29E /* UIViewAdditions.h */,
@@ -105,6 +104,7 @@
 		1D9EF9EF1BA14EBC00620DDD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1D0CEB881BAAAC0300DF2B22 /* SXWaveCell.xib */,
 				1D9EF9F01BA14EBC00620DDD /* fb_rotation.png */,
 				1D9EF9F11BA14EBC00620DDD /* fb_wave.png */,
 			);
@@ -185,6 +185,7 @@
 				1DE5AFA61B08D75500A489BD /* Sources */,
 				1DE5AFA71B08D75500A489BD /* Frameworks */,
 				1DE5AFA81B08D75500A489BD /* Resources */,
+				1D0CEB851BAAAA0B00DF2B22 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,10 +257,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D9EF9F31BA14EBC00620DDD /* fb_wave.png in Resources */,
+				1D0CEB7E1BAAA6B200DF2B22 /* fb_wave.png in Resources */,
 				1DE5AFB91B08D75500A489BD /* Main.storyboard in Resources */,
-				1D2CF1FE1B9EA66D00D1C29E /* SXWaveCell.xib in Resources */,
-				1D9EF9F21BA14EBC00620DDD /* fb_rotation.png in Resources */,
+				1D0CEB7D1BAAA6AF00DF2B22 /* fb_rotation.png in Resources */,
+				1D0CEB891BAAAC0300DF2B22 /* SXWaveCell.xib in Resources */,
 				1DE5AFBE1B08D75500A489BD /* LaunchScreen.xib in Resources */,
 				1DE5AFBB1B08D75500A489BD /* Images.xcassets in Resources */,
 			);
@@ -274,20 +275,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D0CEB851BAAAA0B00DF2B22 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1DE5AFA61B08D75500A489BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D2CF1FF1B9EA66D00D1C29E /* SXWaveView.m in Sources */,
-				1D2CF1FD1B9EA66D00D1C29E /* SXWaveCell.m in Sources */,
-				1D2CF2001B9EA66D00D1C29E /* UIViewAdditions.m in Sources */,
+				1D0CEB7B1BAAA67700DF2B22 /* SXWaveView.m in Sources */,
 				1DE5AFB61B08D75500A489BD /* ViewController.m in Sources */,
+				1D0CEB7C1BAAA67900DF2B22 /* UIViewAdditions.m in Sources */,
 				1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */,
 				1DE5AFB01B08D75500A489BD /* main.m in Sources */,
+				1D0CEB7A1BAAA67100DF2B22 /* SXHalfWaveView.m in Sources */,
 				1D5B22CB1B09EFF900C1D5C9 /* TableViewController.m in Sources */,
 				1D5E14C41B6770F7005180C1 /* SXViewController.m in Sources */,
-				1D2CF1FC1B9EA66D00D1C29E /* SXHalfWaveView.m in Sources */,
+				1D0CEB791BAAA66F00DF2B22 /* SXWaveCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
