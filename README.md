@@ -7,7 +7,6 @@
 )](https://en.wikipedia.org/wiki/Objective-C)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
 )](http://mit-license.org)
-[![Build](https://img.shields.io/teamcity/codebetter/bt428.svg)](http://www.cnblogs.com/dsxniubility/)
 
 ####本库已经配置到cocoapods。
 _在podfile文件中加入_ `pod "SXWaveAnimate", "~> 1.3.6"` _或_ `pod "SXWaveAnimate"`
