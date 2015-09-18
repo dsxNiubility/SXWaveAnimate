@@ -9,6 +9,10 @@
 )](http://mit-license.org)
 [![Build](https://img.shields.io/teamcity/codebetter/bt428.svg)](http://www.cnblogs.com/dsxniubility/)
 
+####本库已经配置到cocoapods。
+_在podfile文件中加入_ `pod "SXWaveAnimate", "~> 1.3.6"` _或_ `pod "SXWaveAnimate"`
+<br />_使用_ `pod install`_即可一键引入_
+
 ####7月30日升级版本（建议更新下）
 **与以往的只有自定义cell相比，开通了粒度更小的自定义View-SXWaveView**
 
