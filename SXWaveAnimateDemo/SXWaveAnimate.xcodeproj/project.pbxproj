@@ -51,6 +51,7 @@
 		1D5E14C31B6770F7005180C1 /* SXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXViewController.m; sourceTree = "<group>"; };
 		1D9EF9F01BA14EBC00620DDD /* fb_rotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_rotation.png; sourceTree = "<group>"; };
 		1D9EF9F11BA14EBC00620DDD /* fb_wave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_wave.png; sourceTree = "<group>"; };
+		1DAC37B11BCF8E9000820BFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		1DE5AFAA1B08D75500A489BD /* SXWaveAnimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXWaveAnimate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE5AFAE1B08D75500A489BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DE5AFAF1B08D75500A489BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -140,8 +141,8 @@
 				1D5B22C91B09EFF900C1D5C9 /* TableViewController.h */,
 				1D5B22CA1B09EFF900C1D5C9 /* TableViewController.m */,
 				1D5E14C21B6770F7005180C1 /* SXViewController.h */,
-				1D5E14C31B6770F7005180C1 /* SXViewController.m */,
 				1DE5AFB71B08D75500A489BD /* Main.storyboard */,
+				1D5E14C31B6770F7005180C1 /* SXViewController.m */,
 				1DE5AFBA1B08D75500A489BD /* Images.xcassets */,
 				1DE5AFBC1B08D75500A489BD /* LaunchScreen.xib */,
 				1DE5AFAD1B08D75500A489BD /* Supporting Files */,
@@ -331,6 +332,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				1DE5AFB81B08D75500A489BD /* Base */,
+				1DAC37B11BCF8E9000820BFB /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

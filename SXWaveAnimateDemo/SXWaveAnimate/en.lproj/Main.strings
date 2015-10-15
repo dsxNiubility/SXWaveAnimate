@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "please set percent 0-100"; ObjectID = "2Ow-CM-EnL"; */
+"2Ow-CM-EnL.text" = "please set percent 0-100";
+
+/* Class = "UITextView"; text = "88"; ObjectID = "MWT-ki-elG"; */
+"MWT-ki-elG.text" = "88";
+
+/* Class = "UINavigationItem"; title = "WaterWave"; ObjectID = "OAF-8I-YSv"; */
+"OAF-8I-YSv.title" = "WaterWave";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "Xu5-5X-rng"; */
+"Xu5-5X-rng.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "董铂然 dsxNiubility"; ObjectID = "ayU-PD-SDP"; */
+"ayU-PD-SDP.normalTitle" = "董铂然 dsxNiubility";
+
+/* Class = "UIButton"; normalTitle = "Show As Cell"; ObjectID = "biC-PI-lCp"; */
+"biC-PI-lCp.normalTitle" = "Show As Cell";
+
+/* Class = "UIButton"; normalTitle = "Show As VIew"; ObjectID = "nnc-Fc-GIj"; */
+"nnc-Fc-GIj.normalTitle" = "Show As VIew";
