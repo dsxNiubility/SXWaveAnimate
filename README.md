@@ -1,12 +1,11 @@
 # SXWaveAnimate
 ##实现非常美观的灌水动画
 <br />
-[![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
-)](https://developer.apple.com/iphone/index.action)
-[![Language](http://img.shields.io/badge/language-OC-brightgreen.svg?style=flat
+[![Platform](https://img.shields.io/badge/platform-iOS-red.svg)](https://developer.apple.com/iphone/index.action)
+[![Language](http://img.shields.io/badge/language-OC-yellow.svg?style=flat
 )](https://en.wikipedia.org/wiki/Objective-C)
-[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
-)](http://mit-license.org)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://mit-license.org)
+![CocoaPods Version](https://img.shields.io/badge/pod-v1.3.6-brightgreen.svg)
 
 ####本库已经配置到cocoapods。
 _在podfile文件中加入_ `pod "SXWaveAnimate", "~> 1.3.6"` _或_ `pod "SXWaveAnimate"`
