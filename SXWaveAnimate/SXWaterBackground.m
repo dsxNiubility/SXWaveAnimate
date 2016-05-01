@@ -1,0 +1,41 @@
+//
+//  SXWaterBackground.m
+//  SXWaveAnimate
+//
+//  Created by dongshangxian on 16/5/1.
+//  Copyright © 2016年 Sankuai. All rights reserved.
+//
+
+#import "SXWaterBackground.h"
+
+#define www 500
+#define mmm 10
+
+@implementation SXWaterBackground
+
+- (void)drawRect:(CGRect)rect {
+    
+    CGContextRef context2 = UIGraphicsGetCurrentContext();
+    CGContextMoveToPoint(context2, 0, www*0.5+mmm);//设置Path的起点
+    CGContextAddCurveToPoint(context2,www*(2/8.0)+mmm, www*(2.5/6.0)-mmm, www*(2/8.0)+mmm, www*(3.5/6.0)+mmm, www*(1/2.0), www*(1/2.0)+mmm);
+    CGContextAddCurveToPoint(context2,www*(6/8.0)+mmm, www*(2.5/6.0)-mmm, www*(6/8.0)+mmm, www*(3.5/6.0)+mmm, www*(1), www*(1/2.0)+mmm);
+    CGContextAddLineToPoint(context2, www, www);
+    CGContextAddLineToPoint(context2, 0, www);
+    CGContextAddLineToPoint(context2, 0, www+mmm);
+    [[UIColor colorWithRed:1 green:1 blue:1 alpha:1]setFill];
+    CGContextFillPath(context2);
+    
+
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextMoveToPoint(context, 0, www*0.5);//设置Path的起点
+    CGContextAddCurveToPoint(context,www*(2/8.0), www*(2.5/6.0), www*(2/8.0), www*(3.5/6.0), www*(1/2.0), www*(1/2.0));
+    CGContextAddCurveToPoint(context,www*(6/8.0), www*(2.5/6.0), www*(6/8.0), www*(3.5/6.0), www*(1), www*(1/2.0));
+    CGContextAddLineToPoint(context, www, www);
+    CGContextAddLineToPoint(context, 0, www);
+    CGContextAddLineToPoint(context, 0, www*0.5);
+    [[UIColor colorWithRed:1 green:1 blue:1 alpha:0.3]setFill];
+    CGContextFillPath(context);
+}
+
+
+@end

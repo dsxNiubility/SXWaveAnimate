@@ -23,6 +23,7 @@
 		1DE5AFBB1B08D75500A489BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DE5AFBA1B08D75500A489BD /* Images.xcassets */; };
 		1DE5AFBE1B08D75500A489BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DE5AFBC1B08D75500A489BD /* LaunchScreen.xib */; };
 		1DE5AFCA1B08D75500A489BD /* SXWaveAnimateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFC91B08D75500A489BD /* SXWaveAnimateTests.m */; };
+		1DEBD23B1CD6218000851781 /* SXWaterBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DEBD23A1CD6218000851781 /* SXWaterBackground.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		1DE5AFC31B08D75500A489BD /* SXWaveAnimateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SXWaveAnimateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE5AFC81B08D75500A489BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DE5AFC91B08D75500A489BD /* SXWaveAnimateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXWaveAnimateTests.m; sourceTree = "<group>"; };
+		1DEBD2391CD6218000851781 /* SXWaterBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWaterBackground.h; sourceTree = "<group>"; };
+		1DEBD23A1CD6218000851781 /* SXWaterBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaterBackground.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				1D2CF1F61B9EA66D00D1C29E /* SXWaveCell.m */,
 				1D2CF1F81B9EA66D00D1C29E /* SXWaveView.h */,
 				1D2CF1F91B9EA66D00D1C29E /* SXWaveView.m */,
+				1DEBD2391CD6218000851781 /* SXWaterBackground.h */,
+				1DEBD23A1CD6218000851781 /* SXWaterBackground.m */,
 				1D2CF1FA1B9EA66D00D1C29E /* UIViewAdditions.h */,
 				1D2CF1FB1B9EA66D00D1C29E /* UIViewAdditions.m */,
 			);
@@ -297,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DEBD23B1CD6218000851781 /* SXWaterBackground.m in Sources */,
 				1D0CEB7B1BAAA67700DF2B22 /* SXWaveView.m in Sources */,
 				1DE5AFB61B08D75500A489BD /* ViewController.m in Sources */,
 				1D0CEB7C1BAAA67900DF2B22 /* UIViewAdditions.m in Sources */,
