@@ -8,12 +8,17 @@
 
 #import "SXWaterBackground.h"
 
-#define www 500
-#define mmm 10
+#define www self.frame.size.width
+#define mmm 4
 
 @implementation SXWaterBackground
 
 - (void)drawRect:(CGRect)rect {
+
+    CGContextRef context3 = UIGraphicsGetCurrentContext();
+    CGContextAddRect(context3, self.bounds);
+    [[UIColor orangeColor] set];
+    CGContextFillPath(context3);
     
     CGContextRef context2 = UIGraphicsGetCurrentContext();
     CGContextMoveToPoint(context2, 0, www*0.5+mmm);//设置Path的起点

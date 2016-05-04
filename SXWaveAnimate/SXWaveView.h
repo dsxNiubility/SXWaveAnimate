@@ -16,7 +16,8 @@
 @property (weak, nonatomic) UILabel *descriptionLbl;
 @property (nonatomic,assign) int precent;
 
-@property (nonatomic,strong) UIImageView *bigImg;
+@property (nonatomic,strong) UIView *bigImg;
+@property(nonatomic,strong)UIView *waterBackground;
 
 @property (nonatomic,assign) CGFloat alpha;
 @property (nonatomic,strong) UIColor *textColor;
