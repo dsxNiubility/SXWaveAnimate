@@ -13,8 +13,26 @@
 
 @implementation SXWaterBackground
 
-- (void)drawRect:(CGRect)rect {
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        SXWaterBackgroundSub *v1 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0, -60, www/3, self.frame.size.height)];
+        SXWaterBackgroundSub *v2 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0 + www/3 -1, -60, www/3, self.frame.size.height)];
+        SXWaterBackgroundSub *v3 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0 + www/3*2 -2, -60, www/3, self.frame.size.height)];
+        [self addSubview:v1];
+        [self addSubview:v2];
+        [self addSubview:v3];
+    }
+    return self;
+}
 
+@end
+
+@implementation SXWaterBackgroundSub
+
+- (void)drawRect:(CGRect)rect {
+    
     CGContextRef context3 = UIGraphicsGetCurrentContext();
     CGContextAddRect(context3, self.bounds);
     [[UIColor orangeColor] set];
@@ -30,7 +48,7 @@
     [[UIColor colorWithRed:1 green:1 blue:1 alpha:1]setFill];
     CGContextFillPath(context2);
     
-
+    
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextMoveToPoint(context, 0, www*0.5);//设置Path的起点
     CGContextAddCurveToPoint(context,www*(2/8.0), www*(2.5/6.0), www*(2/8.0), www*(3.5/6.0), www*(1/2.0), www*(1/2.0));
@@ -41,6 +59,5 @@
     [[UIColor colorWithRed:1 green:1 blue:1 alpha:0.3]setFill];
     CGContextFillPath(context);
 }
-
 
 @end

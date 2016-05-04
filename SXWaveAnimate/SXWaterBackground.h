@@ -11,3 +11,7 @@
 @interface SXWaterBackground : UIView
 
 @end
+
+@interface SXWaterBackgroundSub : UIView
+
+@end
