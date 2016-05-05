@@ -8,8 +8,10 @@
 
 #import "SXWaterBackground.h"
 
-#define www self.frame.size.width
-#define mmm 4
+#define kBGWidth self.frame.size.width
+#define kBGHeight self.frame.size.height
+#define kBGMargin (kBGWidth/38)
+#define kBGTop -93
 
 @implementation SXWaterBackground
 
@@ -17,9 +19,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        SXWaterBackgroundSub *v1 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0, -60, www/3, self.frame.size.height)];
-        SXWaterBackgroundSub *v2 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0 + www/3 -1, -60, www/3, self.frame.size.height)];
-        SXWaterBackgroundSub *v3 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0 + www/3*2 -2, -60, www/3, self.frame.size.height)];
+        SXWaterBackgroundSub *v1 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0, kBGTop, kBGWidth/3, kBGHeight)];
+        SXWaterBackgroundSub *v2 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0 + kBGWidth/3 -1, kBGTop, kBGWidth/3, kBGHeight)];
+        SXWaterBackgroundSub *v3 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0 + kBGWidth/3*2 -2, kBGTop, kBGWidth/3, kBGHeight)];
         [self addSubview:v1];
         [self addSubview:v2];
         [self addSubview:v3];
@@ -39,23 +41,23 @@
     CGContextFillPath(context3);
     
     CGContextRef context2 = UIGraphicsGetCurrentContext();
-    CGContextMoveToPoint(context2, 0, www*0.5+mmm);//设置Path的起点
-    CGContextAddCurveToPoint(context2,www*(2/8.0)+mmm, www*(2.5/6.0)-mmm, www*(2/8.0)+mmm, www*(3.5/6.0)+mmm, www*(1/2.0), www*(1/2.0)+mmm);
-    CGContextAddCurveToPoint(context2,www*(6/8.0)+mmm, www*(2.5/6.0)-mmm, www*(6/8.0)+mmm, www*(3.5/6.0)+mmm, www*(1), www*(1/2.0)+mmm);
-    CGContextAddLineToPoint(context2, www, www);
-    CGContextAddLineToPoint(context2, 0, www);
-    CGContextAddLineToPoint(context2, 0, www+mmm);
+    CGContextMoveToPoint(context2, 0, kBGWidth*0.5+kBGMargin);//设置Path的起点
+    CGContextAddCurveToPoint(context2,kBGWidth*(2/8.0)+kBGMargin, kBGWidth*(2.5/6.0)-kBGMargin, kBGWidth*(2/8.0)+kBGMargin, kBGWidth*(3.5/6.0)+kBGMargin, kBGWidth*(1/2.0), kBGWidth*(1/2.0)+kBGMargin);
+    CGContextAddCurveToPoint(context2,kBGWidth*(6/8.0)+kBGMargin, kBGWidth*(2.5/6.0)-kBGMargin, kBGWidth*(6/8.0)+kBGMargin, kBGWidth*(3.5/6.0)+kBGMargin, kBGWidth*(1), kBGWidth*(1/2.0)+kBGMargin);
+    CGContextAddLineToPoint(context2, kBGWidth, kBGWidth);
+    CGContextAddLineToPoint(context2, 0, kBGWidth);
+    CGContextAddLineToPoint(context2, 0, kBGWidth+kBGMargin);
     [[UIColor colorWithRed:1 green:1 blue:1 alpha:1]setFill];
     CGContextFillPath(context2);
     
     
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextMoveToPoint(context, 0, www*0.5);//设置Path的起点
-    CGContextAddCurveToPoint(context,www*(2/8.0), www*(2.5/6.0), www*(2/8.0), www*(3.5/6.0), www*(1/2.0), www*(1/2.0));
-    CGContextAddCurveToPoint(context,www*(6/8.0), www*(2.5/6.0), www*(6/8.0), www*(3.5/6.0), www*(1), www*(1/2.0));
-    CGContextAddLineToPoint(context, www, www);
-    CGContextAddLineToPoint(context, 0, www);
-    CGContextAddLineToPoint(context, 0, www*0.5);
+    CGContextMoveToPoint(context, 0, kBGWidth*0.5);//设置Path的起点
+    CGContextAddCurveToPoint(context,kBGWidth*(2/8.0), kBGWidth*(2.5/6.0), kBGWidth*(2/8.0), kBGWidth*(3.5/6.0), kBGWidth*(1/2.0), kBGWidth*(1/2.0));
+    CGContextAddCurveToPoint(context,kBGWidth*(6/8.0), kBGWidth*(2.5/6.0), kBGWidth*(6/8.0), kBGWidth*(3.5/6.0), kBGWidth*(1), kBGWidth*(1/2.0));
+    CGContextAddLineToPoint(context, kBGWidth, kBGWidth);
+    CGContextAddLineToPoint(context, 0, kBGWidth);
+    CGContextAddLineToPoint(context, 0, kBGWidth*0.5);
     [[UIColor colorWithRed:1 green:1 blue:1 alpha:0.3]setFill];
     CGContextFillPath(context);
 }
