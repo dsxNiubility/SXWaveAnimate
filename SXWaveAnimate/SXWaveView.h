@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIViewAdditions.h"
 
+@class SXWaterBackground;
 @interface SXWaveView : UIView
 @property (weak, nonatomic) UIView *leftView;
 @property (weak, nonatomic) UIImageView *rotateImg;
@@ -16,7 +17,7 @@
 @property (weak, nonatomic) UILabel *descriptionLbl;
 @property (nonatomic,assign) int precent;
 
-@property (nonatomic,strong) UIView *bigImg;
+@property (nonatomic,strong) SXWaterBackground *bigImg;
 @property(nonatomic,strong)UIView *waterBackground;
 
 @property (nonatomic,assign) CGFloat alpha;

@@ -11,22 +11,38 @@
 #define kBGWidth self.frame.size.width
 #define kBGHeight self.frame.size.height
 #define kBGMargin (kBGWidth/38)
-#define kBGTop -93
+#define kBGTop (kBGWidth/5.75*(-1))
 
+@interface SXWaterBackground ()
+
+@property(nonatomic,strong)SXWaterBackgroundSub *v1;
+@property(nonatomic,strong)SXWaterBackgroundSub *v2;
+@property(nonatomic,strong)SXWaterBackgroundSub *v3;
+
+@end
 @implementation SXWaterBackground
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        SXWaterBackgroundSub *v1 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0, kBGTop, kBGWidth/3, kBGHeight)];
-        SXWaterBackgroundSub *v2 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0 + kBGWidth/3 -1, kBGTop, kBGWidth/3, kBGHeight)];
-        SXWaterBackgroundSub *v3 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0 + kBGWidth/3*2 -2, kBGTop, kBGWidth/3, kBGHeight)];
-        [self addSubview:v1];
-        [self addSubview:v2];
-        [self addSubview:v3];
+        NSLog(@"gaga - %f",frame.size.width);
+        self.v1 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0, kBGTop, kBGWidth/3, kBGHeight)];
+        self.v2 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0 + kBGWidth/3 -1, kBGTop, kBGWidth/3, kBGHeight)];
+        self.v3 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0 + kBGWidth/3*2 -2, kBGTop, kBGWidth/3, kBGHeight)];
+        [self addSubview:_v1];
+        [self addSubview:_v2];
+        [self addSubview:_v3];
     }
     return self;
+}
+
+- (void)setBgColor:(UIColor *)bgColor
+{
+    _bgColor = bgColor;
+    self.v1.subBgColor = bgColor;
+    self.v2.subBgColor = bgColor;
+    self.v3.subBgColor = bgColor;
 }
 
 @end
@@ -37,7 +53,7 @@
     
     CGContextRef context3 = UIGraphicsGetCurrentContext();
     CGContextAddRect(context3, self.bounds);
-    [[UIColor orangeColor] set];
+    [self.subBgColor set];
     CGContextFillPath(context3);
     
     CGContextRef context2 = UIGraphicsGetCurrentContext();
@@ -60,6 +76,11 @@
     CGContextAddLineToPoint(context, 0, kBGWidth*0.5);
     [[UIColor colorWithRed:1 green:1 blue:1 alpha:0.3]setFill];
     CGContextFillPath(context);
+    
+    CGContextRef context4 = UIGraphicsGetCurrentContext();
+    CGContextAddRect(context4, CGRectMake(0, kBGWidth, kBGWidth, kBGWidth));
+    [[UIColor whiteColor] set];
+    CGContextFillPath(context4);
 }
 
 @end

@@ -170,6 +170,7 @@
 - (void)setBgColor:(UIColor *)bgColor{
     _bgColor = bgColor;
     self.backgroundColor = _bgColor;
+    self.bigImg.bgColor = bgColor;
 }
 
 - (void)setDescriptionTxt:(NSString *)descriptionTxt{
