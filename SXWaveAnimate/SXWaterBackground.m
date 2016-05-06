@@ -26,7 +26,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        NSLog(@"gaga - %f",frame.size.width);
         self.v1 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0, kBGTop, kBGWidth/3, kBGHeight)];
         self.v2 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0 + kBGWidth/3 -1, kBGTop, kBGWidth/3, kBGHeight)];
         self.v3 = [[SXWaterBackgroundSub alloc]initWithFrame:CGRectMake(0 + kBGWidth/3*2 -2, kBGTop, kBGWidth/3, kBGHeight)];
@@ -57,9 +56,9 @@
     CGContextFillPath(context3);
     
     CGContextRef context2 = UIGraphicsGetCurrentContext();
-    CGContextMoveToPoint(context2, 0, kBGWidth*0.5+kBGMargin);//设置Path的起点
-    CGContextAddCurveToPoint(context2,kBGWidth*(2/8.0)+kBGMargin, kBGWidth*(2.5/6.0)-kBGMargin, kBGWidth*(2/8.0)+kBGMargin, kBGWidth*(3.5/6.0)+kBGMargin, kBGWidth*(1/2.0), kBGWidth*(1/2.0)+kBGMargin);
-    CGContextAddCurveToPoint(context2,kBGWidth*(6/8.0)+kBGMargin, kBGWidth*(2.5/6.0)-kBGMargin, kBGWidth*(6/8.0)+kBGMargin, kBGWidth*(3.5/6.0)+kBGMargin, kBGWidth*(1), kBGWidth*(1/2.0)+kBGMargin);
+    CGContextMoveToPoint(context2, 0, kBGWidth * 0.5 + kBGMargin);
+    CGContextAddCurveToPoint(context2,kBGWidth * (2 / 8.0) + kBGMargin,kBGWidth * (2.5 / 6.0) -kBGMargin,kBGWidth * (2 / 8.0) + kBGMargin,kBGWidth * (3.5 / 6.0) + kBGMargin,kBGWidth*(1 / 2.0),kBGWidth * (1 / 2.0) + kBGMargin);
+    CGContextAddCurveToPoint(context2,kBGWidth * (6 / 8.0) + kBGMargin,kBGWidth * (2.5 / 6.0) -kBGMargin, kBGWidth*(6/8.0)+kBGMargin, kBGWidth*(3.5/6.0)+kBGMargin, kBGWidth*(1), kBGWidth * (1 / 2.0) + kBGMargin);
     CGContextAddLineToPoint(context2, kBGWidth, kBGWidth);
     CGContextAddLineToPoint(context2, 0, kBGWidth);
     CGContextAddLineToPoint(context2, 0, kBGWidth+kBGMargin);
@@ -68,9 +67,9 @@
     
     
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextMoveToPoint(context, 0, kBGWidth*0.5);//设置Path的起点
-    CGContextAddCurveToPoint(context,kBGWidth*(2/8.0), kBGWidth*(2.5/6.0), kBGWidth*(2/8.0), kBGWidth*(3.5/6.0), kBGWidth*(1/2.0), kBGWidth*(1/2.0));
-    CGContextAddCurveToPoint(context,kBGWidth*(6/8.0), kBGWidth*(2.5/6.0), kBGWidth*(6/8.0), kBGWidth*(3.5/6.0), kBGWidth*(1), kBGWidth*(1/2.0));
+    CGContextMoveToPoint(context, 0, kBGWidth * 0.5);
+    CGContextAddCurveToPoint(context,kBGWidth * (2 / 8.0), kBGWidth * (2.5 / 6.0), kBGWidth * (2 / 8.0), kBGWidth * (3.5 / 6.0), kBGWidth * (1 / 2.0), kBGWidth * (1 / 2.0));
+    CGContextAddCurveToPoint(context,kBGWidth * (6 / 8.0), kBGWidth * (2.5 / 6.0), kBGWidth * (6/ 8.0), kBGWidth * (3.5 / 6.0), kBGWidth * (1), kBGWidth * (1/2.0));
     CGContextAddLineToPoint(context, kBGWidth, kBGWidth);
     CGContextAddLineToPoint(context, 0, kBGWidth);
     CGContextAddLineToPoint(context, 0, kBGWidth*0.5);

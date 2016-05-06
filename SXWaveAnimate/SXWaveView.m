@@ -36,7 +36,6 @@
         leftView.height = bgView.height - W/12.5;
         leftView.centerx = bgView.centerx;
         leftView.centery = bgView.centery;
-
         
         leftView.top = W/25;
         [bgView addSubview:rotateImg];
@@ -51,8 +50,6 @@
         avgScoreLbl.font = [UIFont fontWithName:@"DIN Alternate" size:30*W/125];
         avgScoreLbl.text = @"56%";
         avgScoreLbl.textAlignment = NSTextAlignmentCenter;
-        
-       
         
         UILabel *descriptionLbl = [[UILabel alloc]init];
         descriptionLbl.width = W / 2;
@@ -73,39 +70,13 @@
         
         _alpha = 1;
         _endless = NO;
-//        UIImageView *bigImg = [[UIImageView alloc]init];
-//        bigImg.image = [UIImage imageNamed:@"fb_wave.png"];
-//        self.bigImg = bigImg;
-//        [self.leftView addSubview:bigImg];
-        
-//        UIView *waterbackgroundView = [[UIView alloc]init];
-//        self.bigImg = waterbackgroundView;
-//        self.bigImg.backgroundColor = [UIColor orangeColor];
-        NSLog(@"------%f",2*W);
+
         self.bigImg  = [[SXWaterBackground alloc]initWithFrame:CGRectMake(-5*W, W, 6*W, 3*W)];
         [self.leftView addSubview:self.bigImg];
-        
-        
-        
-//        SXWaterBackground *v2 = [[SXWaterBackground alloc]initWithFrame:CGRectMake(2*W-1, -60, 2*W, 3*W)];
-//        SXWaterBackground *v3 = [[SXWaterBackground alloc]initWithFrame:CGRectMake(4*W-2, -60, 2*W, 3*W)];
-//        [waterbackgroundView addSubview:v1];
-//        [waterbackgroundView addSubview:v2];
-//        [waterbackgroundView addSubview:v3];
-        
         
         self.backgroundColor = [UIColor colorWithRed:42/255.0 green:178/255.0 blue:163/255.0 alpha:1];
         self.leftView.layer.cornerRadius = self.leftView.bounds.size.width/2.0;
         self.leftView.clipsToBounds = YES;
-        
-//        self.bigImg.frame = CGRectMake(0, 0, 6*W, 3*W);
-//        self.bigImg.top = W;
-//        self.bigImg.left = -5*W;
-        
-//        self.waterBackground.frame = CGRectMake(0, 0, 6*W, 3*W);
-//        self.waterBackground.top = W;
-//        self.waterBackground.left = -5*W;
-    
     }
     return self;
 }

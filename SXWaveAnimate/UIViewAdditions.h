@@ -20,23 +20,17 @@
 @property (nonatomic,assign)CGFloat centery;
 @end
 
-
-
 @interface UIView(ViewHiarachy)
-
 @property (nonatomic,readonly)UIViewController *viewController;
-
 - (void)removeAllSubviews;
 @end
 
-
-
 @interface UIView (gesture)
-
 - (void)addTapAction:(SEL)tapAction target:(id)target;
 @end
 
 @interface UIView (sepLine)
 +(UIView*) sepLineWithRect:(CGRect)rect;
 +(UIView*) twoLayerSepLineWithRect:(CGRect)rect;
+
 @end
