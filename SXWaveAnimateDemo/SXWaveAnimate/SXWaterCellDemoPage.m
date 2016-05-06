@@ -21,7 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"WaveCellShow";
-    NSLog(@"%d",self.precent);
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -65,14 +64,17 @@
         [cell setPrecent:self.precent textColor:[UIColor whiteColor] type:2 alpha:0.3];
         cell.endless = YES;
         return cell;
+        
     }else if (indexPath.row == 3){
+        
         SXWaveCell *cell = [SXWaveCell cell];
         self.waveCell4 = cell;
         [cell setPrecent:self.precent textColor:[UIColor whiteColor] type:1 alpha:0.3];
         return cell;
+        
     }
     else {
-        return nil;
+        return [UITableViewCell new];
     }
     
 }
