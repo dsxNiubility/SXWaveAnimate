@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewController : UITableViewController
+@interface SXWaterCellDemoPage : UITableViewController
 
 @property(nonatomic,assign)int precent;
 

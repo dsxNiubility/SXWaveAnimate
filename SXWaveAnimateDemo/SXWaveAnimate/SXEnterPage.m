@@ -6,16 +6,16 @@
 //  Copyright (c) 2015年 Sankuai. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "TableViewController.h"
-#import "SXViewController.h"
+#import "SXEnterPage.h"
+#import "SXWaterCellDemoPage.h"
+#import "SXWaterViewDemoPage.h"
 
-@interface ViewController ()
+@interface SXEnterPage ()
 @property (weak, nonatomic) IBOutlet UITextView *txtView;
 
 @end
 
-@implementation ViewController
+@implementation SXEnterPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,11 +30,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.destinationViewController isKindOfClass:[TableViewController class]]){
-        TableViewController *tbvc = (TableViewController *)segue.destinationViewController;
+    if ([segue.destinationViewController isKindOfClass:[SXWaterCellDemoPage class]]){
+        SXWaterCellDemoPage *tbvc = (SXWaterCellDemoPage *)segue.destinationViewController;
         tbvc.precent = [self.txtView.text intValue];
-    }else if ([segue.destinationViewController isKindOfClass:[SXViewController class]]){
-        SXViewController *vc = (SXViewController *)segue.destinationViewController;
+    }else if ([segue.destinationViewController isKindOfClass:[SXWaterViewDemoPage class]]){
+        SXWaterViewDemoPage *vc = (SXWaterViewDemoPage *)segue.destinationViewController;
         vc.precent = [self.txtView.text intValue];
     }
 

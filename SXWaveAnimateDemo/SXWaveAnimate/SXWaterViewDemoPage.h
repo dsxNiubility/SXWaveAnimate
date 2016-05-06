@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SXViewController : UIViewController
+@interface SXWaterViewDemoPage : UIViewController
 
 @property(nonatomic,assign)int precent;
 

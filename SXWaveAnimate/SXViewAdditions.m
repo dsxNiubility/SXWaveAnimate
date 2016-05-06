@@ -6,7 +6,7 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "UIViewAdditions.h"
+#import "SXViewAdditions.h"
 
 @implementation UIView(Frame)
 

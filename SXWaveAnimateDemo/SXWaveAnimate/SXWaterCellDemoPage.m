@@ -6,17 +6,17 @@
 //  Copyright (c) 2015年 Sankuai. All rights reserved.
 //
 
-#import "TableViewController.h"
+#import "SXWaterCellDemoPage.h"
 #import "SXWaveCell.h"
 
-@interface TableViewController ()
+@interface SXWaterCellDemoPage ()
 @property(nonatomic,strong)SXWaveCell *waveCell;
 @property(nonatomic,strong)SXWaveCell *waveCell2;
 @property(nonatomic,strong)SXWaveCell *waveCell3;
 @property(nonatomic,strong)SXWaveCell *waveCell4;
 @end
 
-@implementation TableViewController
+@implementation SXWaterCellDemoPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];

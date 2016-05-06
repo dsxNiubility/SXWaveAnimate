@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 Sankuai. All rights reserved.
 //
 
-#import "SXViewController.h"
+#import "SXWaterViewDemoPage.h"
 #import "SXWaveView.h"  // -----步骤1 引入自定义view头文件
 #import "SXHalfWaveView.h"
 
@@ -15,7 +15,7 @@
 #define SIDES SCREEN_WIDTH/3.5
 #define MARGIN SCREEN_WIDTH/28
 #define COLOR(a,b,c,d) [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:d]
-@interface SXViewController ()
+@interface SXWaterViewDemoPage ()
 
 @property(nonatomic,strong)SXWaveView *animateView1; // ------步骤2 建一个成员变量
 @property(nonatomic,strong)SXWaveView *animateView2;
@@ -34,7 +34,7 @@
 
 @end
 
-@implementation SXViewController
+@implementation SXWaterViewDemoPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];

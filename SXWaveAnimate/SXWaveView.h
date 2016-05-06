@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIViewAdditions.h"
+#import "SXViewAdditions.h"
 
 @class SXWaterBackground;
 @interface SXWaveView : UIView

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2YQ-r1-MRR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2YQ-r1-MRR">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--WaterWave-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SXEnterPage" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="504" y="110"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Water Cell Demo Page-->
         <scene sceneID="6se-Pz-n8z">
             <objects>
-                <tableViewController id="9uj-XH-k9u" customClass="TableViewController" sceneMemberID="viewController">
+                <tableViewController id="9uj-XH-k9u" customClass="SXWaterCellDemoPage" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="73" sectionHeaderHeight="22" sectionFooterHeight="22" id="L93-6L-PTH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,10 +149,10 @@
             </objects>
             <point key="canvasLocation" x="1020" y="362"/>
         </scene>
-        <!--View Controller-->
+        <!--Water View Demo Page-->
         <scene sceneID="LOr-ge-aPw">
             <objects>
-                <viewController id="ytw-cQ-k3x" customClass="SXViewController" sceneMemberID="viewController">
+                <viewController id="ytw-cQ-k3x" customClass="SXWaterViewDemoPage" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rPs-v9-PkK"/>
                         <viewControllerLayoutGuide type="bottom" id="dl4-3J-y3q"/>
