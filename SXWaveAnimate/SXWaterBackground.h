@@ -11,11 +11,13 @@
 @interface SXWaterBackground : UIView
 
 @property(nonatomic,strong)UIColor *bgColor;
+@property(nonatomic,strong)UIColor *waterColor;
 
 @end
 
 @interface SXWaterBackgroundSub : UIView
 
 @property(nonatomic,strong)UIColor *subBgColor;
+@property(nonatomic,strong)UIColor *subWaterColor;
 
 @end

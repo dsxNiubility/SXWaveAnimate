@@ -90,6 +90,28 @@
 }
 
 #pragma mark - **************** 赋值方法
+- (void)setPrecent:(int)precent description:(NSString *)description
+{
+    [self setPrecent:precent];
+    if (description) {
+        [self setDescriptionTxt:description];
+    }
+}
+
+- (void)setAlpha:(CGFloat)alpha clips:(BOOL)clips{
+    [self setAlpha:alpha];
+    [self setClips:clips];
+}
+
+- (void)setTextColor:(UIColor *)tcolor bgColor:(UIColor *)bColor waterColor:(UIColor *)wColor{
+    if (tcolor) {
+        [self setTextColor:tcolor];
+    }
+    if (bColor) {
+        [self setBgColor:bColor];
+    }
+}
+
 - (void)setPrecent:(int)precent{
     _precent = precent;
     self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];

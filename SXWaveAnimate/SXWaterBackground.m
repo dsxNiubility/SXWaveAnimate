@@ -44,6 +44,14 @@
     self.v3.subBgColor = bgColor;
 }
 
+- (void)setWaterColor:(UIColor *)waterColor
+{
+    _waterColor = waterColor;
+    self.v1.subWaterColor = waterColor;
+    self.v2.subWaterColor = waterColor;
+    self.v3.subWaterColor = waterColor;
+}
+
 @end
 
 @implementation SXWaterBackgroundSub
@@ -62,7 +70,7 @@
     CGContextAddLineToPoint(context2, kBGWidth, kBGWidth);
     CGContextAddLineToPoint(context2, 0, kBGWidth);
     CGContextAddLineToPoint(context2, 0, kBGWidth+kBGMargin);
-    [[UIColor colorWithRed:1 green:1 blue:1 alpha:1]setFill];
+    [self.subWaterColor setFill];
     CGContextFillPath(context2);
     
     
@@ -73,12 +81,12 @@
     CGContextAddLineToPoint(context, kBGWidth, kBGWidth);
     CGContextAddLineToPoint(context, 0, kBGWidth);
     CGContextAddLineToPoint(context, 0, kBGWidth*0.5);
-    [[UIColor colorWithRed:1 green:1 blue:1 alpha:0.3]setFill];
+    [self.subWaterColor setFill];
     CGContextFillPath(context);
     
     CGContextRef context4 = UIGraphicsGetCurrentContext();
     CGContextAddRect(context4, CGRectMake(0, kBGWidth, kBGWidth, kBGWidth));
-    [[UIColor whiteColor] set];
+    [self.subWaterColor set];
     CGContextFillPath(context4);
 }
 

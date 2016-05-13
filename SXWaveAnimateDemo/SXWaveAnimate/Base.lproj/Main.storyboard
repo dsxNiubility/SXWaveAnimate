@@ -45,7 +45,7 @@
                                     <action selector="pushClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="93u-iT-31Y"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="88" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MWT-ki-elG">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="50" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MWT-ki-elG">
                                 <rect key="frame" x="60" y="131" width="200" height="136"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="0.53725490200000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

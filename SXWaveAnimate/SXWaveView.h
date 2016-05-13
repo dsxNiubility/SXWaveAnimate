@@ -31,12 +31,23 @@
 
 - (instancetype)initWithPrecent:(int)precent;
 
-/** 参数值：0-正常 1-从高而降 2-先升再降*/
+/** 开始动画，参数值：0-正常 1-从高而降 2-先升再降*/
 - (void)addAnimateWithType:(int)type;
 
+#pragma mark -
+#pragma mark 旧接口，不想加deprecated关键字让你们报警告了，可用可不用
+/** 百分比+字体颜色+透明度*/
 - (void)setPrecent:(int)precent textColor:(UIColor *)tcolor alpha:(CGFloat)alpha;
-
+/** 百分比+描述+字体颜色+背景颜色+透明度+是否圆角*/
 - (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha clips:(BOOL)clips;
 
+#pragma mark -
+#pragma mark 新接口，建议使用
+/** 百分比+描述*/
+- (void)setPrecent:(int)precent description:(NSString *)description;
+/** 透明度+是否切除圆角*/
+- (void)setAlpha:(CGFloat)alpha clips:(BOOL)clips;
+/** 颜色设置*/
+- (void)setTextColor:(UIColor *)tcolor bgColor:(UIColor *)bColor waterColor:(UIColor *)wColor;
 
 @end
