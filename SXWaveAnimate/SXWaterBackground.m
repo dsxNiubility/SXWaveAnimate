@@ -7,6 +7,7 @@
 //
 
 #import "SXWaterBackground.h"
+#import "UIColor+Separate.h"
 
 #define kBGWidth self.frame.size.width
 #define kBGHeight self.frame.size.height
@@ -81,7 +82,7 @@
     CGContextAddLineToPoint(context, kBGWidth, kBGWidth);
     CGContextAddLineToPoint(context, 0, kBGWidth);
     CGContextAddLineToPoint(context, 0, kBGWidth*0.5);
-    [self.subWaterColor setFill];
+    [[UIColor colorWithRed:self.subWaterColor.red green:self.subWaterColor.green blue:self.subWaterColor.blue alpha:0.3] setFill];
     CGContextFillPath(context);
     
     CGContextRef context4 = UIGraphicsGetCurrentContext();

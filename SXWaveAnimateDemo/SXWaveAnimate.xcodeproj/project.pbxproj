@@ -14,6 +14,7 @@
 		1D0CEB7D1BAAA6AF00DF2B22 /* fb_rotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9EF9F01BA14EBC00620DDD /* fb_rotation.png */; };
 		1D0CEB7E1BAAA6B200DF2B22 /* fb_wave.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D9EF9F11BA14EBC00620DDD /* fb_wave.png */; };
 		1D0CEB891BAAAC0300DF2B22 /* SXWaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D0CEB881BAAAC0300DF2B22 /* SXWaveCell.xib */; };
+		1D3B33EA1CE5C67A0067FDBA /* UIColor+Separate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3B33E91CE5C67A0067FDBA /* UIColor+Separate.m */; };
 		1D5B22CB1B09EFF900C1D5C9 /* SXWaterCellDemoPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B22CA1B09EFF900C1D5C9 /* SXWaterCellDemoPage.m */; };
 		1D5E14C41B6770F7005180C1 /* SXWaterViewDemoPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5E14C31B6770F7005180C1 /* SXWaterViewDemoPage.m */; };
 		1DE5AFB01B08D75500A489BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5AFAF1B08D75500A489BD /* main.m */; };
@@ -46,6 +47,8 @@
 		1D2CF1F91B9EA66D00D1C29E /* SXWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaveView.m; sourceTree = "<group>"; };
 		1D2CF1FA1B9EA66D00D1C29E /* SXViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXViewAdditions.h; sourceTree = "<group>"; };
 		1D2CF1FB1B9EA66D00D1C29E /* SXViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXViewAdditions.m; sourceTree = "<group>"; };
+		1D3B33E81CE5C67A0067FDBA /* UIColor+Separate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Separate.h"; sourceTree = "<group>"; };
+		1D3B33E91CE5C67A0067FDBA /* UIColor+Separate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Separate.m"; sourceTree = "<group>"; };
 		1D5B22C91B09EFF900C1D5C9 /* SXWaterCellDemoPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWaterCellDemoPage.h; sourceTree = "<group>"; };
 		1D5B22CA1B09EFF900C1D5C9 /* SXWaterCellDemoPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXWaterCellDemoPage.m; sourceTree = "<group>"; };
 		1D5E14C21B6770F7005180C1 /* SXWaterViewDemoPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXWaterViewDemoPage.h; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				1DEBD23A1CD6218000851781 /* SXWaterBackground.m */,
 				1D2CF1FA1B9EA66D00D1C29E /* SXViewAdditions.h */,
 				1D2CF1FB1B9EA66D00D1C29E /* SXViewAdditions.m */,
+				1D3B33E81CE5C67A0067FDBA /* UIColor+Separate.h */,
+				1D3B33E91CE5C67A0067FDBA /* UIColor+Separate.m */,
 			);
 			name = SXWaveAnimate;
 			path = ../../SXWaveAnimate;
@@ -304,6 +309,7 @@
 			files = (
 				1DEBD23B1CD6218000851781 /* SXWaterBackground.m in Sources */,
 				1D0CEB7B1BAAA67700DF2B22 /* SXWaveView.m in Sources */,
+				1D3B33EA1CE5C67A0067FDBA /* UIColor+Separate.m in Sources */,
 				1DE5AFB61B08D75500A489BD /* SXEnterPage.m in Sources */,
 				1D0CEB7C1BAAA67900DF2B22 /* SXViewAdditions.m in Sources */,
 				1DE5AFB31B08D75500A489BD /* AppDelegate.m in Sources */,

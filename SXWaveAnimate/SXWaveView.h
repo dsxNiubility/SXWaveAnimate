@@ -23,6 +23,7 @@
 @property (nonatomic,assign) CGFloat alpha;
 @property (nonatomic,strong) UIColor *textColor;
 @property (nonatomic,strong) UIColor *bgColor;
+@property (nonatomic,strong) UIColor *waterColor;
 @property (nonatomic,assign) int type;
 @property (nonatomic,assign,getter=isEndless) BOOL endless;
 @property (nonatomic,copy) NSString *descriptionTxt;

@@ -66,7 +66,11 @@
     [self.view addSubview:_animateView8];
     [self.view addSubview:_animateView9];
     
-    [self.animateView2 setPrecent:self.precent description:@"sx" textColor:COLOR(31, 187, 170, 1) bgColor:[UIColor orangeColor] alpha:0.5 clips:YES];
+//    [self.animateView2 setPrecent:self.precent description:@"sx" textColor:COLOR(31, 187, 170, 1) bgColor:[UIColor orangeColor] alpha:0.5 clips:YES];
+    
+    [self.animateView2 setPrecent:self.precent description:@"sx"];
+    [self.animateView2 setTextColor:[UIColor redColor] bgColor:[UIColor grayColor] waterColor:[UIColor orangeColor]];
+    
     [self.animateView3 setPrecent:self.precent description:@"sx" textColor:[UIColor redColor] bgColor:[UIColor grayColor] alpha:0.9 clips:NO];
     [self.animateView4 setPrecent:self.precent description:@"sx" textColor:COLOR(19, 118, 107, 1) bgColor:COLOR(31, 187, 170, 1) alpha:0.7 clips:YES];
     [self.animateView5 setPrecent:self.precent description:@"sx" textColor:[UIColor blackColor] bgColor:[UIColor redColor] alpha:0.5 clips:YES];

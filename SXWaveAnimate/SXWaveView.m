@@ -110,6 +110,11 @@
     if (bColor) {
         [self setBgColor:bColor];
     }
+    if (wColor) {
+        [self setWaterColor:wColor];
+    }else{
+        [self setWaterColor:[UIColor whiteColor]];
+    }
 }
 
 - (void)setPrecent:(int)precent{
@@ -154,6 +159,12 @@
     self.bigImg.alpha = _alpha;
 }
 
+- (void)setWaterColor:(UIColor *)waterColor
+{
+    _waterColor = waterColor;
+    self.bigImg.waterColor = waterColor;
+}
+
 - (void)setTextColor:(UIColor *)textColor{
     _textColor = textColor;
     self.avgScoreLbl.textColor = _textColor;
@@ -164,6 +175,9 @@
     _bgColor = bgColor;
     self.backgroundColor = _bgColor;
     self.bigImg.bgColor = bgColor;
+    if (!self.waterColor) {
+        [self setWaterColor:[UIColor whiteColor]];
+    }
 }
 
 - (void)setDescriptionTxt:(NSString *)descriptionTxt{
