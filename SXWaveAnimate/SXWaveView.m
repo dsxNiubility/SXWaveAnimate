@@ -21,6 +21,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         
+//        NSLog(@"%f",frame.size.width);
         UIView *bgView = [[UIView alloc]initWithFrame:frame];
         [self addSubview:bgView];
         bgView.top = 0;
@@ -209,13 +210,12 @@ NSString * viewMoveKey = @"waveMoveAnimation";
     __weak __typeof(&*self)weakSelf = self;
     void(^acallBack)(CGFloat start) = ^(CGFloat start) {
         CAKeyframeAnimation * moveAction = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
-        moveAction.values = [NSArray arrayWithObjects:[NSNumber numberWithFloat:-87],[NSNumber numberWithFloat:start],nil];
+        moveAction.values = [NSArray arrayWithObjects:[NSNumber numberWithFloat:-weakSelf.frame.size.width],[NSNumber numberWithFloat:start],nil];
         moveAction.duration = 4;
         // moveAction.autoreverses = YES;
         moveAction.repeatCount = MAXFLOAT;
         [weakSelf.bigImg.layer addAnimation:moveAction forKey:viewMoveKey];
     };
-    
     if (type == 0) {
         CGFloat avgScore = self.precent;
         [UIView animateWithDuration:4.0 animations:^{
