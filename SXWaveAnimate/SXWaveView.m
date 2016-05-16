@@ -8,7 +8,11 @@
 
 #import "SXWaveView.h"
 #import "SXWaterBackground.h"
+
 #define W self.bounds.size.width
+#define kBigImgTopMargin -20
+#define kWaterAnimateDuration 4.0
+
 @interface SXWaveView ()
 
 @property(nonatomic,assign)CGRect rect;
@@ -203,7 +207,7 @@ NSString * viewMoveKey = @"waveMoveAnimation";
 {
     CABasicAnimation * transformRoate = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     transformRoate.byValue = [NSNumber numberWithDouble:(2 * M_PI)];
-    transformRoate.duration = 2;
+    transformRoate.duration = kWaterAnimateDuration/2;
     transformRoate.repeatCount = self.isEndless == YES ? MAXFLOAT : 2;
     [self.rotateImg.layer addAnimation:transformRoate forKey:viewRotationKey];
     
@@ -216,12 +220,15 @@ NSString * viewMoveKey = @"waveMoveAnimation";
         moveAction.repeatCount = MAXFLOAT;
         [weakSelf.bigImg.layer addAnimation:moveAction forKey:viewMoveKey];
     };
+    
+
+    CGFloat avgScore = self.precent;
     if (type == 0) {
-        CGFloat avgScore = self.precent;
-        [UIView animateWithDuration:4.0 animations:^{
+        
+        [UIView animateWithDuration:kWaterAnimateDuration animations:^{
             self.bigImg.top = W - ((avgScore/100.0) * W);
             if (avgScore == 100) {
-                self.bigImg.top = -20;
+                self.bigImg.top = kBigImgTopMargin;
             }
             self.bigImg.left = 0;
         } completion:^(BOOL finished) {
@@ -230,13 +237,13 @@ NSString * viewMoveKey = @"waveMoveAnimation";
             }
         }];
     }else if (type == 1){
-        CGFloat avgScore = self.precent;
-        self.bigImg.top = -20;
+        
+        self.bigImg.top = kBigImgTopMargin;
         self.bigImg.left = -5*W;
-        [UIView animateWithDuration:4.0 animations:^{
+        [UIView animateWithDuration:kWaterAnimateDuration animations:^{
             self.bigImg.top = W - ((avgScore/100.0) * W);
             if (avgScore == 100) {
-                self.bigImg.top = -20;
+                self.bigImg.top = kBigImgTopMargin;
             }
             self.bigImg.left = 0;
         }completion:^(BOOL finished) {
@@ -245,15 +252,15 @@ NSString * viewMoveKey = @"waveMoveAnimation";
             }
         }];
     }else if (type == 2){
-        CGFloat avgScore = self.precent;
-        [UIView animateWithDuration:2.0 animations:^{
-            self.bigImg.top = -20;
+        
+        [UIView animateWithDuration:kWaterAnimateDuration/2 animations:^{
+            self.bigImg.top = kBigImgTopMargin;
             self.bigImg.left = -3*W;
         } completion:^(BOOL finished) {
-            [UIView animateWithDuration:2.0 animations:^{
+            [UIView animateWithDuration:kWaterAnimateDuration/2 animations:^{
                 self.bigImg.top = W - ((avgScore/100.0) * W);
                 if (avgScore == 100) {
-                    self.bigImg.top = -20;
+                    self.bigImg.top = kBigImgTopMargin;
                 }
                 self.bigImg.left = 0;
             }completion:^(BOOL finished) {
