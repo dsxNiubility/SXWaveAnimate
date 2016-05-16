@@ -37,6 +37,12 @@
     self.waveView.half = YES;
 }
 
+- (void)setEndless:(BOOL)endless
+{
+    _endless = endless;
+    self.waveView.endless = endless;
+}
+
 /** 参数值：0-正常 1-从高而降 2-先升再降*/
 - (void)addAnimateWithType:(int)type{
     [self.waveView addAnimateWithType:type];

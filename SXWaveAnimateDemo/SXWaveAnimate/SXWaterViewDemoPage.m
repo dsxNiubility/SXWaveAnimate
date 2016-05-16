@@ -75,17 +75,23 @@
     [self.view addSubview:_animateView9];
     
     [self.animateView3 setPrecent:self.precent description:@"sx" textColor:[UIColor redColor] bgColor:[UIColor grayColor] alpha:0.9 clips:NO];
+    self.animateView3.waterColor = [UIColor yellowColor];
     [self.animateView4 setPrecent:self.precent description:@"sx" textColor:COLOR(19, 118, 107, 1) bgColor:COLOR(31, 187, 170, 1) alpha:0.7 clips:YES];
+    self.animateView4.waterColor = [UIColor redColor];
     [self.animateView5 setPrecent:self.precent description:@"sx" textColor:[UIColor blackColor] bgColor:[UIColor redColor] alpha:0.5 clips:YES];
     [self.animateView6 setPrecent:self.precent description:@"sx" textColor:[UIColor redColor] bgColor:[UIColor darkGrayColor] alpha:0.5 clips:YES];
     [self.animateView7 setPrecent:self.precent description:@"sx" textColor:COLOR(56, 13, 49, 1) bgColor:COLOR(114, 111, 128, 1) alpha:0.5 clips:NO];
     [self.animateView8 setPrecent:self.precent description:@"sx" textColor:COLOR(151, 173, 172, 1) bgColor:COLOR(255, 94, 72, 1) alpha:1 clips:YES];
+    self.animateView8.endless = YES;
     [self.animateView9 setPrecent:self.precent description:@"sx" textColor:COLOR(255, 222, 0, 1) bgColor:COLOR(0, 90, 117, 1) alpha:0.2 clips:NO];
+    self.animateView9.endless = YES;
     
     
     // ------下面是半圆形的demo
     CGFloat lastMargin = (SCREEN_WIDTH - SIDES*2)/5;
     self.animateView10 = [[SXHalfWaveView alloc]initWithFrame:CGRectMake(lastMargin, 100+MARGIN*7+SIDES*3,SIDES/2, SIDES)];
+    self.animateView10.endless = YES;
+
     [self.view addSubview:_animateView10];
     [self.animateView10 setPrecent:self.precent description:@"sx" textColor:COLOR(214, 200, 75, 1) bgColor:COLOR(38, 188, 213, 1) alpha:1];
     
@@ -100,6 +106,7 @@
     self.animateView13 = [[SXHalfWaveView alloc]initWithFrame:CGRectMake(self.animateView12.right + lastMargin, 100+MARGIN*7+SIDES*3,SIDES/2, SIDES)];
     [self.view addSubview:_animateView13];
     [self.animateView13 setPrecent:self.precent description:@"sx" textColor:COLOR(0, 90, 107, 1) bgColor:COLOR(107, 194, 53, 1) alpha:0.5];
+    self.animateView13.endless = YES;
     
     
     // ------这里代码不相关
