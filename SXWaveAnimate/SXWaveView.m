@@ -98,9 +98,10 @@
     }
 }
 
-- (void)setAlpha:(CGFloat)alpha clips:(BOOL)clips{
+- (void)setAlpha:(CGFloat)alpha clips:(BOOL)clips endless:(BOOL)endless{
     [self setAlpha:alpha];
     [self setClips:clips];
+    [self setEndless:endless];
 }
 
 - (void)setTextColor:(UIColor *)tcolor bgColor:(UIColor *)bColor waterColor:(UIColor *)wColor{
@@ -205,6 +206,16 @@ NSString * viewMoveKey = @"waveMoveAnimation";
     transformRoate.repeatCount = self.isEndless == YES ? MAXFLOAT : 2;
     [self.rotateImg.layer addAnimation:transformRoate forKey:viewRotationKey];
     
+    __weak __typeof(&*self)weakSelf = self;
+    void(^acallBack)(CGFloat start) = ^(CGFloat start) {
+        CAKeyframeAnimation * moveAction = [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
+        moveAction.values = [NSArray arrayWithObjects:[NSNumber numberWithFloat:-87],[NSNumber numberWithFloat:start],nil];
+        moveAction.duration = 4;
+        // moveAction.autoreverses = YES;
+        moveAction.repeatCount = MAXFLOAT;
+        [weakSelf.bigImg.layer addAnimation:moveAction forKey:viewMoveKey];
+    };
+    
     if (type == 0) {
         CGFloat avgScore = self.precent;
         [UIView animateWithDuration:4.0 animations:^{
@@ -213,6 +224,10 @@ NSString * viewMoveKey = @"waveMoveAnimation";
                 self.bigImg.top = -20;
             }
             self.bigImg.left = 0;
+        } completion:^(BOOL finished) {
+            if (self.endless == YES) {
+                acallBack(self.bigImg.layer.position.x);
+            }
         }];
     }else if (type == 1){
         CGFloat avgScore = self.precent;
@@ -224,6 +239,10 @@ NSString * viewMoveKey = @"waveMoveAnimation";
                 self.bigImg.top = -20;
             }
             self.bigImg.left = 0;
+        }completion:^(BOOL finished) {
+            if (self.endless == YES) {
+                acallBack(self.bigImg.layer.position.x);
+            }
         }];
     }else if (type == 2){
         CGFloat avgScore = self.precent;
@@ -237,6 +256,10 @@ NSString * viewMoveKey = @"waveMoveAnimation";
                     self.bigImg.top = -20;
                 }
                 self.bigImg.left = 0;
+            }completion:^(BOOL finished) {
+                if (self.endless == YES) {
+                    acallBack(self.bigImg.layer.position.x);
+                }
             }];
         }];
     }

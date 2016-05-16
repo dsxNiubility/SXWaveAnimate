@@ -47,7 +47,7 @@
 /** 百分比+描述*/
 - (void)setPrecent:(int)precent description:(NSString *)description;
 /** 透明度+是否切除圆角*/
-- (void)setAlpha:(CGFloat)alpha clips:(BOOL)clips;
+- (void)setAlpha:(CGFloat)alpha clips:(BOOL)clips endless:(BOOL)endless;
 /** 颜色设置*/
 - (void)setTextColor:(UIColor *)tcolor bgColor:(UIColor *)bColor waterColor:(UIColor *)wColor;
 
