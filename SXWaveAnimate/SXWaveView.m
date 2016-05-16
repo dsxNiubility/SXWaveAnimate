@@ -103,6 +103,14 @@
     }
 }
 
+- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor{
+    [self setPrecent:precent description:description];
+    [self setTextColor:tcolor];
+    [self setWaterColor:[UIColor whiteColor]];
+    [self setBackgroundColor:[UIColor blackColor]];
+}
+
+
 - (void)setAlpha:(CGFloat)alpha clips:(BOOL)clips endless:(BOOL)endless{
     [self setAlpha:alpha];
     [self setClips:clips];

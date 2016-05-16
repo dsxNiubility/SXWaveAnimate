@@ -40,15 +40,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // ------------------------------
+// ------------------------------
     // 步骤3 初始化并使用set方法
     self.animateView1 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN, 100+MARGIN,SIDES, SIDES)];
+    [self.animateView1 setPrecent:self.precent description:@"董铂然" textColor:[UIColor orangeColor]];
     [self.view addSubview:_animateView1];
-    [self.animateView1 setPrecent:self.precent description:@"董铂然" textColor:[UIColor orangeColor] bgColor:COLOR(31, 187, 170, 1) alpha:1 clips:NO];
-    // ------------------------------
+// ------------------------------
+    
+    
+// ------------------------------
+    // 也是步骤3 更多属性等你发现
+    self.animateView2 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN*2+SIDES, 100+MARGIN,SIDES, SIDES)];
+    [self.animateView2 setPrecent:self.precent description:@"sx"];
+    [self.animateView2 setAlpha:0.8 clips:YES endless:YES];
+    [self.animateView2 setTextColor:[UIColor redColor] bgColor:COLOR(31, 187, 170, 1) waterColor:[UIColor orangeColor]];
+    [self.view addSubview:_animateView2];
+// ------------------------------
     
     // 下面都是重复的代码，相当于多个重复的步骤3
-    self.animateView2 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN*2+SIDES, 100+MARGIN,SIDES, SIDES)];
     self.animateView3 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN*3+2*SIDES, 100+MARGIN,SIDES, SIDES)];
     self.animateView4 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN, 100+MARGIN*2+SIDES,SIDES, SIDES)];
     self.animateView5 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN*2+SIDES, 100+MARGIN*2+SIDES,SIDES, SIDES)];
@@ -57,7 +66,6 @@
     self.animateView8 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN*2+SIDES, 100+MARGIN*3+SIDES*2,SIDES, SIDES)];
     self.animateView9 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN*3+2*SIDES, 100+MARGIN*3+SIDES*2,SIDES, SIDES)];
     
-    [self.view addSubview:_animateView2];
     [self.view addSubview:_animateView3];
     [self.view addSubview:_animateView4];
     [self.view addSubview:_animateView5];
@@ -65,11 +73,6 @@
     [self.view addSubview:_animateView7];
     [self.view addSubview:_animateView8];
     [self.view addSubview:_animateView9];
-    
-//    [self.animateView2 setPrecent:self.precent description:@"sx" textColor:COLOR(31, 187, 170, 1) bgColor:[UIColor orangeColor] alpha:0.5 clips:YES];
-    
-    [self.animateView2 setPrecent:self.precent description:@"sx"];
-    [self.animateView2 setTextColor:[UIColor redColor] bgColor:[UIColor grayColor] waterColor:[UIColor orangeColor]];
     
     [self.animateView3 setPrecent:self.precent description:@"sx" textColor:[UIColor redColor] bgColor:[UIColor grayColor] alpha:0.9 clips:NO];
     [self.animateView4 setPrecent:self.precent description:@"sx" textColor:COLOR(19, 118, 107, 1) bgColor:COLOR(31, 187, 170, 1) alpha:0.7 clips:YES];

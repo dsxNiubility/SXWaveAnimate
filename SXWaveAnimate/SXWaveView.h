@@ -44,6 +44,9 @@
 
 #pragma mark -
 #pragma mark 新接口，建议使用
+/** 最常用的三个属性*/
+- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor;
+
 /** 百分比+描述*/
 - (void)setPrecent:(int)precent description:(NSString *)description;
 /** 透明度+是否切除圆角*/
