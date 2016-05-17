@@ -12,6 +12,20 @@
 @class SXWaterBackground;
 @interface SXWaveView : UIView
 
+/*
+
+ precent        默认值是 0.0
+ alpha          默认值是 1.0
+ textColor      默认值是 redColor
+ bgColor        默认值是 blackColor
+ waterColor     默认值是 whiteColor
+ endless        默认值是 YES
+ descriptionTxt 默认值是 SXWaterWave
+ type           默认值是 0（正常）
+ half           默认值是 NO
+ 
+*/
+
 @property (nonatomic,assign) int precent;
 @property (nonatomic,assign) CGFloat alpha;
 @property (nonatomic,strong) UIColor *textColor;

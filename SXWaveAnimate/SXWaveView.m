@@ -27,7 +27,8 @@
 @end
 @implementation SXWaveView
 
-#pragma mark - **************** 构造方法
+#pragma mark -
+#pragma mark 初始化
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
@@ -79,9 +80,6 @@
         self.avgScoreLbl = avgScoreLbl;
         self.descriptionLbl = descriptionLbl;
         self.rotateImg = rotateImg;
-        
-        _alpha = 1;
-        _endless = NO;
 
         self.bigImg  = [[SXWaterBackground alloc]initWithFrame:CGRectMake(-5*W, W, 6*W, 3*W)];
         [self.leftView addSubview:self.bigImg];
@@ -89,11 +87,22 @@
         self.backgroundColor = [UIColor colorWithRed:42/255.0 green:178/255.0 blue:163/255.0 alpha:1];
         self.leftView.layer.cornerRadius = self.leftView.bounds.size.width/2.0;
         self.leftView.clipsToBounds = YES;
+        
+        self.alpha = 1.0;
+        self.endless = NO;
+        self.bgColor = [UIColor blackColor];
+        self.waterColor = [UIColor whiteColor];
+        self.textColor = [UIColor redColor];
+        self.type = 0;
+        self.endless = NO;
+        self.descriptionTxt = @"SXWaterWave";
+        self.precent = 0;
     }
     return self;
 }
 
-#pragma mark - **************** 赋值方法
+#pragma mark -
+#pragma mark 赋值方法
 - (void)setPrecent:(int)precent description:(NSString *)description
 {
     [self setPrecent:precent];
@@ -105,10 +114,7 @@
 - (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor{
     [self setPrecent:precent description:description];
     [self setTextColor:tcolor];
-    [self setWaterColor:[UIColor whiteColor]];
-    [self setBackgroundColor:[UIColor blackColor]];
 }
-
 
 - (void)setAlpha:(CGFloat)alpha clips:(BOOL)clips endless:(BOOL)endless{
     [self setAlpha:alpha];
@@ -125,8 +131,6 @@
     }
     if (wColor) {
         [self setWaterColor:wColor];
-    }else{
-        [self setWaterColor:[UIColor whiteColor]];
     }
 }
 
@@ -155,7 +159,6 @@
     if (bColor) {
         [self setBgColor:bColor];
     }
-    
 }
 
 - (void)setClips:(BOOL)clips
@@ -188,9 +191,6 @@
     _bgColor = bgColor;
     self.backgroundColor = _bgColor;
     self.bigImg.bgColor = bgColor;
-    if (!self.waterColor) {
-        [self setWaterColor:[UIColor whiteColor]];
-    }
 }
 
 - (void)setDescriptionTxt:(NSString *)descriptionTxt{
@@ -206,7 +206,8 @@
     }
 }
 
-#pragma mark - **************** 动画设置
+#pragma mark -
+#pragma mark 动画设置
 NSString * viewRotationKey = @"rotationAnimation";
 NSString * viewMoveKey = @"waveMoveAnimation";
 
