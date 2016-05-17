@@ -43,7 +43,7 @@
 // ------------------------------
     // 步骤3 初始化并使用set方法
     self.animateView1 = [[SXWaveView alloc]initWithFrame:CGRectMake(0+MARGIN, 100+MARGIN,SIDES, SIDES)];
-    [self.animateView1 setPrecent:self.precent description:@"董铂然" textColor:[UIColor orangeColor]];
+    [self.animateView1 setPrecent:self.precent description:@"董铂然" textColor:[UIColor lightGrayColor]];
     [self.view addSubview:_animateView1];
 // ------------------------------
     

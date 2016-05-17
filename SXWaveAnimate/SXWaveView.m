@@ -10,8 +10,11 @@
 #import "SXWaterBackground.h"
 
 #define W self.bounds.size.width
+#define ItTop self.bigImg.top
+#define ItLeft self.bigImg.left
 #define kBigImgTopMargin -20
 #define kWaterAnimateDuration 4.0
+#define completionWork  completion:^(BOOL finished) { if (self.endless) { acallBack(self.bigImg.layer.position.x); } }
 
 
 @interface SXWaveView ()
@@ -223,54 +226,42 @@ NSString * viewMoveKey = @"waveMoveAnimation";
         moveAction.repeatCount = MAXFLOAT;
         [weakSelf.bigImg.layer addAnimation:moveAction forKey:viewMoveKey];
     };
-    
 
-    CGFloat avgScore = self.precent;
-    if (type == 0) {
-        
+    if (type == 0)
+    {
         [UIView animateWithDuration:kWaterAnimateDuration animations:^{
-            self.bigImg.top = W - ((avgScore/100.0) * W);
-            if (avgScore == 100) {
-                self.bigImg.top = kBigImgTopMargin;
+            ItLeft = 0;
+            ItTop = W - ((_precent/100.0) * W);
+            if (_precent == 100) {
+                ItTop = kBigImgTopMargin;
             }
-            self.bigImg.left = 0;
-        } completion:^(BOOL finished) {
-            if (self.endless == YES) {
-                acallBack(self.bigImg.layer.position.x);
-            }
-        }];
-    }else if (type == 1){
-        
-        self.bigImg.top = kBigImgTopMargin;
-        self.bigImg.left = -5*W;
+        } completionWork];
+    }
+    else if (type == 1)
+    {
+        ItTop = kBigImgTopMargin;
+        ItLeft = -5*W;
         [UIView animateWithDuration:kWaterAnimateDuration animations:^{
-            self.bigImg.top = W - ((avgScore/100.0) * W);
-            if (avgScore == 100) {
-                self.bigImg.top = kBigImgTopMargin;
+            ItLeft = 0;
+            ItTop = W - ((_precent/100.0) * W);
+            if (_precent == 100) {
+                ItTop = kBigImgTopMargin;
             }
-            self.bigImg.left = 0;
-        }completion:^(BOOL finished) {
-            if (self.endless) {
-                acallBack(self.bigImg.layer.position.x);
-            }
-        }];
-    }else if (type == 2){
-        
+        }completionWork];
+    }
+    else if (type == 2)
+    {
         [UIView animateWithDuration:kWaterAnimateDuration/2 animations:^{
-            self.bigImg.top = kBigImgTopMargin;
-            self.bigImg.left = -3*W;
+            ItTop = kBigImgTopMargin;
+            ItLeft = -3*W;
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:kWaterAnimateDuration/2 animations:^{
-                self.bigImg.top = W - ((avgScore/100.0) * W);
-                if (avgScore == 100) {
-                    self.bigImg.top = kBigImgTopMargin;
+                ItLeft = 0;
+                ItTop = W - ((_precent/100.0) * W);
+                if (_precent == 100) {
+                    ItTop = kBigImgTopMargin;
                 }
-                self.bigImg.left = 0;
-            }completion:^(BOOL finished) {
-                if (self.endless) {
-                    acallBack(self.bigImg.layer.position.x);
-                }
-            }];
+            }completionWork];
         }];
     }
 }
