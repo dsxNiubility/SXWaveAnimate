@@ -10,6 +10,6 @@
 
 @interface SXWaterViewDemoPage : UIViewController
 
-@property(nonatomic,assign)int precent;
+@property(nonatomic,assign)CGFloat precent;
 
 @end

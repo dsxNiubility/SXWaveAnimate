@@ -13,6 +13,7 @@
 #define kBigImgTopMargin -20
 #define kWaterAnimateDuration 4.0
 
+
 @interface SXWaveView ()
 
 @property (nonatomic,strong) SXWaterBackground *bigImg;
@@ -56,8 +57,8 @@
         rotateImg.left = 0;
         
         UILabel *avgScoreLbl = [[UILabel alloc]init];
-        avgScoreLbl.width = W / 2;
-        avgScoreLbl.height = W/4;
+        avgScoreLbl.width = W / 1.5;
+        avgScoreLbl.height = W / 4;
         avgScoreLbl.centerx = rotateImg.centerx;
         avgScoreLbl.centery = rotateImg.centery;
         avgScoreLbl.font = [UIFont fontWithName:@"DIN Alternate" size:30*W/125];
@@ -103,13 +104,13 @@
 
 #pragma mark -
 #pragma mark 赋值方法
-- (void)setPrecent:(int)precent description:(NSString *)description
+- (void)setPrecent:(CGFloat)precent description:(NSString *)description
 {
     [self setPrecent:precent];
     [self setDescriptionTxt:description];
 }
 
-- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor{
+- (void)setPrecent:(CGFloat)precent description:(NSString *)description textColor:(UIColor *)tcolor{
     [self setPrecent:precent description:description];
     [self setTextColor:tcolor];
 }
@@ -126,13 +127,13 @@
     [self setWaterColor:wColor];
 }
 
-- (void)setPrecent:(int)precent textColor:(UIColor *)tcolor alpha:(CGFloat)alpha
+- (void)setPrecent:(CGFloat)precent textColor:(UIColor *)tcolor alpha:(CGFloat)alpha
 {
     [self setAlpha:alpha];
     [self setTextColor:tcolor];
     [self setPrecent:precent];
 }
-- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha clips:(BOOL)clips{
+- (void)setPrecent:(CGFloat)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha clips:(BOOL)clips{
     [self setAlpha:alpha];
     [self setPrecent:precent];
     [self setClips:clips];
@@ -155,9 +156,9 @@
     self.bigImg.alpha = _alpha;
 }
 
-- (void)setPrecent:(int)precent{
+- (void)setPrecent:(CGFloat)precent{
     _precent = precent;
-    self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
+    self.avgScoreLbl.text = [NSString stringWithFormat:@"%.1f%%",precent];
 }
 
 - (void)setWaterColor:(UIColor *)waterColor
@@ -195,6 +196,7 @@
     _half = half;
     if (_half) {
         self.avgScoreLbl.centerx = self.width*0.72;
+        self.avgScoreLbl.font = [UIFont fontWithName:@"DIN Alternate" size:30*W/180];
         self.descriptionLbl.centerx = self.width*0.72;
     }
 }
@@ -248,7 +250,7 @@ NSString * viewMoveKey = @"waveMoveAnimation";
             }
             self.bigImg.left = 0;
         }completion:^(BOOL finished) {
-            if (self.endless == YES) {
+            if (self.endless) {
                 acallBack(self.bigImg.layer.position.x);
             }
         }];
@@ -265,7 +267,7 @@ NSString * viewMoveKey = @"waveMoveAnimation";
                 }
                 self.bigImg.left = 0;
             }completion:^(BOOL finished) {
-                if (self.endless == YES) {
+                if (self.endless) {
                     acallBack(self.bigImg.layer.position.x);
                 }
             }];

@@ -26,7 +26,7 @@
  
 */
 
-@property (nonatomic,assign) int precent;
+@property (nonatomic,assign) CGFloat precent;
 @property (nonatomic,assign) CGFloat alpha;
 @property (nonatomic,strong) UIColor *textColor;
 @property (nonatomic,strong) UIColor *bgColor;
@@ -44,17 +44,17 @@
 #pragma mark -
 #pragma mark 旧接口，不想加deprecated关键字让你们报警告了，可用可不用
 /** 百分比+字体颜色+透明度*/
-- (void)setPrecent:(int)precent textColor:(UIColor *)tcolor alpha:(CGFloat)alpha;
+- (void)setPrecent:(CGFloat)precent textColor:(UIColor *)tcolor alpha:(CGFloat)alpha;
 /** 百分比+描述+字体颜色+背景颜色+透明度+是否圆角*/
-- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha clips:(BOOL)clips;
+- (void)setPrecent:(CGFloat)precent description:(NSString *)description textColor:(UIColor *)tcolor bgColor:(UIColor *)bColor alpha:(CGFloat)alpha clips:(BOOL)clips;
 
 #pragma mark -
 #pragma mark 新接口，建议使用
 /** 最常用的三个属性*/
-- (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor;
+- (void)setPrecent:(CGFloat)precent description:(NSString *)description textColor:(UIColor *)tcolor;
 
 /** 百分比+描述*/
-- (void)setPrecent:(int)precent description:(NSString *)description;
+- (void)setPrecent:(CGFloat)precent description:(NSString *)description;
 /** 透明度+是否切除圆角*/
 - (void)setAlpha:(CGFloat)alpha clips:(BOOL)clips endless:(BOOL)endless;
 /** 颜色设置*/
