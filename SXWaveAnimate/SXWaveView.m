@@ -106,9 +106,7 @@
 - (void)setPrecent:(int)precent description:(NSString *)description
 {
     [self setPrecent:precent];
-    if (description) {
-        [self setDescriptionTxt:description];
-    }
+    [self setDescriptionTxt:description];
 }
 
 - (void)setPrecent:(int)precent description:(NSString *)description textColor:(UIColor *)tcolor{
@@ -123,20 +121,9 @@
 }
 
 - (void)setTextColor:(UIColor *)tcolor bgColor:(UIColor *)bColor waterColor:(UIColor *)wColor{
-    if (tcolor) {
-        [self setTextColor:tcolor];
-    }
-    if (bColor) {
-        [self setBgColor:bColor];
-    }
-    if (wColor) {
-        [self setWaterColor:wColor];
-    }
-}
-
-- (void)setPrecent:(int)precent{
-    _precent = precent;
-    self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
+    [self setTextColor:tcolor];
+    [self setBgColor:bColor];
+    [self setWaterColor:wColor];
 }
 
 - (void)setPrecent:(int)precent textColor:(UIColor *)tcolor alpha:(CGFloat)alpha
@@ -149,16 +136,9 @@
     [self setAlpha:alpha];
     [self setPrecent:precent];
     [self setClips:clips];
-    
-    if (description) {
-        [self setDescriptionTxt:description];
-    }
-    if (tcolor) {
-        [self setTextColor:tcolor];
-    }
-    if (bColor) {
-        [self setBgColor:bColor];
-    }
+    [self setDescriptionTxt:description];
+    [self setTextColor:tcolor];
+    [self setBgColor:bColor];
 }
 
 - (void)setClips:(BOOL)clips
@@ -175,32 +155,45 @@
     self.bigImg.alpha = _alpha;
 }
 
+- (void)setPrecent:(int)precent{
+    _precent = precent;
+    self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
+}
+
 - (void)setWaterColor:(UIColor *)waterColor
 {
     _waterColor = waterColor;
-    self.bigImg.waterColor = waterColor;
+    if (waterColor) {
+        self.bigImg.waterColor = waterColor;
+    }
 }
 
 - (void)setTextColor:(UIColor *)textColor{
     _textColor = textColor;
-    self.avgScoreLbl.textColor = _textColor;
-    self.descriptionLbl.textColor = _textColor;
+    if (textColor) {
+        self.avgScoreLbl.textColor = _textColor;
+        self.descriptionLbl.textColor = _textColor;
+    }
 }
 
 - (void)setBgColor:(UIColor *)bgColor{
     _bgColor = bgColor;
-    self.backgroundColor = _bgColor;
-    self.bigImg.bgColor = bgColor;
+    if (bgColor) {
+        self.backgroundColor = _bgColor;
+        self.bigImg.bgColor = bgColor;
+    }
 }
 
 - (void)setDescriptionTxt:(NSString *)descriptionTxt{
     _descriptionTxt = descriptionTxt;
-    self.descriptionLbl.text = _descriptionTxt;
+    if(descriptionTxt){
+        self.descriptionLbl.text = _descriptionTxt;
+    }
 }
 
 - (void)setHalf:(BOOL)half{
     _half = half;
-    if (_half == YES) {
+    if (_half) {
         self.avgScoreLbl.centerx = self.width*0.72;
         self.descriptionLbl.centerx = self.width*0.72;
     }
