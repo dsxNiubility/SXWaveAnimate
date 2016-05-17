@@ -23,6 +23,7 @@
  descriptionTxt 默认值是 SXWaterWave
  type           默认值是 0（正常）
  half           默认值是 NO
+ updating       默认值是 NO
  
 */
 
@@ -37,6 +38,8 @@
 @property (nonatomic,assign) int type;
 /** 如果half为yes，就是展示半圆*/
 @property (nonatomic,assign) BOOL half;
+/** 数字是否随着波纹变化， 只有type=0 或 1才能使用*/
+@property (nonatomic,assign) BOOL updating;
 
 /** 开始动画，参数值：0-正常 1-从高而降 2-先升再降*/
 - (void)addAnimateWithType:(int)type;

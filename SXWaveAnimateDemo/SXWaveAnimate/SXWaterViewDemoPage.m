@@ -54,6 +54,7 @@
     [self.animateView2 setPrecent:self.precent description:@"sx"];
     [self.animateView2 setAlpha:0.8 clips:YES endless:YES];
     [self.animateView2 setTextColor:[UIColor redColor] bgColor:COLOR(31, 187, 170, 1) waterColor:[UIColor orangeColor]];
+    [self.animateView2 setUpdating:YES];
     [self.view addSubview:_animateView2];
 // ------------------------------
     
@@ -76,10 +77,13 @@
     
     [self.animateView3 setPrecent:self.precent description:@"sx" textColor:[UIColor redColor] bgColor:[UIColor grayColor] alpha:0.9 clips:NO];
     self.animateView3.waterColor = [UIColor yellowColor];
+    [self.animateView3 setUpdating:YES];
     [self.animateView4 setPrecent:self.precent description:@"sx" textColor:COLOR(19, 118, 107, 1) bgColor:COLOR(31, 187, 170, 1) alpha:0.7 clips:YES];
     self.animateView4.waterColor = [UIColor redColor];
     [self.animateView5 setPrecent:self.precent description:@"sx" textColor:[UIColor blackColor] bgColor:[UIColor redColor] alpha:0.5 clips:YES];
+    [self.animateView5 setUpdating:YES];
     [self.animateView6 setPrecent:self.precent description:@"sx" textColor:[UIColor redColor] bgColor:[UIColor darkGrayColor] alpha:0.5 clips:YES];
+    [self.animateView6 setUpdating:YES];
     [self.animateView7 setPrecent:self.precent description:@"sx" textColor:COLOR(56, 13, 49, 1) bgColor:COLOR(114, 111, 128, 1) alpha:0.5 clips:NO];
     [self.animateView8 setPrecent:self.precent description:@"sx" textColor:COLOR(151, 173, 172, 1) bgColor:COLOR(255, 94, 72, 1) alpha:1 clips:YES];
     self.animateView8.endless = YES;

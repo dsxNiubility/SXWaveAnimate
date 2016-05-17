@@ -9,12 +9,12 @@
 #import "SXWaveView.h"
 #import "SXWaterBackground.h"
 
-#define W self.bounds.size.width
-#define ItTop self.bigImg.top
-#define ItLeft self.bigImg.left
-#define kBigImgTopMargin -20
-#define kWaterAnimateDuration 4.0
-#define completionWork  completion:^(BOOL finished) { if (self.endless) { acallBack(self.bigImg.layer.position.x); } }
+#define W                       self.bounds.size.width
+#define ItTop                   self.bigImg.top
+#define ItLeft                  self.bigImg.left
+#define kBigImgTopMargin        -20
+#define kWaterAnimateDuration   4.0
+#define completionWork          completion:^(BOOL finished) { if (self.endless) { acallBack(self.bigImg.layer.position.x); } if(self.timer) { [self.timer invalidate]; } }
 
 
 @interface SXWaveView ()
@@ -27,6 +27,9 @@
 @property (weak, nonatomic) UILabel *avgScoreLbl;
 @property (weak, nonatomic) UILabel *descriptionLbl;
 @property(nonatomic,strong)UIView *waterBackground;
+@property(nonatomic,assign)CGFloat updatingNumber;
+@property(nonatomic,assign)CGFloat tempNum;
+@property(nonatomic,strong)NSTimer *timer;
 
 @end
 @implementation SXWaveView
@@ -93,7 +96,6 @@
         self.leftView.clipsToBounds = YES;
         
         self.alpha = 1.0;
-        self.endless = NO;
         self.bgColor = [UIColor blackColor];
         self.waterColor = [UIColor whiteColor];
         self.textColor = [UIColor redColor];
@@ -101,8 +103,28 @@
         self.endless = NO;
         self.descriptionTxt = @"SXWaterWave";
         self.precent = 0;
+        self.updatingNumber = 0;
+        self.tempNum = 0;
+        self.updating = NO;
+        
     }
     return self;
+}
+
+- (void)updateNumber
+{
+    if (self.type == 0) {
+        self.updatingNumber = self.updatingNumber + self.precent/40.0;
+    }else if (self.type == 1){
+        self.tempNum += (100 - self.precent)/40;
+        self.updatingNumber = 100 - self.tempNum;
+    }
+}
+
+- (void)setUpdatingNumber:(CGFloat)updatingNumber
+{
+    _updatingNumber = updatingNumber;
+    self.avgScoreLbl.text = [NSString stringWithFormat:@"%.1f%%",updatingNumber];
 }
 
 #pragma mark -
@@ -211,6 +233,7 @@ NSString * viewMoveKey = @"waveMoveAnimation";
 
 - (void)addAnimateWithType:(int)type
 {
+    self.type = type;
     CABasicAnimation * transformRoate = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     transformRoate.byValue = [NSNumber numberWithDouble:(2 * M_PI)];
     transformRoate.duration = kWaterAnimateDuration/2;
@@ -227,6 +250,10 @@ NSString * viewMoveKey = @"waveMoveAnimation";
         [weakSelf.bigImg.layer addAnimation:moveAction forKey:viewMoveKey];
     };
 
+    if(self.updating){
+        self.timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(updateNumber) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop]addTimer:_timer forMode:NSRunLoopCommonModes];
+    }
     if (type == 0)
     {
         [UIView animateWithDuration:kWaterAnimateDuration animations:^{
@@ -269,6 +296,7 @@ NSString * viewMoveKey = @"waveMoveAnimation";
 -(void)dealloc{
     [self.bigImg.layer removeAnimationForKey:viewRotationKey];
     [self.bigImg.layer removeAnimationForKey:viewMoveKey];
+    [self.timer invalidate];
 }
 
 @end
