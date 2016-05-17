@@ -30,8 +30,6 @@
 @property (nonatomic,assign) BOOL half;
 
 
-- (instancetype)initWithPrecent:(int)precent;
-
 /** 开始动画，参数值：0-正常 1-从高而降 2-先升再降*/
 - (void)addAnimateWithType:(int)type;
 

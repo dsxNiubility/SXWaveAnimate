@@ -21,13 +21,6 @@
     return [[NSBundle mainBundle]loadNibNamed:@"SXWaveCell" owner:nil options:nil][0];
 }
 
-- (instancetype)initWithPrecent:(int)precent{
-    [self setPrecent:precent];
-    self.type = 2;
-    self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
-    return [[NSBundle mainBundle]loadNibNamed:@"SXWaveCell" owner:nil options:nil][0];
-}
-
 - (void)setAlpha:(CGFloat)alpha{
     _alpha = alpha;
 }

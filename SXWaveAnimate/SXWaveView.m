@@ -86,14 +86,6 @@
     return self;
 }
 
-
-- (instancetype)initWithPrecent:(int)precent{
-    [self setPrecent:precent];
-    self.type = 2;
-    self.avgScoreLbl.text = [NSString stringWithFormat:@"%d%%",precent];
-    return [[NSBundle mainBundle]loadNibNamed:@"SXWaveView" owner:nil options:nil][0];
-}
-
 #pragma mark - **************** 赋值方法
 - (void)setPrecent:(int)precent description:(NSString *)description
 {
