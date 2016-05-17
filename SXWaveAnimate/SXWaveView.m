@@ -15,8 +15,15 @@
 
 @interface SXWaveView ()
 
+@property (nonatomic,strong) SXWaterBackground *bigImg;
 @property(nonatomic,assign)CGRect rect;
 @property(nonatomic,assign)BOOL clips;
+@property (weak, nonatomic) UIView *leftView;
+@property (weak, nonatomic) UIImageView *rotateImg;
+@property (weak, nonatomic) UILabel *avgScoreLbl;
+@property (weak, nonatomic) UILabel *descriptionLbl;
+@property(nonatomic,strong)UIView *waterBackground;
+
 @end
 @implementation SXWaveView
 

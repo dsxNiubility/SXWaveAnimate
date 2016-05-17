@@ -8,6 +8,14 @@
 
 #import "SXWaveCell.h"
 
+@interface SXWaveCell ()
+
+@property (weak, nonatomic) IBOutlet UIView *leftView;
+@property (weak, nonatomic) IBOutlet UIImageView *rotateImg;
+@property (weak, nonatomic) IBOutlet UILabel *avgScoreLbl;
+@property (weak, nonatomic) IBOutlet UILabel *discriptionLbl;
+
+@end
 
 @implementation SXWaveCell
 

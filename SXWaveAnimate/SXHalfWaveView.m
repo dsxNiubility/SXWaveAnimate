@@ -14,6 +14,7 @@
 @property(nonatomic,strong)SXWaveView *waveView;
 
 @end
+
 @implementation SXHalfWaveView
 
 - (instancetype)initWithFrame:(CGRect)frame{

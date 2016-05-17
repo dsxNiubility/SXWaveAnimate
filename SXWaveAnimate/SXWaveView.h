@@ -11,24 +11,18 @@
 
 @class SXWaterBackground;
 @interface SXWaveView : UIView
-@property (weak, nonatomic) UIView *leftView;
-@property (weak, nonatomic) UIImageView *rotateImg;
-@property (weak, nonatomic) UILabel *avgScoreLbl;
-@property (weak, nonatomic) UILabel *descriptionLbl;
+
 @property (nonatomic,assign) int precent;
-
-@property (nonatomic,strong) SXWaterBackground *bigImg;
-@property(nonatomic,strong)UIView *waterBackground;
-
 @property (nonatomic,assign) CGFloat alpha;
 @property (nonatomic,strong) UIColor *textColor;
 @property (nonatomic,strong) UIColor *bgColor;
 @property (nonatomic,strong) UIColor *waterColor;
-@property (nonatomic,assign) int type;
 @property (nonatomic,assign,getter=isEndless) BOOL endless;
 @property (nonatomic,copy) NSString *descriptionTxt;
+/** 水花动画展示的方式*/
+@property (nonatomic,assign) int type;
+/** 如果half为yes，就是展示半圆*/
 @property (nonatomic,assign) BOOL half;
-
 
 /** 开始动画，参数值：0-正常 1-从高而降 2-先升再降*/
 - (void)addAnimateWithType:(int)type;
