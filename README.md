@@ -8,8 +8,23 @@
 ![CocoaPods Version](https://img.shields.io/badge/pod-v1.3.6-brightgreen.svg)
 
 ####本库已经配置到cocoapods。
-_在podfile文件中加入_ `pod "SXWaveAnimate", "~> 1.3.6"` _或_ `pod "SXWaveAnimate"`
+_在podfile文件中加入_ `pod "SXWaveAnimate", "~> 2.0.0"` _或_ `pod "SXWaveAnimate"`
 <br />_使用_ `pod install`_即可一键引入_
+
+####5月31日更新（建议更新）
+
+**这次的升级做了一些较大的更改：** <br />
+
+1. 之前灌水是用图片做的，现在已经改成了用贝塞尔曲线画
+2. 因为是画出来的，所以水花的颜色完全可配置了（以后会支持速度，波长等等）
+3. 提供了百分比数字随着水花变化的功能，可自行开关
+4. waveview支持了水花无限循环，并且交界处没有bug
+
+**效果图如下** <br />
+
+![image](https://github.com/dsxNiubility/SXWaveAnimate/raw/master/screenshots/531.gif)
+
+
 
 ####7月30日升级版本（建议更新下）
 **与以往的只有自定义cell相比，开通了粒度更小的自定义View-SXWaveView**
