@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = 'SXWaveAnimate'
-s.version = '1.3.6'
+s.version = '2.0.0'
 s.license = 'MIT'
 s.summary = 'An Animate Water view on iOS.'
 s.homepage = 'https://github.com/dsxNiubility/SXWaveAnimate'
