@@ -1,5 +1,5 @@
 # SXWaveAnimate
-##实现非常美观的灌水动画
+## 实现非常美观的灌水动画
 <br />
 [![Platform](https://img.shields.io/badge/platform-iOS-red.svg)](https://developer.apple.com/iphone/index.action)
 [![Language](http://img.shields.io/badge/language-OC-yellow.svg?style=flat
@@ -7,11 +7,11 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://mit-license.org)
 ![CocoaPods Version](https://img.shields.io/badge/pod-v2.0.0-brightgreen.svg)
 
-####本库已经配置到cocoapods。
+#### 本库已经配置到cocoapods。
 _在podfile文件中加入_ `pod "SXWaveAnimate", "~> 2.0.0"` _或_ `pod "SXWaveAnimate"`
 <br />_使用_ `pod install`_即可一键引入_
 
-####5月31日更新（建议更新）
+#### 5月31日更新（建议更新）
 
 **这次的升级做了一些较大的更改：** <br />
 
@@ -26,12 +26,12 @@ _在podfile文件中加入_ `pod "SXWaveAnimate", "~> 2.0.0"` _或_ `pod "SXWave
 
 
 
-####7月30日升级版本（建议更新下）
+#### 7月30日升级版本（建议更新下）
 **与以往的只有自定义cell相比，开通了粒度更小的自定义View-SXWaveView**
 
 ![image](https://github.com/dsxNiubility/SXWaveAnimate/raw/master/screenshots/waveAnimate0.gif)
 
-######主要更新有：
+###### 主要更新有：
 * 修改整体UI样式
 * 增加了SXWaveView。使得项目的泛用性和灵活性更好
 * 添加动画的type修改后为3种 1-缓慢上升 2-缓慢下降 3-先升后降 
@@ -55,14 +55,14 @@ _SXWaveView使用方法_
 
 ![image](https://github.com/dsxNiubility/SXWaveAnimate/raw/master/screenshots/0001.png)
 
-#####精心设计了12种配色。现在的自定义配置已经很多，可自行发挥
+##### 精心设计了12种配色。现在的自定义配置已经很多，可自行发挥
 
 ![image](https://github.com/dsxNiubility/SXWaveAnimate/raw/master/screenshots/0002.png)
 
 _看下代码就知道了里面写的很清楚_
 
 ---
-####6月2日升级版本（建议更新下）
+#### 6月2日升级版本（建议更新下）
 **将动画代码封装到了Cell的内部，提供了统一的接口及赋值方法**
 
 ![image](https://github.com/dsxNiubility/SXWaveAnimate/raw/master/screenshots/waveAnimate.gif)
@@ -83,7 +83,7 @@ _具体代码在示例程序中写的都很清晰非常易上手_
 
 
 ---
-####初始版本
+#### 初始版本
 **因为前期主要以实现功能为主，暂时接口封装的还不是很完善，很快会不断完善。并且现在的代码结构也非常清晰了完全可以复用 欢迎关注。**
 
 暂时提供三种样式。
